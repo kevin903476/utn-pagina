@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Idioma</title>
+ <link rel="stylesheet" href="./style/style-test.css">
+</head>
+<body>
+
+    <!-- <header>
+        <h1>Test de Idioma</h1>
+        <p>Read the following paragraph and answer the questions:</p>
+    </header> -->
+
+    <header>
+        <div class="texto-test">
+          <h1>Test de Idioma</h1>
+          <p>Read the following paragraph and answer the questions:</p>
+        </div>
+        <div class="waves">
+          <img src="img/img2.svg" />
+        </div>
+      </header>
+
+
+
+    <div class="container">
+
+        <section id="enunciado">
+            <p>Ana, a student with a brilliant mind and fascinated by 
+                logic and technology, faces the dilemma of choosing her 
+                university major. Between ITI, where she could apply her
+                 skills to solve problems and create innovative solutions,
+                  Software Development, where her passion for programming
+                   would lead her to build digital worlds, and Mathematics,
+                    the science that seduces her with its precision and beauty,
+                     she seeks a path May you combine your intellect with a prosperous
+                      future. Her doubts about the complexity of the areas, job opportunities,
+                       her ability to work as a team, and her personal satisfaction worry her.
+                       Ana needs guidance to make the best decision for her professional future.</p>
+        </section>
+        <section id="p0">
+            <h3>1- What subjects does Ana like the most in high school?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">Mathematics, Physics and Chemistry.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">Biology, Earth Sciences and Geography.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">Language, History and Philosophy.
+            </label>
+        </section>
+
+        <section id="p1">
+            <h3>2- What extracurricular activities related to technology does Ana do?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">Participate in debate and theater clubs.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">Play team sports in a club.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">Attend programming, robotics or 3D printing workshops.
+            </label>
+        </section>
+
+        <section id="p2">
+            <h3>3- What kind of books and movies does Ana like to watch?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)">Science fiction books, biographies of famous people in technology and films about innovation.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)">Romantic novels and action movies.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)">Books about animals and plants, and documentaries about the environment.
+            </label>
+        </section>
+
+        <section id="p3">
+            <h3>4- What worries Ana about the ITI career?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)">That it is too difficult and requires a lot of study.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)">That is too theoretical and does not have enough real practice.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)">That you do not have many job opportunities in your region.
+            </label>
+        </section>
+
+        <section id="p4">
+            <h3>5- What attracts Ana to a career in Software Development?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> Social prestige and high salary.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p4"  onclick="respuesta(4,this)"> The possibility of working in a laboratory or clinic.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p4"  onclick="respuesta(4,this)"> The idea of creating programs and applications that can be useful to people.
+            </label>
+        </section>
+
+        <section id="p5">
+            <h3>6- What does Ana think of the idea of working in the mathematics sector?</h3>
+            <label>
+                <input type="radio" value="1" name="p5"  onclick="respuesta(5,this)">Is not convinced because he has no experience in the financial sector.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p5" onclick="respuesta(5,this)">Finds it interesting because he likes precision and logic.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p5" onclick="respuesta(5,this)">Is not interested because he prefers to work in a more creative environment.
+            </label>
+        </section>
+
+        <section id="p6">
+            <h3>7- What skills and knowledge does Ana need to be successful in any of the three careers?</h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="respuesta(6,this)">Mathematical skills, logic skills, analysis and problem solving. Knowledge of programming, computing and technology.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p6" onclick="respuesta(6,this)">Capacity for analysis, observation, communication and teamwork. Knowledge of biology, ecology and the environment.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p6" onclick="respuesta(6,this)">Social skills and ability to work with the public.
+            </label>
+        </section>
+
+        <section id="p7">
+            <h3>8- What advice would you give Ana to make a decision about her professional future?</h3>
+            <label>
+                <input type="radio" value="1" name="p7" onclick="respuesta(7,this)">Choose the career that you like the most, regardless of job opportunities.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p7" onclick="respuesta(7,this)">Research more about the three careers, talk to professionals in each area and make a list of pros and cons of each option.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p7" onclick="respuesta(7,this)">Follow the advice of your parents and family.
+            </label>
+        </section>
+
+        <section id="p8">
+            <h3>9- What other career options could Ana consider, given her interests?</h3>
+            <label>
+                <input type="radio" value="1" name="p8" onclick="respuesta(8,this)">Biology or Veterinary Medicine. 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p8" onclick="respuesta(8,this)">Civil Engineering or Architecture.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p8" onclick="respuesta(8,this)">Computer Engineering, Physics or Statistics.
+            </label>
+        </section>
+
+        <section id="p9">
+            <h3>10- What do you think about the three career options Ana is considering?</h3>
+            <label>
+                <input type="radio" value="1" name="p9" onclick="respuesta(9,this)">None of the three options are suitable for Ana, as she does not have the skills necessary to succeed in them.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p9" onclick="respuesta(9,this)">All three are good options, but the best is the one that offers you a better salary and job stability.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p9" onclick="respuesta(9,this)">All three are good options for someone who is passionate about technology. The final decision will depend on your specific interests, skills, and career goals.
+            </label>
+        </section>
+        <br>
+        <button id="resultados" onclick="corregir()">Terminar Intento</button>
+        <br>
+        <h2>Cantidad acertadas <span id="resultado"></span></h2>
+<!-- //respuestas 1-a,  2-c,  3-a, 4-b, 5-b, 6-c, 7-a, 8-c, 9-b, 10-c -->
+
+<!-- Botón para abrir el modal -->
+<button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button ><a href="./carrera-iti.html">Volver a los Tests</a></button>
+<br>
+<br>
+<!-- El modal -->
+<div id="miModal" class="modal">
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <!-- Encabezado del modal -->
+    <div class="modal-encabezado">
+      <span class="cerrarModal">&times;</span>
+      <h2>Recomendaciones</h2>
+    </div>
+    <!-- Cuerpo del modal -->
+    <div class="modal-cuerpo">
+      <p id="mensaje"></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="./js/testea.js"></script>
+    
+</body>
+</html>

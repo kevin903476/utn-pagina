@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Logico</title>
+ <link rel="stylesheet" href="./style/style-test.css">
+
+
+</head>
+<body>
+
+    <header>
+        <h1>Test Logico</h1>
+        <p>Responde las siguientes preguntas, según consideres</p>
+        <div class="waves">
+            <img src="img/img2.svg" />
+          </div>
+    </header>
+    
+    
+
+    <div class="container">
+        <section id="p0">
+            <h3>1. Si un tren viaja de Ciudad A a Ciudad B a una velocidad promedio de 60 km/h y luego regresa de Ciudad B a Ciudad A a una velocidad promedio de 80 km/h, ¿cuál es la velocidad promedio del tren durante todo el viaje?
+                ?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">60 km/h.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">100 km/h.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">70 km/h.
+            </label>
+        </section>
+
+        <section id="p1">
+            <h3>2- Si tres personas pueden pintar una casa en 4 días, ¿cuánto tiempo tomaría a 6 personas pintar la misma casa?
+                </h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">2 días
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">1 días
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">3 días
+            </label>
+        </section>
+
+        <section id="p2">
+            <h3>3- Si A es mayor que B, B es mayor que C, y C es mayor que D, ¿cuál de las siguientes afirmaciones es verdadera?
+            </h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> A es igual a D.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)">D es mayor que A.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)">A es mayor que D.
+            </label>
+        </section>
+
+        <section id="p3">
+            <h3>4- Si un reloj marca las 2:00 PM, ¿en cuántos grados se han movido las manecillas del reloj desde las 9:00 AM del mismo día?                </h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)">En 260 grados.
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)">En 270 grados.
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)">En 250 grados.
+            </label>
+        </section>
+
+        <section id="p4">
+            <h3>5-  Si un número es divisible por 3 y por 5, ¿cuál de las siguientes afirmaciones es verdadera?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)">El número es divisible por 8 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p4"  onclick="respuesta(4,this)">El número es divisible por 15
+
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p4"  onclick="respuesta(4,this)">El número es divisible por 12
+
+            </label>
+        </section>
+
+        <section id="p5">
+            <h3>6- Si 5 máquinas producen 200 piezas en 8 horas, ¿cuántas piezas producirán 8 máquinas en 5 horas?
+            </h3>
+            <label>
+                <input type="radio" value="1" name="p5"  onclick="respuesta(5,this)">800 piezas.
+
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p5" onclick="respuesta(5,this)">600 piezas.
+
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p5" onclick="respuesta(5,this)">700 piezas.
+
+            </label>
+        </section>
+
+        <section id="p6">
+            <h3>7- Si Juan tiene el doble de la edad que tenía hace 10 años, y la suma de sus edades actuales con las de su hermana es 50 años, ¿cuántos años tiene Juan?
+                ?</h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="respuesta(6,this)">35 años
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p6" onclick="respuesta(6,this)">25 años
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p6" onclick="respuesta(6,this)">30 años
+            </label>
+        </section>
+
+      
+
+<button id="resultados" onclick="corregir()" >Terminar Intento</button>
+
+<br>
+<h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+
+<!-- Botón para abrir el modal -->
+
+<button id="abrirModal">Ver Recomendaciones</button>
+<button id="cargar" >cargar</button>
+<div id="contenido"></div>
+<br>
+<button ><a href="./carrera-iti.html">Volver a los Tests</a></button>
+<br>
+<br>
+<!-- El modal -->
+<div id="miModal" class="modal">
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <!-- Encabezado del modal -->
+    <div class="modal-encabezado">
+      <span class="cerrarModal">&times;</span>
+      <h2>Recomendaciones</h2>
+    </div>
+    <!-- Cuerpo del modal -->
+    <div class="modal-cuerpo">
+      <p id="mensaje"></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="./js/controller_iti.js" type="module" ></script>
+    <script src="./js/testea2 .js"></script>
+    
+</body>
+</html>

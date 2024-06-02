@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style-loading.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+    <title>Inicio</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="contenedor-loading">
+        <div class="loading-image">
+          <img src="./img/loading.gif" alt="gif" height="150" width="150" />
+        </div>
+
+        <div class="loading-text">
+          <p>Cargando...</p>
+        </div>
+      </div>
+      <!-- inicio de la pantalla principal -->
+      <div class="principal-screen">
+        <div class="background"></div>
+
+        <header class="header">
+          <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" /></a>
+
+          <button class="button">
+            <svg
+              class="icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </button>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="./index.html">INICIO</a></li>
+              <li><a href="https://www.utn.ac.cr">PRINCIPAL UTN</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="banner-content">
+          <div class="info">
+            <h1 class="principal-title">¿No sabes qué estudiar?</h1>
+            <div id="link-banner-content">
+              <a onclick="show()" id="login-link" href="./login.html"
+                >Iniciar</a
+              >
+              <a id="register-link" href="./Registro.html">Registrar</a>
+            </div>
+            <div id="login-name">
+              <h2 id="name">Bienvenido</h2>
+              <a id="logout-button" onclick="out()" onclick="logout()">Salir</a>
+            </div>
+          </div>
+        </div>
+        <div class="waves">
+          <img src="img/img2.svg" />
+        </div>
+      </div>
+      <!-- final de la pantalla principal -->
+
+      <!-- inicio del content test  -->
+      <div id="first-info-content" class="info-content">
+        <h2 class="tittle">Qué es un Test Actitudinal</h2>
+        <p>
+          Un test actitudinal es una evaluación diseñada para medir las
+          actitudes y valores de una persona hacia ciertos temas, situaciones o
+          áreas de la vida. Ayuda a comprender cómo una persona se siente o
+          piensa sobre determinados aspectos, y puede utilizarse en contextos
+          como la orientación vocacional, el desarrollo personal o la
+          investigación psicológica.
+        </p>
+        <div class="video-youtube">
+          <iframe
+            src="https://www.youtube.com/embed/IOyGoIovLNg?si=aPH22JgHgXOTJ6Zp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!--  <video
+          src="img/Sans fortnite default dance green screen version 2.mp4"
+          autoplay
+          muted
+          loop
+        ></video> -->
+      </div>
+      <!-- final del content test  -->
+      <div id="separator-content"></div>
+
+      <!-- inicio del contenido de cartas -->
+
+      <div id="content-carts">
+        <h1 class="tittle">Carreras que ofrece la UTN</h1>
+        <div class="box-container">
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img_svg/4.svg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Tecnologías de la información</h3>
+              <p>
+                Si quieres tener más información sobre esta carrera presiona el
+                botón de abajo
+              </p>
+              <br />
+              <a href="carrera-iti.html" class="link-box">Más información</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img_svg/2.svg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Agronomía</h3>
+              <p>
+                Si quieres tener más información sobre esta carrera presiona el
+                botón de abajo
+              </p>
+              <br />
+              <a href="/carrera-iti.html" class="link-box">Más información</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img_svg/1.svg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Energética</h3>
+              <p>
+                Si quieres tener más información sobre esta carrera presiona el
+                botón de abajo
+              </p>
+              <br />
+              <a href="/carrera-iti.html" class="link-box">Más información</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img_svg/6.svg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Inglés</h3>
+              <p>
+                Si quieres tener más información sobre esta carrera presiona el
+                botón de abajo
+              </p>
+              <br />
+              <a href="/carrera-iti.html" class="link-box">Más información</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img_svg/3.svg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Salud</h3>
+              <p>
+                Si quieres tener más información sobre esta carrera presiona el
+                botón de abajo
+              </p>
+              <br />
+              <a href="/carrera-iti.html" class="link-box">Más información</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img_svg/5.svg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Química</h3>
+              <p>
+                Si quieres tener más información sobre esta carrera presiona el
+                botón de abajo
+              </p>
+              <br />
+              <a href="/carrera-iti.html" class="link-box">Más información</a>
+            </div>
+          </div>
+        </div>
+        <!-- final del contenido de cartas -->
+
+        <!-- inicio del footer -->
+        <div id="separator"></div>
+        <div class="waves-position">
+          <img src="img/img6.svg" />
+        </div>
+        <footer class="footer">
+          <div class="footer-container">
+            <dic class="block-footer">
+              <div class="footer-col">
+                <h4>Sobre nosotros</h4>
+                <ul>
+                  <li>
+                    <a href="https://www.utn.ac.cr/mapas-y-direcciones"
+                      >Ubicaciones</a
+                    >
+                  </li>
+                  <li><a href="https://www.utn.ac.cr/carreras">carreras</a></li>
+                  <!-- <li><a href="#">videos</a></li> -->
+                  <li>
+                    <a href="https://www.utn.ac.cr/cursos-libres-por-sede"
+                      >cursos</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.utn.ac.cr/content/directorio-sede-de-guanacaste"
+                      >Sede de Guanacaste</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.utn.ac.cr/content/contacto-sede-central"
+                      >Sede de Central</a
+                    >
+                  </li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+            </dic>
+            <div class="block-footer">
+              <div class="footer-col">
+                <h4>Información</h4>
+                <ul>
+                  <li>
+                    <a href="https://www.utn.ac.cr/content/informacion-general"
+                      >Información General
+                    </a>
+                  </li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                  <a
+                    href="https://www.facebook.com/UniversidadTecnicaNacional/?locale=es_LA"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <!-- <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a> -->
+                  <a
+                    href="https://www.linkedin.com/school/utncostarica/?originalSubdomain=cr"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- final del footer -->
+
+        <script src="./js/app.js"></script>
+
+        <script src="js/google.js"></script>
+
+        <script src="js/loading.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

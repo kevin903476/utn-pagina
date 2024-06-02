@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style-test.css">
+</head>
+<body>
+    <header>
+        <div class="texto-test">
+            <h1>Test Matematico</h1>
+            <p>Pon aprueba tu lógica matemática</p>
+        </div>
+        
+        
+        <div class="waves">
+            <img src="img/img2.svg" />
+          </div>
+    </header>
+    <div class="container">
+        <section id="p0">
+            <h3>1- Si un triángulo equilátero tiene un perímetro de 24 cm, ¿cuál es la longitud de cada lado?</h3>
+        <label>
+            <input type="radio" value="1" name="p0" onclick="respuesta(0,this)"> 12 cm
+        </label>
+        <label>
+            <input type="radio" value="2" name="p0" onclick="respuesta(0,this)"> 6 cm
+        </label>
+        <label>
+            <input type="radio" value="3" name="p0" onclick="respuesta(0,this)"> 8 cm
+        </label>
+    </section>
+    <section id="p1">
+        <h3>2- Si un sistema informático tarda 10 minutos en procesar un conjunto de datos de tamaño 100 MB, ¿cuánto tiempo tardará en procesar un conjunto de datos de tamaño 500 MB, suponiendo que la velocidad de procesamiento es constante?</h3>
+
+    <label>
+        <input type="radio" value="1" name="p1" onclick="respuesta(1,this)"> 40 minutos
+    </label>
+    <label>
+        <input type="radio" value="2" name="p1" onclick="respuesta(1,this)"> 1 hora
+    </label>
+    <label>
+        <input type="radio" value="3" name="p1" onclick="respuesta(1,this)"> 50 minutos
+    </label>
+</section>
+<section id="p2">
+    <h3>3-Si el producto de dos números es 24 y su suma es 10, ¿cuáles son esos números?</h3>
+<label>
+    <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> 5 y 5 
+</label>
+<label>
+    <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> 6 y 4 
+</label>
+<label>
+    <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> 8 y 3
+</label>
+</section>
+<section id="p3">
+    <h3>4-¿Cuál es el siguiente número en la siguiente secuencia? 2, 4, 8, 16, ... </h3>
+<label>
+    <input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> 24
+</label>
+<label>
+    <input type="radio" value="2" name="p3" onclick="respuesta(3,this)"> 32 
+</label>
+<label>
+    <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> 26
+</label>
+</section>
+<section id="p4">
+    <h3>5- Tienes una caja con 3 manzanas, 4 naranjas y 5 plátanos. Si eliges dos frutas al azar, ¿cuál es la probabilidad de que ambas sean naranjas? </h3>
+<label>
+    <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> 1/11
+</label>
+<label>
+    <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> 2/10
+</label>
+<label>
+    <input type="radio" value="3" name="p4" onclick="respuesta(4,this)"> 1/10
+</label>
+</section>
+<section id="p5">
+    <h3>6-  Si una computadora puede ejecutar 500 líneas de código por segundo, ¿cuánto tiempo tomará ejecutar un programa que consta de 2000 líneas de código?</h3>
+<label>
+    <input type="radio" value="1" name="p5" onclick="respuesta(5,this)"> 5 segundos
+</label>
+<label>
+    <input type="radio" value="2" name="p5" onclick="respuesta(5,this)"> 2 segundos
+</label>
+<label>
+    <input type="radio" value="3" name="p5" onclick="respuesta(5,this)"> 4 segundos
+</label>
+</section>
+<section id="p6">
+<h3>7- ¿Cuál es la diferencia entre la suma de los primeros 10 números pares y la suma de los primeros 10 números impares?</h3>
+<label>
+    <input type="radio" value="1" name="p6" onclick="respuesta(6,this)"> 2
+</label>
+<label>
+    <input type="radio" value="2" name="p6" onclick="respuesta(6,this)"> 10
+</label>
+<label>
+    <input type="radio" value="3" name="p6" onclick="respuesta(6,this)"> 12
+</section>
+<section id="p7">
+    <h3>8- En una caja hay 12 pelotas: 4 azules, 3 rojas y 5 verdes. Si sacas una pelota al azar sin mirar, ¿cuál es la probabilidad de que saques una pelota roja?</h3>
+    <label>
+        <input type="radio" value="1" name="p7" onclick="respuesta(7,this)"> 1/3
+    </label>
+    <label>
+        <input type="radio" value="2" name="p7" onclick="respuesta(7,this)"> 1/4
+    </label>
+    <label>
+        <input type="radio" value="3" name="p7" onclick="respuesta(7,this)">1/2
+    </section>
+    <section id="p8">
+    <h3>9- ¿Cuál es el siguiente número en la siguiente secuencia? 2,5,10, 17, ...</h3>
+    <label>
+    <input type="radio" value="1" name="p8" onclick="respuesta(8,this)"> 26
+    </label>
+    <label>
+    <input type="radio" value="2" name="p8" onclick="respuesta(8,this)"> 27
+    </label>
+    <label>
+    <input type="radio" value="3" name="p8" onclick="respuesta(8,this)"> 29
+</section>
+<section id="p9">
+    <h3>10- Si tres hermanas tienen edades consecutivas y la suma de sus edades es 30, ¿cuál es la edad de la hermana mayor?</h3>
+    <label>
+    <input type="radio" value="1" name="p9" onclick="respuesta(9,this)"> 9
+    </label>
+    <label>
+    <input type="radio" value="2" name="p9" onclick="respuesta(9,this)"> 11
+    </label>
+    <label>
+    <input type="radio" value="3" name="p9" onclick="respuesta(9,this)"> 12
+</section>
+<br>
+
+<button id="resultados" onclick="corregir()">Terminar Intento</button>
+<br>
+<h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+
+<!-- Botón para abrir el modal -->
+
+<button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button ><a href="./carrera-iti.html">Volver a los Tests</a></button>
+<br>
+<br>
+<!-- El modal -->
+<div id="miModal" class="modal">
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <!-- Encabezado del modal -->
+    <div class="modal-encabezado">
+      <span class="cerrarModal">&times;</span>
+      <h2>Recomendaciones</h2>
+    </div>
+    <!-- Cuerpo del modal -->
+    <div class="modal-cuerpo">
+      <p id="mensaje"></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="./js/Matematico.js"></script>
+</body>
+</html>
