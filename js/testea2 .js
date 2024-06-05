@@ -49,7 +49,7 @@ function corregir() {
   }
 
   // Desactiva el botón de corregir
-  document.getElementById("resultados").disabled = true;
+  document.getElementById("resultado").disabled = true;
 
   var btnAbrirModal = document.getElementById("abrirModal");
 

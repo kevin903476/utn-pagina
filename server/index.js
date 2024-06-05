@@ -23,6 +23,7 @@ app.post('/insert', (request, response) =>{
 //read
 app.get('/getAll', (request, response) =>{
     const db = dbService.getDbServiceInstance();
+
     const result = db.getAllData();
     
     result
@@ -30,11 +31,35 @@ app.get('/getAll', (request, response) =>{
     .catch(err => console.log(err)); 
 });
 //update
-app.patch('/update', (request , response) => {
+app.patch('/updatePLG', (request , response) => {
     const {puntuacion_logico, nombre} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByName(puntuacion_logico,nombre);
+    const result = db.updateByNamePLG(puntuacion_logico,nombre);
     console.log(puntuacion_logico)
+    console.log(nombre)
+
+
+    result
+    .then(data => response.json({sucess : data}))
+    .catch(err => console.log(err))
+})
+app.patch('/updatePMT', (request , response) => {
+    const {puntuacion_matematico, nombre} =request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.updateByNamePMT(puntuacion_matematico,nombre);
+    console.log(puntuacion_matematico)
+    console.log(nombre)
+
+
+    result
+    .then(data => response.json({sucess : data}))
+    .catch(err => console.log(err))
+})
+app.patch('/updatePIM', (request , response) => {
+    const {puntuacion_idioma, nombre} =request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.updateByNamePIM(puntuacion_idioma,nombre);
+    console.log(puntuacion_idioma)
     console.log(nombre)
 
 
