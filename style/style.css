@@ -231,7 +231,27 @@
   background-attachment: fixed;
   position: relative;
 }
-.image-banner::before {
+.image-banner-ile {
+  width: 100%;
+  height: 100%;
+  background: url(/img/ingles-telefono.jpg);
+  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  background-position: center; /* Para centrar la imagen */
+  background-attachment: fixed;
+  position: relative;
+}
+.image-banner-gec {
+  width: 100%;
+  height: 100%;
+  background: url(/img/turismo-telefono.jpg);
+  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  background-position: center; /* Para centrar la imagen */
+  background-attachment: fixed;
+  position: relative;
+}
+.image-banner::before , .image-banner-ile::before, .image-banner-gec::before {
   content: "";
   position: absolute;
   top: 0;
@@ -896,6 +916,24 @@ background-color: #006691;
     background-attachment: fixed;
     position: relative;
   }
+  .image-banner-ile {
+    
+    background: url(/img/ingles.jpg);
+    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed;
+    position: relative;
+  }
+  .image-banner-gec {
+    
+    background: url(/img/turismo.jpg);
+    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed;
+    position: relative;
+  }
   .button {
     display: none;
   }
@@ -944,6 +982,11 @@ background-color: #006691;
   }
   .video-youtube , .video {
     height: 400px;
+    width: 70%;
+  }
+  .imagen {
+    text-align: center;
+    
     width: 70%;
   }
   #separator-content{
