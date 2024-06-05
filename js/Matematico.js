@@ -36,7 +36,7 @@ function corregir() {
       mensaje = "Hay que seguir estudiando";
   }
 
-    document.getElementById("resultado").innerHTML = cantidad_correctas;
+    document.getElementById("resultado-mate").innerHTML = cantidad_correctas;
     document.getElementById("mensaje").innerHTML = mensaje;
     mostrarRecomendaciones();
 

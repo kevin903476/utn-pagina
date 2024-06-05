@@ -192,11 +192,25 @@
         <br>
         <button id="resultados" onclick="corregir()">Terminar Intento</button>
         <br>
-        <h2>Cantidad acertadas <span id="resultado"></span></h2>
+
+        <!-- prueba de nombre -->
+        <div id="nombre-bd">
+            <center>
+                <p>ingresa tu nombre</p>
+                <input type="text" id="nombre-insertar-im">
+            </center>
+            <br>
+            
+        </div>
+<!-- fin prueba de nombre -->
+
+        <h2>Cantidad acertadas <span id="resultado-idioma"></span></h2>
 <!-- //respuestas 1-a,  2-c,  3-a, 4-b, 5-b, 6-c, 7-a, 8-c, 9-b, 10-c -->
 
 <!-- Botón para abrir el modal -->
 <button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button id="cargar-im">cargar</button>
 <br>
 <button ><a href="./carrera-iti.html">Volver a los Tests</a></button>
 <br>
@@ -219,6 +233,8 @@
 
     </div>
     <script src="./js/testea.js"></script>
+    <script src="./js/controller_iti.js"></script>
+    
     
 </body>
 </html>

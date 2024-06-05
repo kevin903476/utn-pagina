@@ -118,7 +118,7 @@ h2 {
   text-align: center;
 }
 
-#resultado {
+#resultado, #resultado-idioma, #resultado-mate{
   font-size: 30px;
   color: darkblue;
 }

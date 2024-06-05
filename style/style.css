@@ -364,6 +364,22 @@
 
 /*_____ final habilidades  _____*/
 
+
+#contenedor-tabla{
+  width: 100%;
+}
+#table{
+  width: 90%;
+  
+  margin: auto;
+  
+}
+
+#table tbody{
+  color: beige;
+  
+}
+
 /*_____ inicio contenido  plan estudios_____*/
 
 

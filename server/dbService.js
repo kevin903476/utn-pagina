@@ -45,7 +45,7 @@ class DbService{
                 const query = "INSERT INTO carrera_iti (nombre, test_logico, test_matematico, test_idioma) VALUES (?,0,0,0)";
                 connection.query(query,[name], (err , results)=>{
                     if (err) reject(new Error(err.message));
-                    resolve(result.insertUser);
+                    resolve(results.insertUser);
                 }) 
             });
 
@@ -57,12 +57,46 @@ class DbService{
         }
     }
 
-    async updateByName(puntuacion_logico, nombre){
+    async updateByNamePLG(puntuacion_logico, nombre){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_logico = (?) WHERE nombre = 'kevin'"
+                const query = "UPDATE carrera_iti SET puntuacion_logico = (?) WHERE nombre = ?"
                 connection.query(query, [puntuacion_logico, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+    async updateByNamePMT(puntuacion_matematico, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_matematico = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_matematico, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+    async updateByNamePIM(puntuacion_idioma, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_idioma = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_idioma, nombre],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 

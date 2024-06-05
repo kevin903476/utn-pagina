@@ -140,11 +140,22 @@
 
 <button id="resultados" onclick="corregir()">Terminar Intento</button>
 <br>
-<h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+<h2>Cantidad Acertadas: <span id="resultado-mate"></span></h2>
 
 <!-- Botón para abrir el modal -->
 
+<div id="nombre-bd">
+    <center>
+        <p>ingresa tu nombre</p>
+        <input type="text" id="nombre-insertar-mt">
+    </center>
+    <br>
+    
+</div>
+
 <button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button id="cargar-mt" >cargar</button>
 <br>
 <button ><a href="./carrera-iti.html">Volver a los Tests</a></button>
 <br>
@@ -167,5 +178,6 @@
 
     </div>
     <script src="./js/Matematico.js"></script>
+    <script src="./js/controller_iti.js"></script>
 </body>
 </html>
