@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const btnCargar_im = document.querySelector("#cargar-im");
-  const btnCargar = document.querySelector("#cargar");
-  const btnCargar_mt = document.querySelector("#cargar-mt");
+  const btnCargar_im = document.querySelector("#enviar-im");
+  const btnCargar = document.querySelector("#enviar");
+  const btnCargar_mt = document.querySelector("#enviar-mt");
   fetch("http://localhost:5501/getAll")
     .then((response) => response.json())
     .then((data) => loadTable(data["data"]));
@@ -26,7 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.sucess) {
-            location.reload();
+            alert()
+            btnCargar_mt.classList.add('presionado')
+            btnCargar_mt.classList.add('no-hover')
+            btnCargar_mt.innerHTML = 'enviado'
+            //location.reload();
           }
         });
     };
@@ -51,7 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.sucess) {
-            location.reload();
+            btnCargar_im.classList.add('presionado')
+            btnCargar_im.classList.add('no-hover')
+            btnCargar_im.innerHTML = 'enviado'
+            //location.reload();
           }
         });
     };
@@ -61,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const numero = document.querySelector("#resultado");
       const nombre = document.querySelector("#nombre-insertar").value;
       const resultado = numero.textContent;
+    
   
       fetch("http://localhost:5501/updatePLG", {
         method: "PATCH",
@@ -75,7 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.sucess) {
-            location.reload();
+            btnCargar.classList.add('presionado')
+            btnCargar.classList.add('no-hover')
+            btnCargar.innerHTML = 'enviado'
+            //location.reload();
           }
         });
     };

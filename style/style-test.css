@@ -43,6 +43,10 @@ label {
 label:hover {
   background: #94e7ff;
 }
+.presionado{
+  background-color: #02293a;
+}
+
 button a{
   color: white;
 }
@@ -66,6 +70,9 @@ button{
   padding: 10px;
   }
   
+  .no-hover::before {
+    width: 0 !important;
+  }
   
   button::before{
       text-decoration: none;
