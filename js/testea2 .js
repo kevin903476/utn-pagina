@@ -1,3 +1,5 @@
+
+const terminar = document.getElementById("terminar");
 let correctas = [3, 1, 3, 2, 2, 1, 3];
 
 let opcion_elegida = [];
@@ -49,9 +51,13 @@ function corregir() {
   }
 
   // Desactiva el botón de corregir
-  document.getElementById("resultado").disabled = true;
+ 
+  
 
-  var btnAbrirModal = document.getElementById("abrirModal");
+  
+}
+
+var btnAbrirModal = document.getElementById("abrirModal");
 
   var modal = document.getElementById("miModal");
 
@@ -75,5 +81,9 @@ function corregir() {
     var mensaje = document.getElementById("mensaje").textContent;
     document.getElementsByClassName("modal-cuerpo")[0].innerHTML = mensaje;
   }
+
+terminar.onclick = function(){
+  corregir();
+  terminar.disabled = true
 }
 
