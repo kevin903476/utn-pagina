@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    
     <div id="container">
       <div class="contenedor-loading">
         <div class="loading-image">
@@ -52,7 +53,6 @@
             <ul class="nav-list">
               <li><a href="./index.html">INICIO</a></li>
               <li><a href="https://www.utn.ac.cr">PRINCIPAL UTN</a></li>
-              <li><a href="./tabla.html">TABLA</a></li>
             </ul>
           </nav>
         </header>
@@ -60,7 +60,7 @@
           <div class="info">
             <h1 class="principal-title">¿No sabes qué estudiar?</h1>
             <div id="link-banner-content">
-              <a id="login-link" href="./login.html"
+              <a onclick="show()" id="login-link" href="./login.html"
                 >Iniciar</a
               >
               <a id="register-link" href="./Registro.html">Registrar</a>
@@ -108,8 +108,6 @@
       <!-- final del content test  -->
       <div id="separator-content"></div>
 
-
-
       <!-- inicio del contenido de cartas -->
 
       <div id="content-carts">
@@ -117,7 +115,7 @@
         <div class="box-container">
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img_svg/4.svg" alt="" />
+              <img src="img/informatica.png" alt=""  />
             </div>
             <div class="card-info">
               <h3>Tecnologías de la información</h3>
@@ -132,7 +130,7 @@
 
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img_svg/2.svg" alt="" />
+              <img src="img/agronomia.png" alt="" />
             </div>
             <div class="card-info">
               <h3>Agronomía</h3>
@@ -147,7 +145,7 @@
 
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img_svg/1.svg" alt="" />
+              <img src="img/energia-renovable.png" alt="" />
             </div>
             <div class="card-info">
               <h3>Energética</h3>
@@ -162,7 +160,7 @@
 
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img_svg/6.svg" alt="" />
+              <img src="img/intercambio.png" alt=""/>
             </div>
             <div class="card-info">
               <h3>Inglés</h3>
@@ -171,27 +169,13 @@
                 botón de abajo
               </p>
               <br />
-              <a href="/carrera-ile.html" class="link-box">Más información</a>
-            </div>
-          </div>
-          <div class="card-content" id="column">
-            <div class="card-image">
-              <img src="img_svg/ecoturismo.svg" alt="" />
-            </div>
-            <div class="card-info">
-              <h3>Gestion Ecoturistica</h3>
-              <p>
-                Si quieres tener más información sobre esta carrera presiona el
-                botón de abajo
-              </p>
-              <br />
-              <a href="carrera-gec.html" class="link-box">Más información</a>
+              <a href="/carrera-iti.html" class="link-box">Más información</a>
             </div>
           </div>
 
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img_svg/3.svg" alt="" />
+              <img src="img/casco.png" alt="" />
             </div>
             <div class="card-info">
               <h3>Salud</h3>
@@ -203,7 +187,7 @@
               <a href="/carrera-iti.html" class="link-box">Más información</a>
             </div>
           </div>
-
+<!-- 
           <div class="card-content" id="column">
             <div class="card-image">
               <img src="img_svg/5.svg" alt="" />
@@ -217,7 +201,7 @@
               <br />
               <a href="/carrera-iti.html" class="link-box">Más información</a>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- final del contenido de cartas -->
 
@@ -306,7 +290,6 @@
         <script src="js/google.js"></script>
 
         <script src="js/loading.js"></script>
-        
       </div>
     </div>
   </body>
