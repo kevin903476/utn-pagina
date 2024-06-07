@@ -2,6 +2,13 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+body{
+  margin: 0 ;
+}
+h1{
+  padding: 15px;
+  margin: 0;
+}
 header {
   text-align: center;
   background: linear-gradient(#006691, #fff);
@@ -36,7 +43,9 @@ label {
 label:hover {
   background: #94e7ff;
 }
-
+button a{
+  color: white;
+}
 button{
   width: 20em; 
   height: 3em; 
@@ -52,7 +61,8 @@ button{
   display: block;
   margin: auto;
   text-align: center;
-
+  color: white;
+  background-color: #007eb4;
   padding: 10px;
   }
   

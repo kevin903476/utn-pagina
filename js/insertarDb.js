@@ -25,7 +25,6 @@ function insertUser(nombre){
 btnInsertar.onclick = function(){
     const nombre = document.querySelector('#nombre-insertar');
     insertUser(nombre.value)
-    console.log(ingresado)
     
   }
 
