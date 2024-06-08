@@ -50,4 +50,3 @@ if(spanCerrarModal){
         document.getElementById("miModal").style.display = "none";
     }
 }
-
