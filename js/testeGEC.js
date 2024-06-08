@@ -17,13 +17,15 @@ function calcularPuntuacion() {
     }
 
     
-    document.getElementById('resultado').innerText = `Puntuación total: ${totalPuntos} puntos`;
+    
 
     
     document.getElementById('mensaje').innerText = interpretacion;
 
     
     document.getElementById('miModal').style.display = "block";
+    document.getElementById('resultado').innerText = `Puntuación total: ${totalPuntos} puntos`;
+
 }
 
 
@@ -39,12 +41,7 @@ window.onclick = function(event) {
 }
 
 
-var btnAbrirModal = document.getElementById("abrirModal");
-if(btnAbrirModal){
-    btnAbrirModal.onclick = function() {
-        document.getElementById("miModal").style.display = "block";
-    }
-}
+
 
 
 var spanCerrarModal = document.getElementsByClassName("cerrarModal")[0];

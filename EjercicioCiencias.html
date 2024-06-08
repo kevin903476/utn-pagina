@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Ciencias Basicas</title>
+ <link rel="stylesheet" href="./style/style-test.css">
+
+
+</head>
+<body>
+
+    <header>
+        <h1>Ejercicio Ciencias Basicas</h1>
+        <p>Responde las siguientes preguntas, según consideres</p>
+        <div class="waves">
+            <img src="img/img2.svg" />
+          </div>
+    </header>
+    
+    
+
+    <div class="container">
+        <section id="p0">
+            <h3> 1. Un productor observa que una planta en su finca que crece más rápido cuando la coloca en un lugar 
+                soleado que cuando la coloca en un lugar con sombra. 
+                ¿Qué proceso biológico es responsable del crecimiento más rápido de la planta en el lugar soleado?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">A)-Respiración 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">B)-Fotosíntesis
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">C)-Fermentación  
+            </label>
+            <label>
+                <input type="radio" value="4" name="p0" onclick="respuesta(0,this)">D)-Transpiración 
+            </label>
+        </section>
+
+        <section id="p1">
+            <h3>2.Un estudiante mezcla vinagre (ácido acético) con bicarbonato de sodio. 
+                Observa que la mezcla burbujea y libera un gas. 
+                ¿Qué tipo de reacción química se produce en esta mezcla?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">A)-Combustión  
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">B)-Neutralización 
+
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">C)- Síntesis 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p1" onclick="respuesta(1,this)">D)-Descomposición
+            </label>
+        </section>
+
+        <section id="p2">
+            <h3>3.Un investigador deja caer una pelota desde una ventana del segundo piso de un edificio. 
+                ¿Qué sucede con la velocidad de la pelota a medida que cae?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> A)-Disminuye 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> B)-Aumenta 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> C)-Primero aumenta y luego disminuye
+            </label>
+            <label>
+                <input type="radio" value="4" name="p2" onclick="respuesta(2,this)"> D) Permanece constante 
+            </label>
+        </section>
+
+        <section id="p3">
+            <h3>4- En un jardín, ¿cómo ayuda la lombriz de tierra al ciclo del agua?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> A)-Absorbe agua del suelo y la libera a la atmósfera. 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)"> B)-Crea túneles en el suelo que permiten que el agua se infiltre más fácilmente. 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> C)-Deposita materia orgánica en el suelo, que mejora su capacidad de retención de agua 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p3" onclick="respuesta(3,this)"> D)-Todas las opciones anteriores. mm 
+            </label>
+        </section>
+
+        <section id="p4">
+            <h3>5-En una piscina, ¿qué proceso químico ayuda a eliminar el cloro y otros desinfectantes del agua?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> A)-Filtracion
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> B)- Fotosíntesis 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p4" onclick="respuesta(4,this)"> C)-Descomposición
+            </label>
+            <label>
+                <input type="radio" value="4" name="p4" onclick="respuesta(4,this)"> D)-Evaporación  
+            </label>
+        </section>
+
+        <section id="p5">
+            <h3>6- En una granja, ¿cómo contribuye la rotación de cultivos al ciclo del nitrógeno?</h3>
+                <label>
+                    <input type="radio" value="1" name="p5" onclick="respuesta(5,this)"> A)-Aporta nitrógeno inorgánico al suelo a través de la fijación de nitrógeno por leguminosas. 
+                </label>
+    
+                <label>
+                    <input type="radio" value="2" name="p5" onclick="respuesta(5,this)"> B)-Reduce la cantidad de nitrógeno disponible para los organismos descomponedores.
+                </label>
+    
+                <label>
+                    <input type="radio" value="3" name="p5" onclick="respuesta(5,this)"> C)-Aumenta la salinidad del suelo, lo que favorece el crecimiento de algunas especies de plantas.
+                </label>
+                <label>
+                    <input type="radio" value="4" name="p5" onclick="respuesta(5,this)"> D)-Libera dióxido de carbono a la atmósfera, que es utilizado por las plantas para la fotosíntesis. 
+                </label>
+        </section>
+
+        <section id="p6">
+            <h3>7- En una planta, ¿qué tipo de célula es responsable de la fotosíntesis?</h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="respuesta(6,this)">A)-Células del xilema
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p6" onclick="respuesta(6,this)">B)-Células del floema
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p6" onclick="respuesta(6,this)">C)-Células epidérmicas 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p6" onclick="respuesta(6,this)">D)-Células cloroplastídicas  mm
+            </label>
+        </section>
+      
+<button id="resultados" onclick="corregir()" >Terminar Intento</button>
+
+<br>
+<!-- prueba de nombre -->
+<div id="nombre-bd">
+    <center>
+        <p>ingresa tu nombre</p>
+        <input type="text" id="nombre-insertar">
+    </center>
+    <br>
+    
+</div>
+<!-- fin prueba de nombre -->
+
+<h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+
+<!-- Botón para abrir el modal -->
+
+<button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button id="cargar" >cargar</button>
+<div id="contenido"></div>
+<br>
+<button ><a href="./carrera-agr.html">Volver a los Ejercicios</a></button>
+<br>
+<br>
+<!-- El modal -->
+<div id="miModal" class="modal">
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <!-- Encabezado del modal -->
+    <div class="modal-encabezado">
+      <span class="cerrarModal">&times;</span>
+      <h2>Recomendaciones</h2>
+    </div>
+    <!-- Cuerpo del modal -->
+    <div class="modal-cuerpo">
+      <p id="mensaje"></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="./js/controller_iti.js" type="module" ></script>
+    <!-- <script src="./js/testea2 .js"></script> -->
+    <script src="js/ejercicioCiencias.js"></script>
+    
+</body>
+</html>

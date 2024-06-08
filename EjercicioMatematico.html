@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Matematico</title>
+ <link rel="stylesheet" href="./style/style-test.css">
+
+
+</head>
+<body>
+
+    <header>
+        <h1>Ejercicio Matematico</h1>
+        <p>Responde las siguientes preguntas, según consideres</p>
+        <div class="waves">
+            <img src="img/img2.svg" />
+          </div>
+    </header>
+    
+    
+
+    <div class="container">
+        <section id="p0">
+            <h3> 1. Un agricultor tiene un campo rectangular de 300 metros de largo y 200 metros de ancho. 
+                Planea plantar maíz en la mitad del campo y frijoles en la otra mitad. Si el agricultor 
+                espera obtener un rendimiento promedio de 8 toneladas por hectárea de maíz y 5 toneladas por 
+                hectárea de frijoles,¿cuántas toneladas de maíz y frijoles espera cosechar en total?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">A)24 toneladas
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">B)32 toneladas 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">C)39 toneladas  
+            </label>
+            <label>
+                <input type="radio" value="4" name="p0" onclick="respuesta(0,this)">D)46 toneladas  
+            </label>
+            <label>
+                <input type="radio" value="5" name="p0" onclick="respuesta(0,this)"> E)54 toneladas 
+            </label>
+        </section>
+
+        <section id="p1">
+            <h3>2. Un agricultor tiene un sistema de riego por goteo que necesita 2 litros de agua/minuto 
+                para regar una hectárea. El sistema funciona durante 6 horas al día durante 5 días a la semana.
+                 Si el agricultor tiene 10 hectáreas de maíz, 
+                ¿cuántos litros de agua se han utilizado en total para regar las 10 hectáreas durante una semana?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">A)14,400 litros 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">B)21,600 litros 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">C)28,800 litros 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p1" onclick="respuesta(1,this)">D)36,000 litros 
+            </label>
+            <label>
+                <input type="radio" value="5" name="p1" onclick="respuesta(1,this)">E)43,200 litros
+            </label>
+        </section>
+
+        <section id="p2">
+            <h3>3. Un agricultor necesita comprar fertilizante para un campo de 5 hectáreas. 
+                El precio del fertilizante es de 40 colones por saco y cada saco cubre 0.4 hectáreas. 
+                Y también necesita comprar insecticida para el mismo terreno. El precio del insecticida es de 
+                20 colones por litro y se necesitan 2 litros por hectárea.
+                ¿Cuánto gastará el agricultor en total en fertilizante y Insecticida?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> A) ¢ 400
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> B) ¢ 700 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> C) ¢ 500 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p2" onclick="respuesta(2,this)"> D) ¢ 600
+            </label>
+            <label>
+                <input type="radio" value="5" name="p2" onclick="respuesta(2,this)"> E) ¢ 800
+            </label>
+        </section>
+
+        <section id="p3">
+            <h3>4- Un agricultor tiene una finca con 80 árboles de naranja. 
+                Si cada árbol produce un promedio de 60 kg de naranjas/año y las vende ¢ 1.20/Kg 
+                ¿cuánto dinero gana el agricultor en total por la venta de las naranjas en un año?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> A) ¢ 3,600 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)"> B) ¢ 4,800 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> C) ) ¢ 6,720  
+            </label>
+            <label>
+                <input type="radio" value="4" name="p3" onclick="respuesta(3,this)"> D) ¢ 5,760  
+            </label>
+            <label>
+                <input type="radio" value="5" name="p3" onclick="respuesta(3,this)"> E) ¢ 7,680
+            </label>
+        </section>
+
+        <section id="p4">
+            <h3>5-Un ganadero necesita comprar alimento para sus animales. 
+                El precio del alimento es de ¢ 20/saco y cada saco alimenta a 5 vacas durante una semana. 
+                Si el ganadero tiene 200 vacas, 
+                ¿cuántos sacos de alimento necesita comprar para una semana?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> A) 80 sacos 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> B) 40 sacos 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p4" onclick="respuesta(4,this)"> C) 120 sacos 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p4" onclick="respuesta(4,this)"> D) 160 sacos 
+            </label>
+            <label>
+                <input type="radio" value="5" name="p4" onclick="respuesta(4,this)"> E) 200 sacos
+            </label>
+        </section>
+
+        <section id="p5">
+            <h3>6- Un ganadero tiene una granja con 200 vacas lecheras. L
+                a producción promedio de leche por vaca es de 25 litros por día. 
+                El ganadero vende la leche a una empresa procesadora a un precio de ¢ 1.20/litro. 
+                Si el ganadero tiene un costo de producción de ¢ 0.80/litro, 
+                ¿cuál es su margen de ganancia diario por la venta de leche?</h3>
+                <label>
+                    <input type="radio" value="1" name="p5" onclick="respuesta(5,this)"> A) $800 
+                </label>
+    
+                <label>
+                    <input type="radio" value="2" name="p5" onclick="respuesta(5,this)"> B)  $1600 
+                </label>
+    
+                <label>
+                    <input type="radio" value="3" name="p5" onclick="respuesta(5,this)"> C) $400
+                </label>
+                <label>
+                    <input type="radio" value="4" name="p5" onclick="respuesta(5,this)"> D)  $2000
+                </label>
+                <label>
+                    <input type="radio" value="5" name="p5" onclick="respuesta(5,this)"> E) $1200 
+                </label>
+        </section>
+
+        <section id="p6">
+            <h3>7- Un agricultor dispone de un terreno rectangular de 200 metros de largo por 50 metros de ancho.
+                 Quiere dividirlo en parcelas cuadradas para plantar diferentes cultivos. 
+                ¿Cuál es la mayor cantidad de parcelas cuadradas de igual tamaño que puede obtener el agricultor 
+                sin que sobre terreno?</h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="respuesta(6,this)">A)25 parcelas 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p6" onclick="respuesta(6,this)">B)50 parcelas 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p6" onclick="respuesta(6,this)">C)100 parcelas 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p6" onclick="respuesta(6,this)">D)200 parcelas 
+            </label>
+            <label>
+                <input type="radio" value="5" name="p6" onclick="respuesta(6,this)">E)150 parcelas 
+            </label>
+        </section>
+        <section id="p7">
+            <h3>8- Un agricultor quiere construir un depósito cilíndrico para almacenar agua de riego. 
+                El depósito debe tener una capacidad de 100 metros cúbicos. 
+                ¿Cuál es el radio y la altura mínimos del cilindro que satisfacen esta condición?</h3>
+            <label>
+                <input type="radio" value="1" name="p7" onclick="respuesta(7,this)">A) Radio = 2.5 metros, Altura = 8 metros 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p7" onclick="respuesta(7,this)">B) Radio = 3 metros, Altura = 6.67 metros 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p7" onclick="respuesta(7,this)">C) Radio = 4 metros, Altura = 5 metros 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p7" onclick="respuesta(7,this)">D) Radio = 5 metros, Altura = 4 metros
+            </label>
+            <label>
+                <input type="radio" value="5" name="p7" onclick="respuesta(7,this)">E) Radio = 6 metros, Altura = 3 metros
+            </label>
+        </section>
+
+      
+<button id="resultados" onclick="corregir()" >Terminar Intento</button>
+
+<br>
+<!-- prueba de nombre -->
+<div id="nombre-bd">
+    <center>
+        <p>ingresa tu nombre</p>
+        <input type="text" id="nombre-insertar">
+    </center>
+    <br>
+    
+</div>
+<!-- fin prueba de nombre -->
+
+<h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+
+<!-- Botón para abrir el modal -->
+
+<button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button id="cargar" >cargar</button>
+<div id="contenido"></div>
+<br>
+<button ><a href="./carrera-agr.html">Volver a los ejercicios</a></button>
+<br>
+<br>
+<!-- El modal -->
+<div id="miModal" class="modal">
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <!-- Encabezado del modal -->
+    <div class="modal-encabezado">
+      <span class="cerrarModal">&times;</span>
+      <h2>Recomendaciones</h2>
+    </div>
+    <!-- Cuerpo del modal -->
+    <div class="modal-cuerpo">
+      <p id="mensaje"></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="./js/controller_iti.js" type="module" ></script>
+    <!-- <script src="./js/testea2 .js"></script> -->
+    <script src="js/ejercicioARG.js"></script>
+    
+</body>
+</html>

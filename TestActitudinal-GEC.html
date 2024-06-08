@@ -206,12 +206,13 @@
             </section>
         
         
-           
+
             <section id="p13">
                 <h3>14.¿Qué te apasiona del ecoturismo?</h3>
                 <label >
                     <input type="radio" value="3" name="p13"> A) Me apasiona la idea de trabajar en un campo que promueva la conservación del medio ambiente y el desarrollo sostenible de las comunidades locales. Creo que el ecoturismo puede ser una herramienta poderosa para generar un cambio positivo en el mundo.
-                <label >
+                </label>
+                <label>
                     <input type="radio" value="2" name="p13"> B)  Me apasiona la idea de trabajar en un campo que me permita estar en contacto con la naturaleza y aprender sobre diferentes culturas. Creo que el ecoturismo es una carrera que me permitirá combinar mis pasiones y tener un impacto positivo en el mundo.
                 </label>
                 <label >
@@ -233,21 +234,21 @@
                 </label>
             </section>
             <br>
-        
+
     </div>
+    <input type="text" id="nombre" placeholder="Introduce tu nombre">
     <button type="button" onclick="calcularPuntuacion()">Enviar</button>
     
-    <p id="result"></p>
+    
 </body>
 </html>
 
 <br>
-<h2><span id="resultado"></span></h2>
+
 
 <!-- Botón para abrir el modal -->
 
-<button id="abrirModal">Ver Recomendaciones</button>
-<br>
+
 
 <button id="cargar" >cargar</button>
 <div id="contenido"></div>
@@ -257,9 +258,9 @@
 <br>
 <!-- El modal -->
 <div id="miModal" class="modal">
-  <!-- Contenido del modal -->
+
   <div class="modal-contenido">
-    <!-- Encabezado del modal -->
+    
     <div class="modal-encabezado">
       <span class="cerrarModal">&times;</span>
       <h2>Recomendaciones</h2>
@@ -267,6 +268,7 @@
     <!-- Cuerpo del modal -->
     <div class="modal-cuerpo">
       <p id="mensaje"></p>
+      <p id="resultado"></p>
     </div>
   </div>
 </div>

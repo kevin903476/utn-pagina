@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Idioma</title>
+ <link rel="stylesheet" href="./style/style-test.css">
+</head>
+<body>
+
+    <!-- <header>
+        <h1>Test de Idioma</h1>
+        <p>Read the following paragraph and answer the questions:</p>
+    </header> -->
+
+    <header>
+        <div class="texto-test">
+          <h1>Ejercicio de Ingles</h1>
+          <p>Read the following paragraph and answer the questions:</p>
+        </div>
+        <div class="waves">
+          <img src="img/img2.svg" />
+        </div>
+      </header>
+
+
+
+    <div class="container">
+
+        <section id="enunciado">
+            <p>The Amazon rainforest is the largest rainforest in the world, covering an area of over 
+                2 million square miles. It is home to an incredible diversity of plant and animal life, 
+                including over 10% of the world's known species. The rainforest is also a vital source of 
+                oxygen for the planet, and it plays an important role in regulating the Earth's climate.
+                However, the Amazon rainforest is under threat from deforestation. Every year, millions of 
+                acres of rainforest are cleared for logging, agriculture, and mining. This deforestation 
+                is having a devastating impact on the environment, leading to loss of biodiversity, soil 
+                erosion, and climate change.
+                </p>
+        </section>
+        <section id="p0">
+            <h3>1-What is the Amazon rainforest? </h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">A)-A large desert in Africa 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">B)-The largest rainforest in the world 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">C)-A mountain range in South America 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p0" onclick="respuesta(0,this)">D)-A type of plant found in tropical climates
+            </label>
+        </section>
+
+        <section id="p1">
+            <h3>2- What is the importance of the Amazon rainforest? </h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">A)-It is home to a diverse range of plant and animal life. 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">B)-It is a vital source of oxygen for the planet. 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">C)-It plays an important role in regulating the Earth's climate. 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p1" onclick="respuesta(1,this)">D)-All of the above
+            </label>
+        </section>
+
+        <section id="p2">
+            <h3>3- What is the main threat to the Amazon rainforest? </h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)">A)-Drought 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)">B)-Flooding 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)">C)-Deforestation 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p2" onclick="respuesta(2,this)">D)-Wildfires 
+            </label>
+        </section>
+
+        <section id="p3">
+            <h3>4- What are the consequences of deforestation in the Amazon rainforest?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)">A)-Loss of biodiversity 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)">B)-Soil erosion 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)">C)-Climate change 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p3" onclick="respuesta(3,this)">D)S-All of the above
+            </label>
+        </section>
+
+        <section id="p4">
+            <h3>5- What can be done to protect the Amazon rainforest?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)">A)-Reduce deforestation by promoting sustainable forestry practices. 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p4"  onclick="respuesta(4,this)">B)-Support conservation efforts and indigenous communities. 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p4"  onclick="respuesta(4,this)">C)-Raise awareness about the importance of the rainforest.
+            </label>
+            <label>
+                <input type="radio" value="4" name="p4"  onclick="respuesta(4,this)">D)-All of the above
+            </label>
+        </section>
+
+        <section id="p5">
+            <h3>6- According to the passage, what percentage of the world's known species are found in the Amazon rainforest? </h3>
+            <label>
+                <input type="radio" value="1" name="p5"  onclick="respuesta(5,this)">A)-10% 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p5" onclick="respuesta(5,this)">B)-20% 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p5" onclick="respuesta(5,this)">C)-30% 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p5" onclick="respuesta(5,this)">D)-40% 
+            </label>
+        </section>
+
+        <section id="p6">
+            <h3>7- What is the main idea of the passage? </h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="respuesta(6,this)">A)-The Amazon rainforest is a beautiful and important place. 
+            </label>
+
+            <label>
+                <input type="radio" value="2" name="p6" onclick="respuesta(6,this)">B)-he Amazon rainforest is facing a serious threat from deforestation. 
+            </label>
+
+            <label>
+                <input type="radio" value="3" name="p6" onclick="respuesta(6,this)">C)-We need to take action to protect the Amazon rainforest. 
+            </label>
+            <label>
+                <input type="radio" value="4" name="p6" onclick="respuesta(6,this)">C)-All of the above
+            </label>
+        </section>
+
+
+        <br>
+        <button id="resultados" onclick="corregir()">Terminar Intento</button>
+        <br>
+
+        <!-- prueba de nombre -->
+        <div id="nombre-bd">
+            <center>
+                <p>ingresa tu nombre</p>
+                <input type="text" id="nombre-insertar-im">
+            </center>
+            <br>
+            
+        </div>
+<!-- fin prueba de nombre -->
+
+        <h2>Cantidad acertadas <span id="resultado-idioma"></span></h2>
+<!-- //respuestas 1-a,  2-c,  3-a, 4-b, 5-b, 6-c, 7-a, 8-c, 9-b, 10-c -->
+
+<!-- Botón para abrir el modal -->
+<button id="abrirModal">Ver Recomendaciones</button>
+<br>
+<button id="cargar-im">cargar</button>
+<br>
+<button ><a href="./carrera-agr.html">Volver a los ejercicios</a></button>
+<br>
+<br>
+<!-- El modal -->
+<div id="miModal" class="modal">
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <!-- Encabezado del modal -->
+    <div class="modal-encabezado">
+      <span class="cerrarModal">&times;</span>
+      <h2>Recomendaciones</h2>
+    </div>
+    <!-- Cuerpo del modal -->
+    <div class="modal-cuerpo">
+      <p id="mensaje"></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="js/ejercicioEnglish.js"></script>
+    <script src="./js/controller_iti.js"></script>
+    
+    
+</body>
+</html>
