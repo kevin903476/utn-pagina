@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnCargar_im = document.querySelector("#enviar-im");
   const btnCargar = document.querySelector("#enviar");
   const btnCargar_mt = document.querySelector("#enviar-mt");
-  fetch("http://localhost:5501/getAll")
-    .then((response) => response.json())
-    .then((data) => loadTable(data["data"]));
+
 
   if (btnCargar_mt) {
     btnCargar_mt.onclick = function () {
@@ -92,43 +90,5 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   
   }
-  
-  function loadTable(data) {
-    const newDiv = document.createElement("div");
-    const contenido = document.querySelector("#contenido");
-    const table = document.querySelector("table tbody");
 
-    console.log(data);
-
-    if (data.length === 0) {
-      table.innerHTML += `
-    <tr><td class='no-data' colspan='5'> no data </td></tr>
-    `;
-      return;
-    }
-    let tablehtml = "";
-    data.forEach(function ({
-      nombre,
-      puntuacion_logico,
-      puntuacion_matematico,
-      puntuacion_idioma,
-    }) {
-      /* tablehtml += `
-    <p> nombre ${nombre}</p>
-    <p> puntuacion_logico ${puntuacion_logico}</p>
-    <p> puntuacion_matematico ${puntuacion_matematico}</p>
-    <p> puntuacion_idioma ${puntuacion_idioma}</p>
-    <br>
-    `; */
-      tablehtml += "<tr>";
-      tablehtml += `<td> ${nombre} </td>`;
-      tablehtml += `<td> ${puntuacion_logico} </td>`;
-      tablehtml += `<td> ${puntuacion_matematico} </td>`;
-      tablehtml += `<td> ${puntuacion_idioma} </td>`;
-      tablehtml += "</tr>";
-    });
-    /* newDiv.innerHTML = html;
-  contenido.appendChild(newDiv); */
-    table.innerHTML = tablehtml;
-  }
 });
