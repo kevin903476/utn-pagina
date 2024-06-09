@@ -42,7 +42,7 @@ class DbService{
     async insertNewUser(name){
         try {
             const insertUser = await new Promise((resolve, reject)=>{
-                const query = "INSERT INTO carrera_iti (nombre, test_logico, test_matematico, test_idioma) VALUES (?,0,0,0)";
+                const query = "INSERT INTO carrera_iti (nombre) VALUES (?)";
                 connection.query(query,[name], (err , results)=>{
                     if (err) reject(new Error(err.message));
                     resolve(results.insertUser);
@@ -97,6 +97,77 @@ class DbService{
             const response = await new Promise((resolve, reject)=>{
                 const query = "UPDATE carrera_iti SET puntuacion_idioma = (?) WHERE nombre = ?"
                 connection.query(query, [puntuacion_idioma, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+    async updateByNameAPAR(puntuacion_ar, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_ar = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_ar, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameAPCI(puntuacion_ci, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_ci = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_ci, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameAPIG(puntuacion_ig, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_ig = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_ig, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameAPMT(puntuacion_mt, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_mt = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_mt, nombre],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 

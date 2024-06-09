@@ -6,40 +6,60 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Tabla</title>
 </head>
-<body>
-    <div class="background">
-        <div class="principal-screen">
+<body style="background-color: #2499c7;">
+
+    <div id="nav-db" >
             
 
-            <header class="header">
-            <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" /></a>
+        <header class="header-db">
+        <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" /></a>
 
-            <button class="button">
-                <svg
-                class="icon-svg"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-                >
-                <path
-                    fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-                />
-                </svg>
-            </button>
-            <nav class="nav">
-                <ul class="nav-list">
-                <li><a href="./index.html">INICIO</a></li>
-                <li><a href="https://www.utn.ac.cr">PRINCIPAL UTN</a></li>
-                </ul>
-            </nav>
-            </header>
-            
-            
-            <div id="contenedor-tabla">
-                <table id="table">
+        <button class="button">
+            <svg
+              class="icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </button>
+        <nav class="nav">
+            <ul class="nav-list">
+            <li><a href="./index.html">INICIO</a></li>
+            <li><a href="https://www.utn.ac.cr">PRINCIPAL UTN</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        
+        
+    </div>
+    <div id="contenedor-tabla">
+        
+        
+
+        
+        <div id="separator-content"></div>
+        <div  class="tablas">
+
+            <div id="insertar-nombre-bd">
+                
+                    <p>Ingresa tu nombre</p>
+                    <input type="text" id="nombre-insertar">
+                    <br>
+                    <button id="boton-insertar">Enviar</button>
+                
+                
+            </div>
+            <div class="contenedor-tabla-bd">
+                <h2>Tecnologías de la información</h2>
+                <table id="tableiti">
                     <thead>
                         <th>Nombre</th>
                         <th>puntuacion_logico</th>
@@ -48,22 +68,49 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                  
             </div>
-            
-        </div>
+    
+            <div class="contenedor-tabla-bd">
+                <h2>Agronomía</h2>
+                <table id="tableagro">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>puntuacion_ar</th>
+                        <th>puntuacion_ci</th>
+                        <th>puntuacion_ig</th>
+                        <th>puntuacion_mt</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
 
-        <div id="insertar-nombre-bd">
-            <center>
-                <p>ingresa tu nombre</p>
-                <input type="text" id="nombre-insertar">
-                <br>
-                <button id="boton-insertar">Enviar</button>
-            </center>
-            
-          </div>
+            <div class="contenedor-tabla-bd">
+                <h2>Gestión ecoturística</h2>
+                <table id="tablegec">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>puntuacion_at</th>
+                        
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="contenedor-tabla-bd">
+                <h2>Ingles</h2>
+                <table id="tableig">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>puntuacion_lg</th>
+                        
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
     </div>
-    <script src="./js/controller_iti.js"></script>
-    <script src="js/insertarDb.js"></script>
+    
+    <script src="js/controller_tablaDB.js"></script>
 </body>
 </html>
