@@ -1,3 +1,5 @@
+const terminar = document.getElementById("terminar");
+
 let correctas = [3,4,4,3,2,3,1,2];
 
 let opcion_elegida = [];
@@ -28,27 +30,25 @@ function corregir() {
   }
 
 
-  document.getElementById("resultado").innerHTML = cantidad_correctas;
-  document.getElementById("mensaje").innerHTML = mensaje;
-  mostrarRecomendaciones();
+  document.getElementById("resultado-mt").innerHTML = cantidad_correctas;
+/*   document.getElementById("mensaje").innerHTML = mensaje;
+  mostrarRecomendaciones(); */
 
   var preguntas = document.getElementsByClassName("pregunta");
   for (var i = 0; i < preguntas.length; i++) {
     preguntas[i].disabled = true;
   }
 
-  // Desactiva el botón de corregir
-  document.getElementById("resultado").disabled = true;
 
-  var btnAbrirModal = document.getElementById("abrirModal");
+  //var btnAbrirModal = document.getElementById("abrirModal");
 
   var modal = document.getElementById("miModal");
 
   var spanCerrarModal = document.getElementsByClassName("cerrarModal")[0];
 
-  btnAbrirModal.onclick = function () {
+
     modal.style.display = "block";
-  };
+  
 
   spanCerrarModal.onclick = function () {
     modal.style.display = "none";
@@ -64,5 +64,13 @@ function corregir() {
     var mensaje = document.getElementById("mensaje").textContent;
     document.getElementsByClassName("modal-cuerpo")[0].innerHTML = mensaje;
   }
+
+  terminar.classList.add('presionado')
+  terminar.classList.add('no-hover')
+  terminar.disabled = true
 }
 
+terminar.onclick = function(){
+  corregir();
+ 
+}

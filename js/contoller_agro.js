@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnCargar_riego = document.querySelector("#enviar-riego");
     const btnCargar_ciencias = document.querySelector("#enviar-ciencias");
     const btnCargar_ig = document.querySelector("#enviar-ig");
+    const btnCargar_mt = document.querySelector("#enviar-mt");
    
   
     if (btnCargar_riego) {
@@ -84,6 +85,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 btnCargar_ig.classList.add('presionado')
                 btnCargar_ig.classList.add('no-hover')
                 btnCargar_ig.innerHTML = 'enviado'
+              //location.reload();
+            }
+          });
+      };
+    
+    }
+   if (btnCargar_mt) {
+    btnCargar_mt.onclick = function () {
+        const numero_mt = document.querySelector("#resultado-mt");
+        const nombre_mt = document.querySelector("#nombre-insertar-mt").value;
+        const resultado_mt = numero_mt.textContent;
+      
+    
+        fetch("http://localhost:5501/updateAPMT", {
+          method: "PATCH",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            agro_puntuacion_mt: resultado_mt,
+            nombre: nombre_mt,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.sucess) {
+              btnCargar_mt.classList.add('presionado')
+              btnCargar_mt.classList.add('no-hover')
+              btnCargar_mt.innerHTML = 'enviado'
               //location.reload();
             }
           });
