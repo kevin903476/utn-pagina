@@ -1,3 +1,5 @@
+const terminar = document.getElementById("terminar");
+
 function calcularPuntuacion() {
     const preguntas = document.querySelectorAll('input[type="radio"]:checked');
     let totalPuntos = 0;
@@ -24,8 +26,11 @@ function calcularPuntuacion() {
 
     
     document.getElementById('miModal').style.display = "block";
-    document.getElementById('resultado').innerText = `Puntuación total: ${totalPuntos} puntos`;
+    document.getElementById('resultado').innerText = totalPuntos;
 
+    terminar.classList.add('presionado')
+  terminar.classList.add('no-hover')
+  terminar.disabled = true
 }
 
 
@@ -39,6 +44,11 @@ window.onclick = function(event) {
         cerrarModal();
     }
 }
+
+terminar.onclick = function(){
+    calcularPuntuacion();
+   
+  }
 
 
 

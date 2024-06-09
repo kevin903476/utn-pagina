@@ -179,6 +179,42 @@ class DbService{
             return false;
         }
     }
+
+    async updateByNameEXPI(puntuacion_ig, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET ext_puntuacion_lg = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_ig, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameGCPA(puntuacion_at, nombre){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET gec_puntuacion_at = (?) WHERE nombre = ?"
+                connection.query(query, [puntuacion_at, nombre],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
 }
 
 module.exports = DbService;

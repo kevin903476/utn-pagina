@@ -117,6 +117,32 @@ app.patch('/updateAPMT', (request , response) => {
     .then(data => response.json({sucess : data}))
     .catch(err => console.log(err))
 })
+
+app.patch('/updateEXPI', (request , response) => {
+    const {ext_puntuacion_lg, nombre} =request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.updateByNameEXPI(ext_puntuacion_lg,nombre);
+    console.log(ext_puntuacion_lg)
+    console.log(nombre)
+
+
+    result
+    .then(data => response.json({sucess : data}))
+    .catch(err => console.log(err))
+})
+
+app.patch('/updateGCPA', (request , response) => {
+    const {gec_puntuacion_at, nombre} =request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.updateByNameGCPA(gec_puntuacion_at,nombre);
+    console.log(gec_puntuacion_at)
+    console.log(nombre)
+
+
+    result
+    .then(data => response.json({sucess : data}))
+    .catch(err => console.log(err))
+})
 //delete
 
 app.listen(process.env.PORT, () => console.log("app is running"))

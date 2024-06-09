@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const btnCargar_im = document.querySelector("#enviar-im");
+    const btnCargar_im = document.querySelector("#enviar-idioma");
     
   
   
@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnCargar_im) {
       btnCargar_im.onclick = function () {
         const numero_idioma = document.querySelector("#resultado-idioma");
-        const nombre_idioma = document.querySelector("#nombre-insertar-im").value;
+        const nombre_idioma = document.querySelector("#nombre-insertar-id").value;
         const resultado_idioma = numero_idioma.textContent;
     
-        fetch("http://localhost:5501/updatePIM", {
+        fetch("http://localhost:5501/updateEXPI", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
           },
           body: JSON.stringify({
-            puntuacion_idioma: resultado_idioma,
+            ext_puntuacion_lg: resultado_idioma,
             nombre: nombre_idioma,
           }),
         })
