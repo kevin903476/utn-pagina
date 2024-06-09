@@ -166,29 +166,22 @@
 
 
         <br>
-        <button id="resultados" onclick="corregir()">Terminar Intento</button>
+        <button id="terminar" class="boton">Terminar Intento</button>
         <br>
 
         <!-- prueba de nombre -->
-        <div id="nombre-bd">
-            <center>
-                <p>ingresa tu nombre</p>
-                <input type="text" id="nombre-insertar-im">
-            </center>
-            <br>
-            
-        </div>
+        
 <!-- fin prueba de nombre -->
 
-        <h2>Cantidad acertadas <span id="resultado-idioma"></span></h2>
+       
 <!-- //respuestas 1-a,  2-c,  3-a, 4-b, 5-b, 6-c, 7-a, 8-c, 9-b, 10-c -->
 
 <!-- Botón para abrir el modal -->
-<button id="abrirModal">Ver Recomendaciones</button>
+<!-- <button id="abrirModal">Ver Recomendaciones</button>
 <br>
 <button id="cargar-im">cargar</button>
-<br>
-<button ><a href="./carrera-agr.html">Volver a los ejercicios</a></button>
+<br> -->
+<a href="./carrera-agr.html"><button >Volver a los ejercicios</button></a>
 <br>
 <br>
 <!-- El modal -->
@@ -202,14 +195,22 @@
     </div>
     <!-- Cuerpo del modal -->
     <div class="modal-cuerpo">
-      <p id="mensaje"></p>
+        <h2>Cantidad acertadas <span id="resultado-ig"></span></h2>
+      <div id="nombre-bd">
+        <center>
+            <p>ingresa tu nombre</p>
+            <input type="text" id="nombre-insertar-ig">
+        </center>
+        <br>
+        <button id="enviar-ig">enviar</button>
+    </div>
     </div>
   </div>
 </div>
 
     </div>
     <script src="js/ejercicioEnglish.js"></script>
-    <script src="./js/controller_iti.js"></script>
+    <script src="./js/contoller_agro.js"></script>
     
     
 </body>

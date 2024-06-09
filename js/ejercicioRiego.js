@@ -1,3 +1,5 @@
+const terminar = document.getElementById("terminar");
+
 let correctas = [3,3,4,3,3,4,3,4,4,4];
 
 let opcion_elegida = [];
@@ -28,27 +30,25 @@ function corregir() {
   }
 
 
-  document.getElementById("resultado").innerHTML = cantidad_correctas;
-  document.getElementById("mensaje").innerHTML = mensaje;
-  mostrarRecomendaciones();
+  document.getElementById("resultado-riego").innerHTML = cantidad_correctas;
+  /* document.getElementById("mensaje").innerHTML = mensaje;
+  mostrarRecomendaciones(); */
 
   var preguntas = document.getElementsByClassName("pregunta");
   for (var i = 0; i < preguntas.length; i++) {
     preguntas[i].disabled = true;
   }
 
-  // Desactiva el botón de corregir
-  document.getElementById("resultado").disabled = true;
-
-  var btnAbrirModal = document.getElementById("abrirModal");
+ 
+  //var btnAbrirModal = document.getElementById("abrirModal");
 
   var modal = document.getElementById("miModal");
 
   var spanCerrarModal = document.getElementsByClassName("cerrarModal")[0];
 
-  btnAbrirModal.onclick = function () {
+ 
     modal.style.display = "block";
-  };
+
 
   spanCerrarModal.onclick = function () {
     modal.style.display = "none";
@@ -60,9 +60,12 @@ function corregir() {
     }
   };
 
-  function mostrarRecomendaciones() {
-    var mensaje = document.getElementById("mensaje").textContent;
-    document.getElementsByClassName("modal-cuerpo")[0].innerHTML = mensaje;
-  }
+  terminar.classList.add('presionado')
+  terminar.classList.add('no-hover')
+  terminar.disabled = true
 }
 
+terminar.onclick = function(){
+  corregir();
+ 
+}

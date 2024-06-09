@@ -135,7 +135,7 @@ h2 {
   text-align: center;
 }
 
-#resultado, #resultado-idioma, #resultado-mate{
+#resultado, #resultado-idioma, #resultado-mate, #resultado-riego , #resultado-ci, #resultado-ig{
   font-size: 30px;
   color: darkblue;
 }
