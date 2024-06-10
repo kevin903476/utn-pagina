@@ -362,7 +362,7 @@
 
 
 
-/* .skills-box{
+.skills-box{
   text-align: left;
   margin-top: 4%;
   width: 90%;
@@ -378,7 +378,7 @@
   align-items: center;
   
 }
- */
+
 #skill-desc{
   padding-left: 20px;
   
@@ -387,9 +387,8 @@
   background-color: #2499c7;
   color: white;
   border-radius: 25px;
-  padding: 5px;
+ padding:5px;
 }
-
 
 
 /*_____ final habilidades  _____*/
@@ -1113,12 +1112,16 @@ background-color: #006691;
 
   .skill{
     font-size: 23px;
+    
     margin-bottom: 35px;
     font-size: 23px;
     margin-top: 35px;
     margin-bottom: 35px;
     margin-left: 0px;
-    display: flex;
+    
+    
+    
+    justify-content: center;
     width: 100%;
   }
 
@@ -1133,9 +1136,7 @@ background-color: #006691;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
-  }
+}
 
   .box-stats{
     display: flex;
