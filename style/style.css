@@ -362,7 +362,7 @@
 
 
 
-.skills-box{
+/* .skills-box{
   text-align: left;
   margin-top: 4%;
   width: 90%;
@@ -378,7 +378,7 @@
   align-items: center;
   
 }
-
+ */
 #skill-desc{
   padding-left: 20px;
   
@@ -1113,16 +1113,12 @@ background-color: #006691;
 
   .skill{
     font-size: 23px;
-    
     margin-bottom: 35px;
     font-size: 23px;
     margin-top: 35px;
     margin-bottom: 35px;
     margin-left: 0px;
-    
-    
-    
-    justify-content: center;
+    display: flex;
     width: 100%;
   }
 
