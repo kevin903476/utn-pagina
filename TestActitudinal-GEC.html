@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Actitudinal en Gestión Ecoturística</title>
-    <link rel="stylesheet" href="style/stylegec.css">
+    <link rel="stylesheet" href="style/style-test.css">
     <link rel="stylesheet" href="style/style-loading.css">
     
 </head>
@@ -17,7 +17,7 @@
           </div>
     </header>
 
-    <div id="container">
+    <div class="container">
             <section id="p0">
                 <h3>1. ¿Te gusta estar en contacto con la naturaleza?</h3>
                 <label >
@@ -236,8 +236,7 @@
             <br>
 
     </div>
-    <input type="text" id="nombre" placeholder="Introduce tu nombre">
-    <button type="button" onclick="calcularPuntuacion()">Enviar</button>
+    <button id="terminar" class="boton">Terminar Intento</button>
     
     
 </body>
@@ -250,10 +249,8 @@
 
 
 
-<button id="cargar" >cargar</button>
-<div id="contenido"></div>
 <br>
-<button ><a href="./carrera-gec.html">Volver a los Tests</a></button>
+<a href="./carrera-gec.html"><button >Volver a los Tests</button></a>
 <br>
 <br>
 <!-- El modal -->
@@ -268,14 +265,23 @@
     <!-- Cuerpo del modal -->
     <div class="modal-cuerpo">
       <p id="mensaje"></p>
-      <p id="resultado"></p>
+      <h2>Cantidad acertadas <strong id="resultado"></strong></h2>
+      <div id="nombre-bd">
+        <center>
+            <p>Ingresa tu nombre para enviar el ejercicio</p>
+            <input type="text" id="nombre-insertar-gec">
+        </center>
+        <br>
+    
+    </div>
+    <button id="enviar">enviar</button>
     </div>
   </div>
 </div>
 
     </div>
-    <script src="./js/controller_iti.js" type="module" ></script>
-    <script src="./js/testea2 .js"></script>
+    <script src="./js/controller_gec.js" type="module" ></script>
+    
     <script src="./js/testeGEC.js"></script>
 </body>
 </html>

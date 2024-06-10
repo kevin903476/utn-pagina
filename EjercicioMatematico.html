@@ -80,14 +80,14 @@
             </label>
 
             <label>
-                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> B) ¢ 700 
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> B) ¢ 600 
             </label>
 
             <label>
                 <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> C) ¢ 500 
             </label>
             <label>
-                <input type="radio" value="4" name="p2" onclick="respuesta(2,this)"> D) ¢ 600
+                <input type="radio" value="4" name="p2" onclick="respuesta(2,this)"> D) ¢ 700 
             </label>
             <label>
                 <input type="radio" value="5" name="p2" onclick="respuesta(2,this)"> E) ¢ 800
@@ -107,10 +107,10 @@
             </label>
 
             <label>
-                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> C) ) ¢ 6,720  
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> C)  ¢  5,760  
             </label>
             <label>
-                <input type="radio" value="4" name="p3" onclick="respuesta(3,this)"> D) ¢ 5,760  
+                <input type="radio" value="4" name="p3" onclick="respuesta(3,this)"> D) ¢ 6,720 
             </label>
             <label>
                 <input type="radio" value="5" name="p3" onclick="respuesta(3,this)"> E) ¢ 7,680
@@ -123,11 +123,11 @@
                 Si el ganadero tiene 200 vacas, 
                 ¿cuántos sacos de alimento necesita comprar para una semana?</h3>
             <label>
-                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> A) 80 sacos 
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> A) 40 sacos
             </label>
 
             <label>
-                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> B) 40 sacos 
+                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> B)  80 sacos 
             </label>
 
             <label>
@@ -156,13 +156,13 @@
                 </label>
     
                 <label>
-                    <input type="radio" value="3" name="p5" onclick="respuesta(5,this)"> C) $400
+                    <input type="radio" value="3" name="p5" onclick="respuesta(5,this)"> C)  $1200 
                 </label>
                 <label>
                     <input type="radio" value="4" name="p5" onclick="respuesta(5,this)"> D)  $2000
                 </label>
                 <label>
-                    <input type="radio" value="5" name="p5" onclick="respuesta(5,this)"> E) $1200 
+                    <input type="radio" value="5" name="p5" onclick="respuesta(5,this)"> E) $400
                 </label>
         </section>
 
@@ -213,30 +213,23 @@
         </section>
 
       
-<button id="resultados" onclick="corregir()" >Terminar Intento</button>
+<button id="terminar" class="boton" >Terminar Intento</button>
 
 <br>
 <!-- prueba de nombre -->
-<div id="nombre-bd">
-    <center>
-        <p>ingresa tu nombre</p>
-        <input type="text" id="nombre-insertar">
-    </center>
-    <br>
-    
-</div>
+
 <!-- fin prueba de nombre -->
 
-<h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+
 
 <!-- Botón para abrir el modal -->
-
+<!-- 
 <button id="abrirModal">Ver Recomendaciones</button>
 <br>
-<button id="cargar" >cargar</button>
+<button id="cargar" >cargar</button> -->
 <div id="contenido"></div>
 <br>
-<button ><a href="./carrera-agr.html">Volver a los ejercicios</a></button>
+<a href="./carrera-agr.html"><button >Volver a los ejercicios</button></a>
 <br>
 <br>
 <!-- El modal -->
@@ -246,19 +239,28 @@
     <!-- Encabezado del modal -->
     <div class="modal-encabezado">
       <span class="cerrarModal">&times;</span>
-      <h2>Recomendaciones</h2>
+      
     </div>
     <!-- Cuerpo del modal -->
     <div class="modal-cuerpo">
-      <p id="mensaje"></p>
+        <h2>Cantidad Acertadas <span id="resultado-mt"></span></h2>
+        <div id="nombre-bd">
+            <center>
+                <p>Ingresa tu nombre para enviar el ejercicio</p>
+                <input type="text" id="nombre-insertar-mt">
+            </center>
+            <br>
+            
+        </div>
+        <button id="enviar-mt">enviar</button>
     </div>
   </div>
 </div>
 
     </div>
-    <script src="./js/controller_iti.js" type="module" ></script>
+    <script src="./js/contoller_agro.js" type="module" ></script>
     <!-- <script src="./js/testea2 .js"></script> -->
-    <script src="js/ejercicioARG.js"></script>
+    <script src="js/ejercicioMate.js"></script>
     
 </body>
 </html>
