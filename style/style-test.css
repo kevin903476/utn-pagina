@@ -305,5 +305,19 @@ a {
   text-align: center;
 }
 
+.correcta {
+  background-color: green;
+  color: black;
+}
 
+.incorrecta {
+  background-color: red;
+  color: black;
+}
+
+.correct-answer {
+  margin-top: 10px;
+  font-weight: bold;
+  color: blue;
+}
 /*_____ inicio de las waves _____*/

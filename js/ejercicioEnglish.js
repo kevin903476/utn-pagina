@@ -17,7 +17,7 @@ function respuesta(num_pregunta, seleccionada){
     labels[7].style.backgroundColor = "white";
     labels[9].style.backgroundColor = "white";
 
-    seleccionada.parentNode.style.backgroundColor= "#006691";
+    seleccionada.parentNode.style.backgroundColor= "cec0fc";
 
 
 }
@@ -81,3 +81,48 @@ terminar.onclick = function(){
   corregir();
  
 }
+
+document.getElementById('enviar-ig').addEventListener('click', function () {
+  const sections = document.querySelectorAll('section');
+  let score = 0;
+
+  sections.forEach((section, index) => {
+      const labels = section.querySelectorAll('label');
+      const correctIndex = correctas[index] - 1; 
+      let selectedInput = null;
+
+      labels.forEach((label, labelIndex) => {
+          const input = label.querySelector('input');
+          
+          if (input.checked) {
+              selectedInput = input;
+          }
+
+          // Reiniciar estilos
+          label.style.backgroundColor = '';
+          label.style.color = '';
+
+          // Marcar la respuesta correcta
+          if (labelIndex === correctIndex) {
+              label.style.backgroundColor = 'green';
+              label.style.color = 'white';
+          } else if (input.checked && labelIndex !== correctIndex) {
+              label.style.backgroundColor = 'red';
+              label.style.color = 'white';
+          }
+          //Desactiva los input
+          input.disabled = true; 
+      });
+
+      // Incrementar puntaje si la respuesta seleccionada es la correcta
+      if (selectedInput && labels[correctIndex].querySelector('input').checked) {
+          score++;
+      }
+
+      // Mostrar respuesta correcta en el div
+      const correctAnswerElement = section.querySelector('.correct-answer');
+      correctAnswerElement.textContent = `Respuesta correcta: ${labels[correctIndex].innerText}`;
+  });
+
+  document.getElementById('resultado-idioma').textContent = score;
+});
