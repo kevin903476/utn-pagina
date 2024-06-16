@@ -1169,11 +1169,7 @@ background-color: #006691;
 
   .dual-section-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px 0;
-    padding: 20px;
+  align-items: flex-start ;
   }
   .dual-section-container p{
     text-align: justify;
