@@ -23,12 +23,114 @@ header {
   margin: auto;
   padding: 20px;
 }
+.container1 {  
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
 
-section {
-  border: 2px solid #006691;
+.container1 section {
+  border: 3px solid;
   border-radius: 7px;
   padding: 10px;
   margin: 10px 0;
+  animation: borderAnimation 5s linear infinite;
+}
+
+@keyframes borderAnimation1 {
+  0% {
+      border-color: #0461a0; 
+  }
+  50% {
+      border-color: #ff6629;
+  }
+  100% {
+      border-color: #3907ad; 
+  }
+}
+.container2 {  
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.container2 section {
+  border: 3px solid;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px 0;
+  animation: borderAnimation2 5s linear infinite;
+}
+
+@keyframes borderAnimation2 {
+  0% {
+      border-color: #4aeb00; 
+  }
+  50% {
+      border-color: #fdec01;
+  }
+  100% {
+      border-color: #006e32; 
+  }
+}
+
+.container3 {  
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.container3 section {
+  border: 3px solid;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px 0;
+  animation: borderAnimation3 5s linear infinite;
+}
+
+@keyframes borderAnimation3 {
+  0% {
+      border-color: #006cf8; 
+  }
+  50% {
+      border-color: #379e22;
+  }
+  100% {
+      border-color: #00a8c5; 
+  }
+}
+.container4 {  
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.container4 section {
+  border: 3px solid;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px 0;
+  animation: borderAnimation4 5s linear infinite;
+}
+
+@keyframes borderAnimation4 {
+  0% {
+      border-color: #14c7df; 
+  }
+  50% {
+      border-color: #a11717;
+  }
+  100% {
+      border-color: #ffd900; 
+  }
+}
+
+.texto-test p{
+  font-size: 20px;
+  text-shadow: #000 2px 2px 5px;
+}
+.texto-test h1{
+  text-shadow: #000 2px 2px 5px;
 }
 
 label {
