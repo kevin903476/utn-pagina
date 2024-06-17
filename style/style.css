@@ -1100,7 +1100,7 @@ background-color: #006691;
     
     
     
-    justify-content: center;
+    justify-content: left;
     width: 100%;
 
     display: flex;
@@ -1114,6 +1114,7 @@ background-color: #006691;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 1%;
+    width: 60%;
    
   }
   .skills-content{
