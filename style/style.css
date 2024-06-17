@@ -311,8 +311,8 @@
 
 .info-content p{
   color:#000000;
-  text-align: left;
-  width: 90%;
+  text-align: center;
+  width: 100%;
   font-size: 18px;
   margin-bottom: 25px;
   line-height: 30px;
@@ -1078,27 +1078,7 @@ background-color: #006691;
     
   }
 
-  .card-content, .card-advice{
-    width: 40%;
-    
-    
-    
-  }
-  .card-advice{
-    width: 30%;
-    
-    
-    
-    
-  }
-  .card-advice p{
-    width: 100%;
-    text-align: center;
-    
-    
-    
-    
-  }
+  
   .box-container , #card-content-advise{
     display: flex;
     flex-direction: row;
@@ -1190,7 +1170,56 @@ background-color: #006691;
   position: relative;
   top: -61px;
 } */
-  
+ /*estilos de carta de pc*/
+ .background-advice img {
+  width: 60%;
+  height: 50%;
+  }
+  .card-content {
+    width: 40%;
+    
+    
+    
+  }
+  .card-advice{
+    width: 30%;
+    
+    
+    
+    
+  }
+  .card-advice p{
+    width: 100%;
+    text-align: center;
+    
+    
+    
+    
+  }
+
+  .content-advice p{
+    font-size: 15px;
+  }
+  /* estilos de footer en pc */
+  .footer-col {
+    width: 15%; 
+    padding: 0 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .footer-col h4{
+  font-size: 25px;
+ }
+ .footer-col ul li a{
+  font-size: 17px;
+ }
+ .block-footer {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-evenly; */
+  margin-bottom: 5%;
+}
 }
 
 
