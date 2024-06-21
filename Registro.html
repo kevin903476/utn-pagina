@@ -22,8 +22,7 @@
 
                 <span> Registro</span>
             </div>
-            <form action="http://127.0.0.1:5500/project/booklist.html" get="" enctype="multipart/form-data"
-                onsubmit="return login()">
+            <form id="userForm" action="index.html">
                 <div class="input-box">
                     <input type="text" id="user" class="input-field" required>
 
@@ -46,7 +45,7 @@
                     </i>
                 </div>
                 <div class="input-box">
-                    <input type="password" id="pass" class="input-field" autocomplete="off">
+                    <input type="password" id="pass-confirm" class="input-field" autocomplete="off">
                     <label for="pass" class="label">Confirme su contraseña</label>
                     <i class="bx bx-lock-alt icon" id="show-password">
 
@@ -60,7 +59,7 @@
         </div>
 
     </div>
-    <script src="form.js"></script>
+    <script src="./js/controller_user.js"></script>
 </body>
 
 </html>

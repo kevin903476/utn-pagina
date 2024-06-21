@@ -39,6 +39,27 @@ class DbService{
         }
     }
 
+    async insertUser(name,email,contra){
+        try {
+            const insertUser = await new Promise((resolve, reject)=>{
+                const query = "INSERT INTO usuarios (nombre,email,contra) VALUES (?,?,?)";
+                connection.query(query,[name,email,contra], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results.insertUser);
+                }) 
+            });
+
+            return {
+                nombre : name,
+                email : email,
+                contra : contra
+
+            };
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     async insertNewUser(name){
         try {
             const insertUser = await new Promise((resolve, reject)=>{
