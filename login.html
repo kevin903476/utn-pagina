@@ -40,7 +40,7 @@
             </div>
             <br>
             <br>
-            <form action="http://127.0.0.1:5500/project/booklist.html" get="" enctype="multipart/form-data">
+            <form id="loginForm" action="./index.html">
                 <div class="input-box">
                     <input type="text" id="user" class="input-field" required>
 
@@ -74,10 +74,10 @@
                 
                 
             </form>
-            <div id="btn-google" class="input-submit">
+            <!-- <div id="btn-google" class="input-submit">
                 <img src="/img/google-logo.png" alt="" width="35px" height="35px">
                 <a  onclick="onSignIn()">Iniciar con Google</a>  
-            </div>
+            </div> -->
             <br>
 
             <div class="register">
@@ -92,9 +92,11 @@
 
     </div>
     <script src="js/form.js"></script>
-    <script src="js/google.js"> </script>
+    
 
     <script src="js/loading.js"></script>
+    <script src="./js/controller_user.js"></script>
+
 </body>
 
 </html>

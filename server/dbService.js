@@ -39,6 +39,21 @@ class DbService{
         }
     }
 
+    async validarUser(name,contra){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT * FROM usuarios WHERE nombre = ? AND contra = ?";
+                connection.query(query,[name,contra], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results.length > 0);
+                }) 
+            });
+            return response ;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     async insertUser(name,email,contra){
         try {
             const insertUser = await new Promise((resolve, reject)=>{
