@@ -41,13 +41,22 @@ app.get('/getAll', (request, response) =>{
     .then(data => response.json({data : data}))
     .catch(err => console.log(err)); 
 });
+
+app.post('/validarUser', (request, response) =>{
+    const { nombre, contra } = request.body;
+    const db = dbService.getDbServiceInstance();
+    const result = db.validarUser(nombre, contra);
+
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err))
+});
 //update
 app.patch('/updatePLG', (request , response) => {
     const {puntuacion_logico, nombre} =request.body
     const db = dbService.getDbServiceInstance();
     const result = db.updateByNamePLG(puntuacion_logico,nombre);
-    console.log(puntuacion_logico)
-    console.log(nombre)
+
 
 
     result

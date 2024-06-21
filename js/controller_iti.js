@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
             btnCargar.classList.add('no-hover')
             btnCargar.innerHTML = 'enviado'
             //location.reload();
+          }else{
+            alert("error")
           }
         });
     };
