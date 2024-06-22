@@ -63,13 +63,14 @@
             
             <div id="link-banner-content">
               <a  id="login-link" href="./login.html"
-                >Iniciar</a
+              >Iniciar</a
               >
               <a id="register-link" href="./Registro.html">Registrar</a>
             </div>
             <div id="login-name">
-              <h2 id="name">Bienvenido</h2>
-              <a id="logout-button" onclick="out()" onclick="logout()">Salir</a>
+              <h2 id="logueado">Bienvenid@ <strong id="name"></strong></h2>
+              
+              <a id="logout-button" onclick="out()">Salir</a>
             </div>
           </div>
         </div>
@@ -298,9 +299,9 @@
 
         <script src="./js/app.js"></script>
 
-        <script src="js/google.js"></script>
 
         <script src="js/loading.js"></script>
+        <script src="js/controller_user.js"></script>
       </div>
     </div>
   </body>
