@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnCargar_mt.onclick = function () {
     
       const numero_mate = document.querySelector("#resultado-mate");
-      const nombre_mate = document.querySelector("#nombre-insertar-mt").value;
+      const nombre_mate = localStorage.getItem("user");
       const resultado_mate = numero_mate.textContent;
   
       fetch("http://localhost:5501/updatePMT", {
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.sucess) {
-            alert()
             btnCargar_mt.classList.add('presionado')
             btnCargar_mt.classList.add('no-hover')
             btnCargar_mt.innerHTML = 'enviado'
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btnCargar_im) {
     btnCargar_im.onclick = function () {
       const numero_idioma = document.querySelector("#resultado-idioma");
-      const nombre_idioma = document.querySelector("#nombre-insertar-im").value;
+      const nombre_idioma = localStorage.getItem("user");
       const resultado_idioma = numero_idioma.textContent;
   
       fetch("http://localhost:5501/updatePIM", {
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btnCargar) {
     btnCargar.onclick = function () {
       const numero = document.querySelector("#resultado");
-      const nombre = document.querySelector("#nombre-insertar").value;
+      const nombre = localStorage.getItem("user");
       const resultado = numero.textContent;
     
   
