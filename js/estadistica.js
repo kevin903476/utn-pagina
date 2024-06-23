@@ -57,5 +57,3 @@ function handleScroll() {
 
 // Asociar el evento de desplazamiento a la función handleScroll
 window.addEventListener("scroll", handleScroll);
-
-
