@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/style-loading.css" />
+    <link rel="stylesheet" href="style/stylemodal.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -595,7 +596,7 @@
                 <h3>Ejercicio Agronomia y Riego</h3>
                 <p>Haz clic para tomar el ejercicio </p>
                 <br />
-                <a href="./EjercicioAgro.html" class="link-box">Tomar Ejercicio</a>
+                <a id="openModalBtn" class="link-box">Tomar Ejercicio</a>
               </div>
             </div>
 
@@ -612,7 +613,7 @@
                 <h3>Ejercicio Ciencias Basicas</h3>
                 <p>Haz clic para tomar el ejercicio de ciencias</p>
                 <br />
-                <a href="EjercicioCiencias.html" class="link-box">Tomar Ejercicio</a>
+                <a id="openModalBtn2" class="link-box">Tomar Ejercicio</a>
               </div>
             </div>
 
@@ -624,7 +625,7 @@
                 <h3>Ejercicio Inglés</h3>
                 <p>Haz clic para tomar el ejercicio inglés</p>
                 <br />
-                <a href="./EjercicioEnglish.html" class="link-box">Tomar Test</a>
+                <a id="openModalBtn3" class="link-box">Tomar Test</a>
               </div>
             </div>
 
@@ -636,9 +637,50 @@
                 <h3>Ejercicio Matemático</h3>
                 <p>Haz clic para tomar el ejercicio matemático</p>
                 <br />
-                <a href="./EjercicioMatematico.html" class="link-box">Tomar Test</a>
+                <a id="openModalBtn4" class="link-box">Tomar Test</a>
               </div>
             </div>
+            <div id="overlay" class="overlay"></div>
+
+      <div id="modal" class="modal">
+          <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <img src="./img/modal4.jpg" alt="Imagen">
+              <h1>Prueba lógica</h1>
+              <h2>Pon a prueba tus conocimientos con la siguiente prueba</h2>
+              <a href="./EjercicioAgro.html" class="link-box">Tomar Ejercicio</a>
+          </div>
+      </div>
+
+      <div id="modal2" class="modal2">
+          <div class="modal-content">
+              <span class="close-btn2">&times;</span>
+              <img src="./img/modal2.jpg" alt="Imagen">
+              <h1>Prueba Matematica</h1>
+              <h2>Pon a prueba tus conocimientos con la siguiente prueba</h2>
+              <a href="EjercicioCiencias.html"  class="link-box">Tomar Ejercicio</a>
+          </div>
+      </div>
+
+      <div id="modal3" class="modal3">
+          <div class="modal-content">
+              <span class="close-btn3">&times;</span>
+              <img src="/img/modal9.jpg" alt="Imagen">
+              <h1>Prueba Idioma</h1>
+              <h2>Pon a prueba tus conocimientos con la siguiente prueba</h2>
+              <a href="./EjercicioEnglish.html" class="link-box">Tomar Ejercicio</a>
+          </div>
+      </div>
+
+      <div id="modal4" class="modal4">
+          <div class="modal-content">
+              <span class="close-btn4">&times;</span>
+              <img src="./img/modal16.jpg" alt="Imagen">
+              <h1>Prueba de Programación</h1>
+              <h2>Pon a prueba tus conocimientos con la siguiente prueba</h2>
+              <a href="./EjercicioMatematico.html" class="link-box">Tomar Ejercicio</a>
+          </div>
+      </div>
           </div>
         </div>
       </div>
@@ -755,7 +797,7 @@
     <!-- final del footer -->
     
     <script src="./js/app.js"></script>
-
+    <script src="./js/scriptmodal.js"></script>
     <script src="js/loading.js"></script>
     <script src="js/estadisticaAGRO.js"></script>
   </body>
