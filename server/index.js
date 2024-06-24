@@ -42,13 +42,40 @@ app.get('/getAll', (request, response) =>{
     .then(data => response.json({data : data}))
     .catch(err => console.log(err)); 
 });
-app.get('/data', (request, response) =>{
+app.get('/estadisticas-iti', (request, response) =>{
     const db = dbService.getDbServiceInstance();
 
     const result = db.EstadisticaEstudianteITI();
     
     result
-    .then(data => response.json({data : data}))
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
+app.get('/estadisticas-agro', (request, response) =>{
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.estadisticasAgro();
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
+app.get('/estadisticas-ig', (request, response) =>{
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.estadisticasIg();
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
+app.get('/estadisticas-gec', (request, response) =>{
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.estadisticasGEC();
+    
+    result
+    .then(data => response.json({data}))
     .catch(err => console.log(err)); 
 });
 
