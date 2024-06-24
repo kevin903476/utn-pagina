@@ -41,7 +41,52 @@ class DbService{
     async EstadisticaEstudianteITI(){
         try {
             const response = await new Promise((resolve, reject)=>{
-                const query = "SELECT estudiantes FROM estadisticas WHERE carrera= 'carrera_iti'"
+                const query = "SELECT estudiantes,graduados,insercion FROM estadisticas WHERE carrera= 'carrera_iti'"
+                connection.query(query, (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async estadisticasGEC(){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT estudiantes,graduados,insercion FROM estadisticas WHERE carrera= 'carrera_gec'"
+                connection.query(query, (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async estadisticasIg(){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT estudiantes,graduados,insercion FROM estadisticas WHERE carrera= 'carrera_ig'"
+                connection.query(query, (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async estadisticasAgro(){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT estudiantes,graduados,insercion FROM estadisticas WHERE carrera= 'carrera_agro'"
                 connection.query(query, (err , results)=>{
                     if (err) reject(new Error(err.message));
                     resolve(results);

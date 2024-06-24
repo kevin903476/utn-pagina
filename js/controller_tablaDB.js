@@ -4,7 +4,7 @@ const btnInsertar = document.querySelector('#boton-insertar')
 
 fetch("http://localhost:5501/getAll")
 .then((response) => response.json())
-.then((data) => loadTable(data["data"]));
+.then((data) => {loadTable(data["data"])});
 
 function insertUser(nombre){
   fetch('http://localhost:5501/insert', {
