@@ -33,25 +33,25 @@ function isOnFocus(el) {
 var graduadosCounter = false;
 var insercionCounter = false;
 function handleScroll() {
-    var estudiantesITI = document.querySelector("#estudiantesITI");
-    var graduadosITI = document.querySelector("#graduadosITI");
-    var insercionITI = document.querySelector("#insercionITI");
+    var estudiantesITI = document.querySelector("#estudiantes");
+    var graduadosITI = document.querySelector("#graduados");
+    var insercionITI = document.querySelector("#insercion");
 
     
     if (isOnFocus(estudiantesITI) && !estudiantesCounter) {
-        counter("estudiantesITI", 0, 105);
+        counter("estudiantes", 0, 105);
         estudiantesCounter = true;
     }
     
     if (isOnFocus(graduadosITI) && !graduadosCounter) {
-        counter("graduadosITI", 0, 105);
+        counter("graduados", 0, 105);
         graduadosCounter = true;
         
     }
     
     if (isOnFocus(insercionITI) && !insercionCounter) {
         
-        counter("insercionITI", 0, 90);
+        counter("insercion", 0, 90);
         insercionCounter = true;
         
     }
