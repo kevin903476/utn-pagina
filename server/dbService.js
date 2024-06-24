@@ -38,7 +38,22 @@ class DbService{
             console.log(error)
         }
     }
-
+    async EstadisticaEstudianteITI(){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT estudiantes FROM estadisticas WHERE carrera= 'carrera_iti'"
+                connection.query(query, (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    
     async validarUser(name,contra){
         try {
             const response = await new Promise((resolve, reject)=>{
