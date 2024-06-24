@@ -42,6 +42,15 @@ app.get('/getAll', (request, response) =>{
     .then(data => response.json({data : data}))
     .catch(err => console.log(err)); 
 });
+app.get('/data', (request, response) =>{
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.EstadisticaEstudianteITI();
+    
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err)); 
+});
 
 app.post('/validarUser', (request, response) =>{
     const { nombre, contra } = request.body;
@@ -164,6 +173,7 @@ app.patch('/updateGCPA', (request , response) => {
     .then(data => response.json({sucess : data}))
     .catch(err => console.log(err))
 })
+
 //delete
 
 app.listen(process.env.PORT, () => console.log("app is running"))

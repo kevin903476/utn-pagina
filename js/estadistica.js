@@ -1,3 +1,5 @@
+
+
 // Función para animar el conteo de números
 function counter(id, start, end) {
     let current = start;
@@ -27,33 +29,33 @@ function isOnFocus(el) {
 }
 
 // Función para manejar el evento de desplazamiento
-var estudiantesCounter = false;
+ var estudiantesCounter = false;
 var graduadosCounter = false;
 var insercionCounter = false;
 function handleScroll() {
-    var estudiantes = document.querySelector("#estudiantes");
-    var graduados = document.querySelector("#graduados");
-    var insercion = document.querySelector("#insercion");
+    var estudiantesITI = document.querySelector("#estudiantesITI");
+    var graduadosITI = document.querySelector("#graduadosITI");
+    var insercionITI = document.querySelector("#insercionITI");
 
     
-    if (isOnFocus(estudiantes) && !estudiantesCounter) {
-        counter("estudiantes", 0, 105);
+    if (isOnFocus(estudiantesITI) && !estudiantesCounter) {
+        counter("estudiantesITI", 0, 105);
         estudiantesCounter = true;
     }
     
-    if (isOnFocus(graduados) && !graduadosCounter) {
-        counter("graduados", 0, 105);
+    if (isOnFocus(graduadosITI) && !graduadosCounter) {
+        counter("graduadosITI", 0, 105);
         graduadosCounter = true;
         
     }
     
-    if (isOnFocus(insercion) && !insercionCounter) {
+    if (isOnFocus(insercionITI) && !insercionCounter) {
         
-        counter("insercion", 0, 90);
+        counter("insercionITI", 0, 90);
         insercionCounter = true;
         
     }
-}
+} 
 
 // Asociar el evento de desplazamiento a la función handleScroll
 window.addEventListener("scroll", handleScroll);
