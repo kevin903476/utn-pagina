@@ -73,3 +73,111 @@ if (document.querySelector('#ejercicio-progra-iti')) {
     
     }
 }
+if (document.querySelector('#ejercicio-agro-agro')) {
+    const botonLogico = document.querySelector('#ejercicio-agro-agro');
+
+    if (localStorage.getItem("user") == "none") {
+        
+        botonLogico.addEventListener('click', function() {
+            alert('Debes iniciar sesión antes de hacer un ejercicio');
+            window.location.href = 'login.html';
+        });
+        
+    } else {
+        botonLogico.addEventListener('click', function() {
+            // Redirige al usuario a la URL especificada
+            window.location.href = 'EjercicioAgro.html';
+        });
+    
+    }
+}
+if (document.querySelector('#ejercicio-ci-agro')) {
+    const botonLogico = document.querySelector('#ejercicio-ci-agro');
+
+    if (localStorage.getItem("user") == "none") {
+        
+        botonLogico.addEventListener('click', function() {
+            alert('Debes iniciar sesión antes de hacer un ejercicio');
+            window.location.href = 'login.html';
+        });
+        
+    } else {
+        botonLogico.addEventListener('click', function() {
+            // Redirige al usuario a la URL especificada
+            window.location.href = 'EjercicioCiencias.html';
+        });
+    
+    }
+}
+if (document.querySelector('#ejercicio-en-agro')) {
+    const botonLogico = document.querySelector('#ejercicio-en-agro');
+
+    if (localStorage.getItem("user") == "none") {
+        
+        botonLogico.addEventListener('click', function() {
+            alert('Debes iniciar sesión antes de hacer un ejercicio');
+            window.location.href = 'login.html';
+        });
+        
+    } else {
+        botonLogico.addEventListener('click', function() {
+            // Redirige al usuario a la URL especificada
+            window.location.href = 'EjercicioEnglish.html';
+        });
+    
+    }
+}
+if (document.querySelector('#ejercicio-mt-agro')) {
+    const botonLogico = document.querySelector('#ejercicio-mt-agro');
+
+    if (localStorage.getItem("user") == "none") {
+        
+        botonLogico.addEventListener('click', function() {
+            alert('Debes iniciar sesión antes de hacer un ejercicio');
+            window.location.href = 'login.html';
+        });
+        
+    } else {
+        botonLogico.addEventListener('click', function() {
+            // Redirige al usuario a la URL especificada
+            window.location.href = 'EjercicioMatematico.html';
+        });
+    
+    }
+}
+if (document.querySelector('#ejercicio-ac-gec')) {
+    const botonLogico = document.querySelector('#ejercicio-ac-gec');
+
+    if (localStorage.getItem("user") == "none") {
+        
+        botonLogico.addEventListener('click', function() {
+            alert('Debes iniciar sesión antes de hacer un ejercicio');
+            window.location.href = 'login.html';
+        });
+        
+    } else {
+        botonLogico.addEventListener('click', function() {
+            // Redirige al usuario a la URL especificada
+            window.location.href = 'TestActitudinal-GEC.html';
+        });
+    
+    }
+}
+if (document.querySelector('#ejercicio-lg-ile')) {
+    const botonIle = document.querySelector('#ejercicio-lg-ile');
+
+    if (localStorage.getItem("user") == "none") {
+        
+        botonIle.addEventListener('click', function() {
+            alert('Debes iniciar sesión antes de hacer un ejercicio');
+            window.location.href = 'login.html';
+        });
+        
+    } else {
+        botonIle.addEventListener('click', function() {
+            // Redirige al usuario a la URL especificada
+            window.location.href = 'Test_LenguasExt.html';
+        });
+    
+    }
+}

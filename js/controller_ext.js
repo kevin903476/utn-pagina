@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnCargar_im) {
       btnCargar_im.onclick = function () {
         const numero_idioma = document.querySelector("#resultado-idioma");
-        const nombre_idioma = document.querySelector("#nombre-insertar-id").value;
+        const nombre_idioma = localStorage.getItem("user");
         const resultado_idioma = numero_idioma.textContent;
     
         fetch("http://localhost:5501/updateEXPI", {

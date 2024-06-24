@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnCargar) {
       btnCargar.onclick = function () {
         const numero = document.querySelector("#resultado");
-        const nombre = document.querySelector("#nombre-insertar-gec").value;
+        const nombre = localStorage.getItem("user");
         const resultado = numero.textContent;
     
         fetch("http://localhost:5501/updateGCPA", {
