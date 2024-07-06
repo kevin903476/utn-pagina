@@ -33,15 +33,19 @@ app.post('/insert', (request, response) =>{
     .catch(err => console.log(err))
 });
 //read
-app.get('/getAll', (request, response) =>{
-    const db = dbService.getDbServiceInstance();
-
-    const result = db.getAllData();
-    
-    result
-    .then(data => response.json({data : data}))
-    .catch(err => console.log(err)); 
-});
+app.get('/getAll', async (request, response) => {
+    try {
+      const db = dbService.getDbServiceInstance();
+  
+      const data = await db.getAllData();
+  
+      response.json({ data: data });
+    } catch (err) {
+      console.log(err);
+      response.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+  
 app.get('/estadisticas-iti', (request, response) =>{
     const db = dbService.getDbServiceInstance();
 

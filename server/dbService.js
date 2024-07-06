@@ -23,21 +23,49 @@ class DbService{
     static getDbServiceInstance(){
         return instance ? instance : new DbService();
     }
-    async getAllData(){
-        try {
-            const response = await new Promise((resolve, reject)=>{
-                const query = "SELECT * FROM carrera_iti"
-                connection.query(query, (err , results)=>{
-                    if (err) reject(new Error(err.message));
-                    resolve(results);
-                }) 
+    async getAllData() {
+    try {
+      const response = await new Promise((resolve, reject) => {
+        const query = "SELECT * FROM carrera_iti";
+        connection.query(query, async (err, results) => {
+          if (err) reject(new Error(err.message));
+
+          
+          //Agarrar el campo email
+          for (let i = 0; i < results.length; i++) {
+            
+            const usuarioQuery = `SELECT email FROM usuarios WHERE nombre = '${results[i].nombre}'`;
+            const usuarioResult = await new Promise((resolve, reject) => {
+              connection.query(usuarioQuery, (err, userResult) => {
+                if (err) reject(new Error(err.message));
+                resolve(userResult[0]?.email);
+              });
             });
-            console.log(response);
-            return response;
-        } catch (error) {
-            console.log(error)
-        }
+
+            //Agarrar el campo carrera
+            const estadisticasQuery = `SELECT carrera FROM estadisticas WHERE id = '${results[i].id_estadistica}'`;
+            const estadisticasResult = await new Promise((resolve, reject) => {
+              connection.query(estadisticasQuery, (err, statsResult) => {
+                if (err) reject(new Error(err.message));
+                resolve(statsResult[0]?.nombre_carrera);
+              });
+            });
+
+        
+            results[i].email = usuarioResult;
+            results[i].carrera = estadisticasResult;
+          }
+
+          resolve(results);
+        });
+      });
+
+      console.log(response);
+      return response;
+    } catch (error) {
+      console.log(error);
     }
+  }
     async EstadisticaEstudianteITI(){
         try {
             const response = await new Promise((resolve, reject)=>{
@@ -135,10 +163,10 @@ class DbService{
         }
     }
 
-    async insertNewUser(name){
+    async insertNewUser(name,fecha){
         try {
             const insertUser = await new Promise((resolve, reject)=>{
-                const query = "INSERT INTO carrera_iti (nombre) VALUES (?)";
+                const query = "INSERT INTO carrera_iti (nombre,Fecha) VALUES (?,?)";
                 connection.query(query,[name], (err , results)=>{
                     if (err) reject(new Error(err.message));
                     resolve(results.insertUser);
@@ -146,19 +174,20 @@ class DbService{
             });
 
             return {
-                nombre : name
+                nombre : name,
+                fecha  : fecha
             };
         } catch (error) {
             console.log(error)
         }
     }
 
-    async updateByNamePLG(puntuacion_logico, nombre){
+    async updateByNamePLG(puntuacion_logico, nombre,fecha){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_logico = (?) WHERE nombre = ?"
-                connection.query(query, [puntuacion_logico, nombre],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_logico = ?, Fecha = CURRENT_DATE WHERE nombre = ?";
+                connection.query(query, [puntuacion_logico, nombre,fecha],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -170,12 +199,12 @@ class DbService{
             return false;
         }
     }
-    async updateByNamePMT(puntuacion_matematico, nombre){
+    async updateByNamePMT(puntuacion_matematico, nombre,fecha){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_matematico = (?) WHERE nombre = ?"
-                connection.query(query, [puntuacion_matematico, nombre],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_matematico = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
+                connection.query(query, [puntuacion_matematico, nombre,fecha],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -187,12 +216,12 @@ class DbService{
             return false;
         }
     }
-    async updateByNamePIM(puntuacion_idioma, nombre){
+    async updateByNamePIM(puntuacion_idioma, nombre,fecha){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_idioma = (?) WHERE nombre = ?"
-                connection.query(query, [puntuacion_idioma, nombre],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_idioma = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
+                connection.query(query, [puntuacion_idioma, nombre,fecha],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -204,30 +233,12 @@ class DbService{
             return false;
         }
     }
-    async updateByNameAPAR(puntuacion_ar, nombre){
+    async updateByNameAPAR(puntuacion_ar, nombre,fecha){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_ar = (?) WHERE nombre = ?"
-                connection.query(query, [puntuacion_ar, nombre],(err , result)=>{
-                    if (err) reject(new Error(err.message));
-                    resolve(result.affectedRows);
-                }) 
-            });
-            return response === 1 ? true : false;
-            //return response;
-        } catch (error) {
-            console.log(error)
-            return false;
-        }
-    }
-
-    async updateByNameAPCI(puntuacion_ci, nombre){
-        try {
-            
-            const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_ci = (?) WHERE nombre = ?"
-                connection.query(query, [puntuacion_ci, nombre],(err , result)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_ar = ? , Fecha = CURRENT_DATE WHERE nombre = ?"
+                connection.query(query, [puntuacion_ar, nombre,fecha],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -240,12 +251,30 @@ class DbService{
         }
     }
 
-    async updateByNameAPIG(puntuacion_ig, nombre){
+    async updateByNameAPCI(puntuacion_ci, nombre,fecha){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_ig = (?) WHERE nombre = ?"
-                connection.query(query, [puntuacion_ig, nombre],(err , result)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_ci = ? , Fecha = CURRENT_DATE WHERE nombre = ?"
+                connection.query(query, [puntuacion_ci, nombre,fecha],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameAPIG(puntuacion_ig, nombre,fecha){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_iti SET agro_puntuacion_ig = ? , Fecha = CURRENT_DATE WHERE nombre = ?"
+                connection.query(query, [puntuacion_ig, nombre,fecha],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -262,7 +291,7 @@ class DbService{
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_mt = (?) WHERE nombre = ?"
+                const query = "UPDATE carrera_iti SET agro_puntuacion_mt =  ? , Fecha = CURRENT_DATE WHERE nombre = ?"
                 connection.query(query, [puntuacion_mt, nombre],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
@@ -280,7 +309,7 @@ class DbService{
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET ext_puntuacion_lg = (?) WHERE nombre = ?"
+                const query = "UPDATE carrera_iti SET ext_puntuacion_lg = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
                 connection.query(query, [puntuacion_ig, nombre],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
@@ -298,7 +327,7 @@ class DbService{
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET gec_puntuacion_at = (?) WHERE nombre = ?"
+                const query = "UPDATE carrera_iti SET gec_puntuacion_at = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
                 connection.query(query, [puntuacion_at, nombre],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
