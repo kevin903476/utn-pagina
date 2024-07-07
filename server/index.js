@@ -82,14 +82,23 @@ app.get('/estadisticas-gec', (request, response) =>{
     .then(data => response.json({data}))
     .catch(err => console.log(err)); 
 });
+app.post('/obtenerUser', (request, response) =>{
+    const { nombre} = request.body;
+    const db = dbService.getDbServiceInstance();
 
+    const result = db.obtenerUsuario(nombre);
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
 app.post('/validarUser', (request, response) =>{
     const { nombre, contra } = request.body;
     const db = dbService.getDbServiceInstance();
     const result = db.validarUser(nombre, contra);
 
     result
-    .then(data => response.json({data : data}))
+    .then(data => response.json({data}))
     .catch(err => console.log(err))
 });
 //update

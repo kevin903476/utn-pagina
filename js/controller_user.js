@@ -4,6 +4,7 @@ function show(username) {
     let nameUser = document.querySelector("#name");
     let logueado = document.querySelector("#logueado");
     let logoutButton = document.querySelector("#logout-button");
+    let titulo = document.querySelector("#titulo-inicio");
   
     if (nameUser && logoutButton) {
         nameUser.textContent = username;
@@ -14,6 +15,7 @@ function show(username) {
 
     if (loginLink) loginLink.style.display = "none";
     if (registerLink) registerLink.style.display = "none";
+    if (titulo) titulo.style.display = "none";
     localStorage.setItem("show", "true");
 }
 
@@ -26,39 +28,48 @@ function out() {
     let nameUser = document.querySelector("#name");
     let logueado = document.querySelector("#logueado");
     let logoutButton = document.querySelector("#logout-button");
+    let titulo = document.querySelector("#titulo-inicio");
   
     if (logoutButton) logoutButton.style.display = "none";
     if (nameUser) nameUser.style.display = "none";
     if (logueado) logueado.style.display = "none";
     if (loginLink) loginLink.style.display = "block";
     if (registerLink) registerLink.style.display = "block";
+    if (titulo) titulo.style.display = "block";
     localStorage.setItem("show", "false");
     localStorage.setItem("user", "none");
+    window.location.reload();
 }
-
+let admin = document.querySelector("#caja-admin");
 document.addEventListener('DOMContentLoaded', function() {
-    // Comprobar la sesión al cargar la página
-    /* fetch('http://localhost:5501/getSession')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.usuario)
-            if (data.usuario) {
-                show(data.usuario);
-                console.log('usuario cargado '+ data.usuario)
-            } else {
-                console.log('error')
-                out();
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        }); */
+    
         console.log(localStorage.getItem("user"))
         if (localStorage.getItem("user") !== "none") {
             show(localStorage.getItem("user"))
         } else {
            
         }
+
+        fetch('http://localhost:5501/obtenerUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: localStorage.getItem("user")
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data) 
+            if (data.data[0].rol === 1) {
+                admin.style.display = "block";
+            }
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 });
 
 if (document.getElementById('userForm')) {
@@ -116,23 +127,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         .then(response => response.json())
         .then(data => {
             if (data.data === true) {
-                // Establecer la sesión del usuario
-                /* fetch('http://localhost:5501/user', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ username: user })
-                })
-                .then(response => response.text())
-                .then(data => {
-                    console.log(data); // Sesión iniciada
-                    show(user); // Mostrar la sección principal
-                    window.location.href = '/index.html'; // Redirigir a la página principal
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                }); */
+                console.log(data.data[0]);
                 localStorage.setItem("user", user);
                 this.submit();
             } else {

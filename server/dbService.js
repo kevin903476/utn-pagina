@@ -136,7 +136,23 @@ class DbService{
                     resolve(results.length > 0);
                 }) 
             });
+            console.log(response);
             return response ;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async obtenerUsuario(user){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT * FROM usuarios WHERE nombre = ? ";
+                connection.query(query,[user], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
         } catch (error) {
             console.log(error)
         }

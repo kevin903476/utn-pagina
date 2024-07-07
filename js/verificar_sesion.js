@@ -1,4 +1,4 @@
-if (document.querySelector('#ejercicio-logico-iti')) {
+if (document.querySelector('#ejercicio-logico-iti') ) {
     const botonLogico = document.querySelector('#ejercicio-logico-iti');
 
     if (localStorage.getItem("user") == "none") {

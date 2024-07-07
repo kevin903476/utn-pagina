@@ -64,6 +64,48 @@
 }
 /* _____final del header _____*/
 
+/*inicio del bloque admin*/
+#caja-admin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.admin-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  
+}
+.admin-section button {
+  all: unset;
+  margin: 25px;
+}
+
+#caja-admin  a {
+  text-decoration: none;
+  font-size: 19px;
+  padding: 10px 25px;
+  color: #fff;
+  background-color: #40cfff;
+  border-radius: 50px;
+
+  border: 2px solid transparent;
+  transition: all 300ms ease;
+
+  letter-spacing: 0.5px; /*Para separar un poco las letras*/
+}
+
+#caja-admin a:hover {
+  background: transparent; /*Fondo transparente*/
+  border: 2px solid #000000;
+  color: #000000;
+}
+/*inicio del bloque admin*/
+
 /*_____ inio del nav _____*/
 .nav{
   width: 100%;
