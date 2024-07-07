@@ -2,6 +2,7 @@ const express = require('express' );
 const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
+const bcryptjs = require('bcryptjs');
 
 dotenv.config();
 
@@ -13,10 +14,11 @@ app.use(express.urlencoded({extended : false}));
 
 //create
 
-app.post('/insertUser', (request, response) =>{
+app.post('/insertUser', async (request, response) =>{
     const {nombre, email, contra } = request.body;
     const db = dbService.getDbServiceInstance();
-    const result = db.insertUser(nombre,email,contra)
+    let encriptada = await bcryptjs.hash(contra, 8)
+    const result = db.insertUser(nombre,email,encriptada)
 
     result
     .then(data => response.json({data : data}))
@@ -92,15 +94,25 @@ app.post('/obtenerUser', (request, response) =>{
     .then(data => response.json({data}))
     .catch(err => console.log(err)); 
 });
-app.post('/validarUser', (request, response) =>{
+app.post('/validarUser', async (request, response) => {
     const { email, contra } = request.body;
     const db = dbService.getDbServiceInstance();
-    const result = db.validarUser(email, contra);
+    const result = await db.validarUser(email);
 
-    result
-    .then(data => response.json({data}))
-    .catch(err => console.log(err))
+    if (result.length > 0) {
+        const user = result[0];
+        const compare = await bcryptjs.compare(contra, user.contra);
+
+        if (compare) {
+            response.json({ data: true });
+        } else {
+            response.json({ data: false });
+        }
+    } else {
+        response.json({ data: false });
+    }
 });
+
 //update
 app.patch('/updatePLG', (request , response) => {
     const {puntuacion_logico, nombre} =request.body

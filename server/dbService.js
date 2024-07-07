@@ -127,19 +127,18 @@ class DbService{
         }
     }
     
-    async validarUser(email,contra){
+    async  validarUser(email) {
         try {
-            const response = await new Promise((resolve, reject)=>{
-                const query = "SELECT * FROM usuarios WHERE email = ? AND contra = ?";
-                connection.query(query,[email,contra], (err , results)=>{
+            const response = await new Promise((resolve, reject) => {
+                const query = "SELECT * FROM usuarios WHERE email = ?";
+                connection.query(query, [email], (err, results) => {
                     if (err) reject(new Error(err.message));
-                    resolve(results.length > 0);
-                }) 
+                    resolve(results);
+                });
             });
-            console.log(response);
-            return response ;
+            return response;
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
     async obtenerUsuario(email){
