@@ -127,11 +127,11 @@ class DbService{
         }
     }
     
-    async validarUser(name,contra){
+    async validarUser(email,contra){
         try {
             const response = await new Promise((resolve, reject)=>{
-                const query = "SELECT * FROM usuarios WHERE nombre = ? AND contra = ?";
-                connection.query(query,[name,contra], (err , results)=>{
+                const query = "SELECT * FROM usuarios WHERE email = ? AND contra = ?";
+                connection.query(query,[email,contra], (err , results)=>{
                     if (err) reject(new Error(err.message));
                     resolve(results.length > 0);
                 }) 
@@ -142,11 +142,11 @@ class DbService{
             console.log(error)
         }
     }
-    async obtenerUsuario(user){
+    async obtenerUsuario(email){
         try {
             const response = await new Promise((resolve, reject)=>{
-                const query = "SELECT * FROM usuarios WHERE nombre = ? ";
-                connection.query(query,[user], (err , results)=>{
+                const query = "SELECT * FROM usuarios WHERE email = ? ";
+                connection.query(query,[email], (err , results)=>{
                     if (err) reject(new Error(err.message));
                     resolve(results);
                 }) 

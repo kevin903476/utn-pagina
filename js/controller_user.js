@@ -38,6 +38,7 @@ function out() {
     if (titulo) titulo.style.display = "block";
     localStorage.setItem("show", "false");
     localStorage.setItem("user", "none");
+    localStorage.setItem("rol", "0");
     window.location.reload();
 }
 let admin = document.querySelector("#caja-admin");
@@ -46,11 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(localStorage.getItem("user"))
         if (localStorage.getItem("user") !== "none") {
             show(localStorage.getItem("user"))
-        } else {
-           
-        }
-
-        fetch('http://localhost:5501/obtenerUser', {
+        } 
+        console.log(localStorage.getItem("rol"))
+        if (localStorage.getItem("rol")==="1") {
+            admin.style.display = "block";
+        } 
+        /* fetch('http://localhost:5501/obtenerUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch((error) => {
             console.error('Error:', error);
-        });
+        }); */
 });
 
 if (document.getElementById('userForm')) {
@@ -120,19 +122,43 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nombre: user,
+                email: user,
                 contra: pass
             })
         })
         .then(response => response.json())
         .then(data => {
             if (data.data === true) {
-                console.log(data.data[0]);
-                localStorage.setItem("user", user);
+
+                fetch('http://localhost:5501/obtenerUser', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: user
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data) 
+                    localStorage.setItem("user", data.data[0].nombre);
+                    localStorage.setItem("rol", data.data[0].rol);
+                    
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+
+               /*  console.log(data.data[0]); */
+               
                 this.submit();
             } else {
                 // Mostrar alerta si el inicio de sesión falló
+                
                 alert("Usuario o contraseña incorrectos. Por favor, intenta nuevamente.");
+                
             }
         })
         .catch(error => {
