@@ -1003,8 +1003,52 @@ background-color: #006691;
     
 }
 
+.update_estadisticas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  
 
+}
 
+.title-update{
+  color: #fff;
+  padding: 2%;
+  
+
+}
+.update_estadisticas input{
+  margin-top: 5%;
+  border: none;
+  border-radius: 3px;
+  height: 20px;
+}
+.update_estadisticas select{
+  margin-top: 5%;
+  border: none;
+  border-radius: 3px;
+  height: 20px;
+}
+#btn-actualizar{
+  width: 50%;
+  margin-top: 5%;
+  border: none;
+  background-color: #40cfff;
+  
+}
+/* #estadisticas-caja{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: 1;
+  flex-grow: ;
+  align-items: baseline;
+  justify-content: space-around;
+  
+  
+
+} */
 
 
 /*_____ Final footer _____*/

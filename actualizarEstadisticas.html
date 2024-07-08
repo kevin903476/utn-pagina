@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body style="background-color: #2499c7;">
+    <div id="nav-db" >
+            
+
+        <header class="header-db">
+        <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" /></a>
+
+        <button class="button">
+            <svg
+              class="icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </button>
+        <nav class="nav">
+            <ul class="nav-list">
+            <li><a href="./index.html">INICIO</a></li>
+            <li><a href="https://www.utn.ac.cr">PRINCIPAL UTN</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        
+        
+    </div>  
+    <div class="update_estadisticas">
+        <h1 class="title-update">Actualizar Estadísticas de Carreras</h1>
+  
+      <form id="update-form">
+        
+        
+         <div id="estadisticas-caja">
+          <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera" required>
+              <option value="carrera_iti">Ingeniería en Tecnologías de la Información</option>
+              <option value="carrera_agro">Ingeniería Agronómica</option>
+              <option value="carrera_ig">Ingles</option>
+              <option value="carrera_gec">Turismo</option>
+            
+            </select>
+            <br>
+            <label for="estudiantes">Estudiantes:</label>
+            <input type="number" id="estudiantes" name="estudiantes" required>
+            <br>
+            <label for="graduados">Graduados:</label>
+            <input type="number" id="graduados" name="graduados" required>
+            <br>
+            <label for="insercion">Inserción:</label>
+            <input type="number" id="insercion" name="insercion" required>
+            <br>
+          </div>
+          <button type="submit" id="btn-actualizar">Actualizar</button>
+        </form>
+    </div>
+    <script src="js/controller_actualizarEstadisticas.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

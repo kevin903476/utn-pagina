@@ -355,6 +355,22 @@ class DbService{
             return false;
         }
     }
+    async updateEstadistica(carrera, estudiantes,graduados,insercion){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE estadisticas SET estudiantes = ?, graduados = ?, insercion = ? WHERE carrera = ?"
+                connection.query(query, [ estudiantes,graduados,insercion, carrera],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
 }
 
 module.exports = DbService;
