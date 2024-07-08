@@ -61,12 +61,18 @@
 }
 
 .close-btn {
-    color: #aaa;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
-
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 
@@ -120,11 +126,18 @@
 }
 
 .close-btn2 {
-    color: #aaa;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
+  }
+  
+  .close-btn2:hover,
+  .close-btn2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 
@@ -179,11 +192,18 @@
 }
 
 .close-btn3 {
-    color: #aaa;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
+  }
+  
+  .close-btn3:hover,
+  .close-btn3:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 
@@ -237,11 +257,18 @@
 }
 
 .close-btn4 {
-    color: #aaa;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
+  }
+  
+  .close-btn4:hover,
+  .close-btn4:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 .link-box {
     margin-top: 10px;
