@@ -282,6 +282,7 @@ h2 {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+ 
 }
 
 /* Estilo para el contenido del modal */
@@ -291,6 +292,8 @@ h2 {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 20px;
+
 }
 
 .cerrarModal {
@@ -352,5 +355,9 @@ a {
 #enunciado1 iframe{
   height: 300px;
   width: 660px;
+}
+.modal-contenido {
+
+  width: 550px;
 }
 }
