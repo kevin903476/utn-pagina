@@ -223,8 +223,14 @@ if (document.querySelector('#ejercicio-lg-ile')) {
         if (localStorage.getItem("user") == "none") {
             
             botonIle.addEventListener('click', function() {
-                alert('Debes iniciar sesión antes de hacer un ejercicio');
-                window.location.href = 'login.html';
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Inicia sesión',
+                    text: 'Debes iniciar sesión antes de hacer un ejercicio',
+                    confirmButtonText: 'Aceptar'
+                }).then(() => {
+                    window.location.href = 'login.html';
+                });
             });    
         
     } else {

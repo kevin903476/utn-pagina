@@ -225,6 +225,20 @@ app.patch('/updateGCPA', (request , response) => {
     .then(data => response.json({sucess : data}))
     .catch(err => console.log(err))
 })
+app.patch('/updateEstadisticas', (request , response) => {
+    const {carrera, estudiantes,graduados,insercion} =request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.updateEstadistica(carrera, estudiantes,graduados,insercion);
+    console.log(carrera)
+    console.log(estudiantes)
+    console.log(graduados)
+    console.log(insercions)
+
+
+    result
+    .then(data => response.json({sucess : data}))
+    .catch(err => console.log(err))
+})
 
 //delete
 

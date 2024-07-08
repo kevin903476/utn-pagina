@@ -157,7 +157,15 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
             } else {
                 // Mostrar alerta si el inicio de sesión falló
                 
-                alert("Usuario o contraseña incorrectos. Por favor, intenta nuevamente.");
+                /* alert("Usuario o contraseña incorrectos. Por favor, intenta nuevamente."); */
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Error',
+                    text: 'El email o la contraseña son incorrectos',
+                    confirmButtonText: 'Aceptar'
+                }).then(() => {
+                    window.location.href = 'login.html';
+                });
                 
             }
         })
