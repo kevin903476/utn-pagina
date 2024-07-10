@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnCargar_mt = document.querySelector("#enviar-mt");
   const btnCargar_progra = document.querySelector("#enviar-progra");
 
+  const botonLogico = document.querySelector("#openModalBtn");
+  const botonMate = document.querySelector("#openModalBtn2");
+  const botonIdioma = document.querySelector("#openModalBtn3");
+  const botonProgra = document.querySelector("#openModalBtn4");
+
 
   if (btnCargar_mt) {
     btnCargar_mt.onclick = function () {
@@ -122,4 +127,42 @@ document.addEventListener("DOMContentLoaded", function () {
   
   }
 
+
+  if (botonLogico && botonMate && botonIdioma && botonProgra) {
+      fetch('http://localhost:5501/getUserIti', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              email: localStorage.getItem("email")
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          console.log(data) 
+          if (data.data[0].puntuacion_logico > -1) {
+            botonLogico.textContent = 'Deshabilitado'
+            botonLogico.classList.add('disabled');
+          }
+          if (data.data[0].puntuacion_matematico > -1) {
+
+             botonMate.textContent = 'Deshabilitado'
+             botonMate.classList.add('disabled');
+          }
+          if (data.data[0].puntuacion_idioma > -1) {
+             botonIdioma.textContent = 'Deshabilitado'
+             botonIdioma.classList.add('disabled');
+          }
+          if (data.data[0].puntuacion_progra > -1) {
+             botonProgra.textContent = 'Deshabilitado'
+             botonProgra.classList.add('disabled');
+             
+          }
+          
+      })
+      .catch((error) => {
+          console.error('Error:', error);
+      });
+  }
 });

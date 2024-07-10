@@ -156,6 +156,67 @@ class DbService{
             console.log(error)
         }
     }
+    async getUserIti(email){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT * FROM carrera_iti WHERE email = ? ";
+                connection.query(query,[email], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    async getUserAgro(email){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT * FROM carrera_agro WHERE email = ? ";
+                connection.query(query,[email], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async getUserExt(email){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT * FROM carrera_ext WHERE email = ? ";
+                connection.query(query,[email], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async getUserGec(email){
+        try {
+            const response = await new Promise((resolve, reject)=>{
+                const query = "SELECT * FROM carrera_gec WHERE email = ? ";
+                connection.query(query,[email], (err , results)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                }) 
+            });
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     async insertUser(name,email,contra){
         try {
