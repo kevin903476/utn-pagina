@@ -115,9 +115,9 @@ app.post('/validarUser', async (request, response) => {
 
 //update
 app.patch('/updatePLG', (request , response) => {
-    const {puntuacion_logico, nombre} =request.body
+    const {puntuacion_logico, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNamePLG(puntuacion_logico,nombre);
+    const result = db.updateByNamePLG(puntuacion_logico,email);
 
 
 
@@ -126,11 +126,10 @@ app.patch('/updatePLG', (request , response) => {
     .catch(err => console.log(err))
 })
 app.patch('/updatePMT', (request , response) => {
-    const {puntuacion_matematico, nombre} =request.body
+    const {puntuacion_matematico, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNamePMT(puntuacion_matematico,nombre);
-    console.log(puntuacion_matematico)
-    console.log(nombre)
+    const result = db.updateByNamePMT(puntuacion_matematico,email);
+    
 
 
     result
@@ -138,11 +137,21 @@ app.patch('/updatePMT', (request , response) => {
     .catch(err => console.log(err))
 })
 app.patch('/updatePIM', (request , response) => {
-    const {puntuacion_idioma, nombre} =request.body
+    const {puntuacion_idioma, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNamePIM(puntuacion_idioma,nombre);
-    console.log(puntuacion_idioma)
-    console.log(nombre)
+    const result = db.updateByNamePIM(puntuacion_idioma,email);
+    
+
+
+    result
+    .then(data => response.json({sucess : data}))
+    .catch(err => console.log(err))
+})
+app.patch('/updatePPG', (request , response) => {
+    const {puntuacion_progra, email} =request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.updateByNamePPG(puntuacion_progra,email);
+    
 
 
     result
@@ -150,11 +159,10 @@ app.patch('/updatePIM', (request , response) => {
     .catch(err => console.log(err))
 })
 app.patch('/updateAPAR', (request , response) => {
-    const {agro_puntuacion_ar, nombre} =request.body
+    const {agro_puntuacion_ar, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNameAPAR(agro_puntuacion_ar,nombre);
-    console.log(agro_puntuacion_ar)
-    console.log(nombre)
+    const result = db.updateByNameAPAR(agro_puntuacion_ar,email);
+    
 
 
     result
@@ -162,11 +170,10 @@ app.patch('/updateAPAR', (request , response) => {
     .catch(err => console.log(err))
 })
 app.patch('/updateAPCI', (request , response) => {
-    const {agro_puntuacion_ci, nombre} =request.body
+    const {agro_puntuacion_ci, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNameAPCI(agro_puntuacion_ci,nombre);
-    console.log(agro_puntuacion_ci)
-    console.log(nombre)
+    const result = db.updateByNameAPCI(agro_puntuacion_ci,email);
+    
 
 
     result
@@ -175,11 +182,10 @@ app.patch('/updateAPCI', (request , response) => {
 })
 
 app.patch('/updateAPIG', (request , response) => {
-    const {agro_puntuacion_ig, nombre} =request.body
+    const {agro_puntuacion_ig, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNameAPIG(agro_puntuacion_ig,nombre);
-    console.log(agro_puntuacion_ig)
-    console.log(nombre)
+    const result = db.updateByNameAPIG(agro_puntuacion_ig,email);
+
 
 
     result
@@ -188,12 +194,9 @@ app.patch('/updateAPIG', (request , response) => {
 })
 
 app.patch('/updateAPMT', (request , response) => {
-    const {agro_puntuacion_mt, nombre} =request.body
+    const {agro_puntuacion_mt, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNameAPMT(agro_puntuacion_mt,nombre);
-    console.log(agro_puntuacion_mt)
-    console.log(nombre)
-
+    const result = db.updateByNameAPMT(agro_puntuacion_mt,email);
 
     result
     .then(data => response.json({sucess : data}))
@@ -201,11 +204,10 @@ app.patch('/updateAPMT', (request , response) => {
 })
 
 app.patch('/updateEXPI', (request , response) => {
-    const {ext_puntuacion_lg, nombre} =request.body
+    const {ext_puntuacion_lg, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNameEXPI(ext_puntuacion_lg,nombre);
-    console.log(ext_puntuacion_lg)
-    console.log(nombre)
+    const result = db.updateByNameEXPI(ext_puntuacion_lg,email);
+    email
 
 
     result
@@ -214,11 +216,10 @@ app.patch('/updateEXPI', (request , response) => {
 })
 
 app.patch('/updateGCPA', (request , response) => {
-    const {gec_puntuacion_at, nombre} =request.body
+    const {gec_puntuacion_at, email} =request.body
     const db = dbService.getDbServiceInstance();
-    const result = db.updateByNameGCPA(gec_puntuacion_at,nombre);
-    console.log(gec_puntuacion_at)
-    console.log(nombre)
+    const result = db.updateByNameGCPA(gec_puntuacion_at,email);
+  
 
 
     result

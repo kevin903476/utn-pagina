@@ -111,5 +111,5 @@ document.getElementById('enviar-riego').addEventListener('click', function () {
       correctAnswerElement.textContent = `Respuesta correcta: ${labels[correctIndex].innerText}`;
   });
 
-  document.getElementById('resultado-mate').textContent = score;
+  document.getElementById('resultado-riego').textContent = score;
 });

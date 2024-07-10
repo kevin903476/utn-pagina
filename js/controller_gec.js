@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnCargar) {
       btnCargar.onclick = function () {
         const numero = document.querySelector("#resultado");
-        const nombre = localStorage.getItem("user");
+        const nombre = localStorage.getItem("email");
         const resultado = numero.textContent;
     
         fetch("http://localhost:5501/updateGCPA", {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           body: JSON.stringify({
             gec_puntuacion_at: resultado,
-            nombre: nombre,
+            email: nombre,
           }),
         })
           .then((response) => response.json())
