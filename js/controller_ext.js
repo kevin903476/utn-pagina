@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const btnCargar_im = document.querySelector("#enviar-ig");
+    const botonIdioma = document.querySelector("#openModalBtn");
     
   
   
@@ -31,7 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
           });
       };
     }
-   
+    
+    if ( botonIdioma) {
+      fetch('http://localhost:5501/getUserExt', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              email: localStorage.getItem("email")
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          console.log(data) 
+          
+          if (data.data[0].puntuacion_idioma > -1) {
+             botonIdioma.textContent = 'Deshabilitado'
+             botonIdioma.classList.add('disabled');
+          }
+          
+          
+      })
+      .catch((error) => {
+          console.error('Error:', error);
+      });
+  }
   
   });
   

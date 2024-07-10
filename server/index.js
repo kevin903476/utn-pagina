@@ -94,6 +94,48 @@ app.post('/obtenerUser', (request, response) =>{
     .then(data => response.json({data}))
     .catch(err => console.log(err)); 
 });
+
+app.post('/getUserIti', (request, response) =>{
+    const { email} = request.body;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.getUserIti(email);
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
+app.post('/getUserAgro', (request, response) =>{
+    const { email} = request.body;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.getUserAgro(email);
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
+app.post('/getUserExt', (request, response) =>{
+    const { email} = request.body;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.getUserExt(email);
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
+
+app.post('/getUserGec', (request, response) =>{
+    const { email} = request.body;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.getUserGec(email);
+    
+    result
+    .then(data => response.json({data}))
+    .catch(err => console.log(err)); 
+});
 app.post('/validarUser', async (request, response) => {
     const { email, contra } = request.body;
     const db = dbService.getDbServiceInstance();

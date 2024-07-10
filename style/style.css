@@ -1003,6 +1003,12 @@ background-color: #006691;
     
 }
 
+.card-info .disabled {
+  color: red;
+  pointer-events: none;
+  
+}
+
 .update_estadisticas{
   display: flex;
   flex-direction: column;

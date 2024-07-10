@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnCargar_ciencias = document.querySelector("#enviar-ciencias");
     const btnCargar_ig = document.querySelector("#enviar-ig");
     const btnCargar_mt = document.querySelector("#enviar-mt");
+
+    const botonAgro = document.querySelector("#openModalBtn");
+    const botonCiencias = document.querySelector("#openModalBtn2");
+    const botonIdioma = document.querySelector("#openModalBtn3");
+    const botonMate = document.querySelector("#openModalBtn4");
    
   
     if (btnCargar_riego) {
@@ -120,6 +125,45 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     
     }
+
+
+    if (botonAgro && botonMate && botonIdioma && botonCiencias) {
+      fetch('http://localhost:5501/getUserAgro', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              email: localStorage.getItem("email")
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          console.log(data) 
+          if (data.data[0].puntuacion_agro > -1) {
+            botonAgro.textContent = 'Deshabilitado'
+            botonAgro.classList.add('disabled');
+          }
+          if (data.data[0].puntuacion_mate > -1) {
+
+             botonMate.textContent = 'Deshabilitado'
+             botonMate.classList.add('disabled');
+          }
+          if (data.data[0].puntuacion_ingles > -1) {
+             botonIdioma.textContent = 'Deshabilitado'
+             botonIdioma.classList.add('disabled');
+          }
+          if (data.data[0].puntuacion_ciencias > -1) {
+             botonCiencias.textContent = 'Deshabilitado'
+             botonCiencias.classList.add('disabled');
+             
+          }
+          
+      })
+      .catch((error) => {
+          console.error('Error:', error);
+      });
+  }
    
   });
   

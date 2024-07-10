@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const btnCargar = document.querySelector("#enviar");
     
-  
+    const botonAct = document.querySelector("#openModalBtn");
   
     
     if (btnCargar) {
@@ -32,6 +32,31 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     }
    
+    if ( botonAct) {
+      fetch('http://localhost:5501/getUserGec', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              email: localStorage.getItem("email")
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          console.log(data) 
+          
+          if (data.data[0].puntuacion_act > -1) {
+              botonAct.textContent = 'Deshabilitado'
+              botonAct.classList.add('disabled');
+          }
+          
+          
+      })
+      .catch((error) => {
+          console.error('Error:', error);
+      });
+  }
   
   });
   
