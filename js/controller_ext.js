@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const btnCargar_im = document.querySelector("#enviar-idioma");
+    const btnCargar_im = document.querySelector("#enviar-ig");
     
   
   
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnCargar_im) {
       btnCargar_im.onclick = function () {
         const numero_idioma = document.querySelector("#resultado-idioma");
-        const nombre_idioma = localStorage.getItem("user");
+        const nombre_idioma = localStorage.getItem("email");
         const resultado_idioma = numero_idioma.textContent;
     
         fetch("http://localhost:5501/updateEXPI", {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           body: JSON.stringify({
             ext_puntuacion_lg: resultado_idioma,
-            nombre: nombre_idioma,
+            email: nombre_idioma,
           }),
         })
           .then((response) => response.json())

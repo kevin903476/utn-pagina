@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btnCargar_riego.onclick = function () {
       
         const numero_riego = document.querySelector("#resultado-riego");
-        const nombre_riego = localStorage.getItem("user");
+        const nombre_riego = localStorage.getItem("email");
         const resultado_riego = numero_riego.textContent;
     
         fetch("http://localhost:5501/updateAPAR", {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           body: JSON.stringify({
             agro_puntuacion_ar: resultado_riego,
-            nombre: nombre_riego,
+            email: nombre_riego,
           }),
         })
           .then((response) => response.json())
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnCargar_ciencias) {
       btnCargar_ciencias.onclick = function () {
         const numero_ciencias = document.querySelector("#resultado-ci");
-        const nombre_ciencias = localStorage.getItem("user");
+        const nombre_ciencias = localStorage.getItem("email");
         const resultado_ciencias = numero_ciencias.textContent;
     
         fetch("http://localhost:5501/updateAPCI", {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           body: JSON.stringify({
             agro_puntuacion_ci: resultado_ciencias,
-            nombre: nombre_ciencias,
+            email: nombre_ciencias,
           }),
         })
           .then((response) => response.json())
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
    if (btnCargar_ig) {
     btnCargar_ig.onclick = function () {
         const numero = document.querySelector("#resultado-ig");
-        const nombre = localStorage.getItem("user");
+        const nombre = localStorage.getItem("email");
         const resultado = numero.textContent;
       
     
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           body: JSON.stringify({
             agro_puntuacion_ig: resultado,
-            nombre: nombre,
+            email: nombre,
           }),
         })
           .then((response) => response.json())
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
    if (btnCargar_mt) {
     btnCargar_mt.onclick = function () {
         const numero_mt = document.querySelector("#resultado-mt");
-        const nombre_mt = localStorage.getItem("user");
+        const nombre_mt = localStorage.getItem("email");
         const resultado_mt = numero_mt.textContent;
       
     
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           body: JSON.stringify({
             agro_puntuacion_mt: resultado_mt,
-            nombre: nombre_mt,
+            email: nombre_mt,
           }),
         })
           .then((response) => response.json())

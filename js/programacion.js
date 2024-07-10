@@ -1,6 +1,7 @@
+const terminar = document.getElementById("terminar");
 function corregir() {
     const nivel = document.getElementById('nivel')
-    cantidad_correctas = nivel.value;
+    /* cantidad_correctas = nivel.value;
     
 
     let mensaje = "";
@@ -23,34 +24,46 @@ function corregir() {
     for (var i = 0; i < preguntas.length; i++) {
         preguntas[i].disabled = true;
     }
-
+ */
     // Desactiva el botón de corregir
-    document.getElementById("resultados").disabled = true;
+    /* document.getElementById("resultados").disabled = true; */
 
-    var btnAbrirModal = document.getElementById("abrirModal");
+    //var btnAbrirModal = document.getElementById("abrirModal");
+    if (nivel.value.trim() === '') {
+        console.log("ingresa resultado")
+    } else {
+        document.getElementById("resultado-progra").innerHTML = nivel.value.trim();
+        var modal = document.getElementById("miModal");
 
-    var modal = document.getElementById("miModal");
-
-    var spanCerrarModal = document.getElementsByClassName("cerrarModal")[0];
-
-
-    btnAbrirModal.onclick = function() {
-    modal.style.display = "block";
-    }
-
-    spanCerrarModal.onclick = function() {
-    modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-    if (event.target == modal) {
+        var spanCerrarModal = document.getElementsByClassName("cerrarModal")[0];
+    
+    
+    
+        modal.style.display = "block";
+        
+        
+        spanCerrarModal.onclick = function() {
         modal.style.display = "none";
-    }
-    }
+        }
+        
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        
+        
+        terminar.classList.add('presionado')
+        terminar.classList.add('no-hover')
+        terminar.disabled = true
+        }
 
-    function mostrarRecomendaciones() {
-    var mensaje = document.getElementById("mensaje").textContent;
-    document.getElementsByClassName("modal-cuerpo")[0].innerHTML = mensaje;
-    }
-
+    
+    
 }
+    
+terminar.onclick = function(){
+    corregir();
+     
+}
+    

@@ -38,6 +38,7 @@ function out() {
     if (titulo) titulo.style.display = "block";
     localStorage.setItem("show", "false");
     localStorage.setItem("user", "none");
+    localStorage.setItem("email", "none");
     localStorage.setItem("rol", "0");
     window.location.reload();
 }
@@ -144,6 +145,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
                     console.log(data) 
                     localStorage.setItem("user", data.data[0].nombre);
                     localStorage.setItem("rol", data.data[0].rol);
+                    localStorage.setItem("email", data.data[0].email);
                     
                     console.log('Success:', data);
                 })

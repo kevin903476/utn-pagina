@@ -197,12 +197,12 @@ class DbService{
         }
     }
 
-    async updateByNamePLG(puntuacion_logico, nombre,fecha){
+    async updateByNamePLG(puntuacion_logico, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_logico = ?, Fecha = CURRENT_DATE WHERE nombre = ?";
-                connection.query(query, [puntuacion_logico, nombre,fecha],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_logico = ? WHERE email = ?";
+                connection.query(query, [puntuacion_logico, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -214,12 +214,12 @@ class DbService{
             return false;
         }
     }
-    async updateByNamePMT(puntuacion_matematico, nombre,fecha){
+    async updateByNamePMT(puntuacion_matematico, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_matematico = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_matematico, nombre,fecha],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_matematico = ? WHERE email = ?"
+                connection.query(query, [puntuacion_matematico, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -231,12 +231,12 @@ class DbService{
             return false;
         }
     }
-    async updateByNamePIM(puntuacion_idioma, nombre,fecha){
+    async updateByNamePIM(puntuacion_idioma, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET puntuacion_idioma = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_idioma, nombre,fecha],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_idioma = ? WHERE email = ?"
+                connection.query(query, [puntuacion_idioma, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -248,12 +248,12 @@ class DbService{
             return false;
         }
     }
-    async updateByNameAPAR(puntuacion_ar, nombre,fecha){
+    async updateByNamePPG(puntuacion_idioma, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_ar = ? , Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_ar, nombre,fecha],(err , result)=>{
+                const query = "UPDATE carrera_iti SET puntuacion_progra = ? WHERE email = ?"
+                connection.query(query, [puntuacion_idioma, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -265,31 +265,12 @@ class DbService{
             return false;
         }
     }
-
-    async updateByNameAPCI(puntuacion_ci, nombre,fecha){
+    async updateByNameAPAR(puntuacion_ar, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_ci = ? , Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_ci, nombre,fecha],(err , result)=>{
-                    if (err) reject(new Error(err.message));
-                    resolve(result.affectedRows);
-                }) 
-            });
-            return response === 1 ? true : false;
-            //return response;
-        } catch (error) {
-            console.log(error)
-            return false;
-        }
-    }
-
-    async updateByNameAPIG(puntuacion_ig, nombre,fecha){
-        try {
-            
-            const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_ig = ? , Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_ig, nombre,fecha],(err , result)=>{
+                const query = "UPDATE carrera_agro SET puntuacion_agro = ? WHERE email = ?"
+                connection.query(query, [puntuacion_ar, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -302,12 +283,12 @@ class DbService{
         }
     }
 
-    async updateByNameAPMT(puntuacion_mt, nombre){
+    async updateByNameAPCI(puntuacion_ci, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET agro_puntuacion_mt =  ? , Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_mt, nombre],(err , result)=>{
+                const query = "UPDATE carrera_agro SET puntuacion_ciencias = ? WHERE email = ?"
+                connection.query(query, [puntuacion_ci, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -320,12 +301,12 @@ class DbService{
         }
     }
 
-    async updateByNameEXPI(puntuacion_ig, nombre){
+    async updateByNameAPIG(puntuacion_ig, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET ext_puntuacion_lg = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_ig, nombre],(err , result)=>{
+                const query = "UPDATE carrera_agro SET puntuacion_ingles = ? WHERE email = ?"
+                connection.query(query, [puntuacion_ig, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
@@ -338,12 +319,48 @@ class DbService{
         }
     }
 
-    async updateByNameGCPA(puntuacion_at, nombre){
+    async updateByNameAPMT(puntuacion_mt, email){
         try {
             
             const response = await new Promise((resolve, reject)=>{
-                const query = "UPDATE carrera_iti SET gec_puntuacion_at = ?, Fecha = CURRENT_DATE WHERE nombre = ?"
-                connection.query(query, [puntuacion_at, nombre],(err , result)=>{
+                const query = "UPDATE carrera_agro SET puntuacion_mate =  ? WHERE email = ?"
+                connection.query(query, [puntuacion_mt, email],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameEXPI(puntuacion_ig, email){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_ext SET puntuacion_idioma = ? WHERE email = ?"
+                connection.query(query, [puntuacion_ig, email],(err , result)=>{
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                }) 
+            });
+            return response === 1 ? true : false;
+            //return response;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async updateByNameGCPA(puntuacion_at, email){
+        try {
+            
+            const response = await new Promise((resolve, reject)=>{
+                const query = "UPDATE carrera_gec SET puntuacion_act = ? WHERE email = ?"
+                connection.query(query, [puntuacion_at, email],(err , result)=>{
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 }) 
