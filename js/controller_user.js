@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem("rol")==="1") {
             admin.style.display = "block";
         } 
-        /* fetch('http://localhost:5501/obtenerUser', {
+        /* fetch('https://api-utn.up.railway.app/obtenerUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -89,7 +89,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     // Convertir FormData a un objeto para enviar con fetch
     const data = Object.fromEntries(formData.entries());
 
-    fetch('http://localhost:5501/insertUser', {
+    fetch('https://api-utn.up.railway.app/insertUser', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -117,7 +117,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         const pass = document.querySelector("#pass").value;
         
         // Enviar los datos del formulario usando fetch
-        fetch('http://localhost:5501/validarUser', {
+        fetch('https://api-utn.up.railway.app/validarUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         .then(data => {
             if (data.data === true) {
 
-                fetch('http://localhost:5501/obtenerUser', {
+                fetch('https://api-utn.up.railway.app/obtenerUser', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

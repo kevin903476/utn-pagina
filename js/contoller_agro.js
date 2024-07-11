@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre_riego = localStorage.getItem("email");
         const resultado_riego = numero_riego.textContent;
     
-        fetch("http://localhost:5501/updateAPAR", {
+        fetch("https://api-utn.up.railway.app/updateAPAR", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre_ciencias = localStorage.getItem("email");
         const resultado_ciencias = numero_ciencias.textContent;
     
-        fetch("http://localhost:5501/updateAPCI", {
+        fetch("https://api-utn.up.railway.app/updateAPCI", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultado = numero.textContent;
       
     
-        fetch("http://localhost:5501/updateAPIG", {
+        fetch("https://api-utn.up.railway.app/updateAPIG", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultado_mt = numero_mt.textContent;
       
     
-        fetch("http://localhost:5501/updateAPMT", {
+        fetch("https://api-utn.up.railway.app/updateAPMT", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     if (botonAgro && botonMate && botonIdioma && botonCiencias) {
-      fetch('http://localhost:5501/getUserAgro', {
+      fetch('https://api-utn.up.railway.app/getUserAgro', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

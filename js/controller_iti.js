@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const nombre_mate = localStorage.getItem("email");
       const resultado_mate = numero_mate.textContent;
   
-      fetch("http://localhost:5501/updatePMT", {
+      fetch("https://api-utn.up.railway.app/updatePMT", {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const nombre_idioma = localStorage.getItem("email");
       const resultado_idioma = numero_idioma.textContent;
   
-      fetch("http://localhost:5501/updatePIM", {
+      fetch("https://api-utn.up.railway.app/updatePIM", {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const nombre = localStorage.getItem("email");
       const resultado = numero.textContent;
   
-      fetch("http://localhost:5501/updatePLG", {
+      fetch("https://api-utn.up.railway.app/updatePLG", {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const nombre = localStorage.getItem("email");
       const resultado = numero.textContent;
   
-      fetch("http://localhost:5501/updatePPG", {
+      fetch("https://api-utn.up.railway.app/updatePPG", {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   if (botonLogico && botonMate && botonIdioma && botonProgra) {
-      fetch('http://localhost:5501/getUserIti', {
+      fetch('https://api-utn.up.railway.app/getUserIti', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

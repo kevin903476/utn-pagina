@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-  fetch("http://localhost:5501/getPromedio")
+  fetch("https://api-utn.up.railway.app/getPromedio")
     .then((response) => response.json())
     .then((data) => { loadTable(data["data"]) });
 

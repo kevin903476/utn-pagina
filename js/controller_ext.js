@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre_idioma = localStorage.getItem("email");
         const resultado_idioma = numero_idioma.textContent;
     
-        fetch("http://localhost:5501/updateEXPI", {
+        fetch("https://api-utn.up.railway.app/updateEXPI", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     if ( botonIdioma) {
-      fetch('http://localhost:5501/getUserExt', {
+      fetch('https://api-utn.up.railway.app/getUserExt', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
