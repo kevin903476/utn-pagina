@@ -65,27 +65,38 @@
 /* _____final del header _____*/
 
 /*inicio del bloque admin*/
-#caja-admin{
+#caja-admin , #caja-promedio{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: none;
 }
-.admin-section{
+#caja-admin p{
+  color: #000000;
+}
+.caja-section{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  color: #fff;
+  /* margin: 25px; */
   
 }
-.admin-section button {
+
+#caja-promedio h2{
+  
+  color: #fff;
+  /* margin: 25px; */
+  
+}
+.caja-section button {
   all: unset;
   margin: 25px;
 }
 
-#caja-admin  a {
+.caja-emergente {
   text-decoration: none;
   font-size: 19px;
   padding: 10px 25px;
@@ -103,6 +114,11 @@
   background: transparent; /*Fondo transparente*/
   border: 2px solid #000000;
   color: #000000;
+}
+.caja-section a:hover {
+  background: transparent; /*Fondo transparente*/
+  border: 2px solid #ffffff;
+  
 }
 /*inicio del bloque admin*/
 

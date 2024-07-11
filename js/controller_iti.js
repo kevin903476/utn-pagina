@@ -159,6 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
              botonProgra.classList.add('disabled');
              
           }
+          if (data.data[0].puntuacion_logico > -1 && data.data[0].puntuacion_matematico > -1 && data.data[0].puntuacion_idioma > -1 && data.data[0].puntuacion_progra > -1) {
+              document.querySelector("#caja-promedio").style.display = "block";
+          }else{
+            document.querySelector("#caja-promedio").style.display = "none";
+          }
           
       })
       .catch((error) => {
