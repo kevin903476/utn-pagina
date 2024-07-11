@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const btnInsertar = document.querySelector('#boton-insertar');
 
-  fetch("http://localhost:5501/getAll")
+  fetch("https://api-utn.up.railway.app/getAll")
     .then((response) => response.json())
     .then((data) => { loadTable(data["data"]) });
 
   function insertUser(nombre, correo) {
-    fetch('http://localhost:5501/insert', {
+    fetch('https://api-utn.up.railway.app/insert', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'

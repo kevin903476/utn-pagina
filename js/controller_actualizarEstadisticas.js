@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const resInsercion = insercion.textContent;
      
       
-          fetch("http://localhost:5501/updateEstadisticas", {
+          fetch("https://api-utn.up.railway.app/updateEstadisticas", {
             method: "PATCH",
             headers: {
               "Content-type": "application/json",

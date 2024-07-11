@@ -37,7 +37,7 @@ function handleScroll() {
     var graduadosITI = document.querySelector("#graduados");
     var insercionITI = document.querySelector("#insercion");
 
-    fetch("http://localhost:5501/estadisticas-agro")
+    fetch("https://api-utn.up.railway.app/estadisticas-agro")
     .then((response) => response.json())
     .then((data) => {
         

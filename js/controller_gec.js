@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre = localStorage.getItem("email");
         const resultado = numero.textContent;
     
-        fetch("http://localhost:5501/updateGCPA", {
+        fetch("https://api-utn.up.railway.app/updateGCPA", {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
    
     if ( botonAct) {
-      fetch('http://localhost:5501/getUserGec', {
+      fetch('https://api-utn.up.railway.app/getUserGec', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
