@@ -1243,13 +1243,21 @@ background-color: #006691;
   .box-stats{
     display: flex;
     flex-direction: row;
+    width: 70%;
 
   }
 
   .stats{
     margin-top: 5%;
   }
-
+  .stats-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats-container p{
+    width: 100%;
+  }
   .container-test{
     background-color: #2499c7;
     padding-top: 0px;
