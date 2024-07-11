@@ -66,6 +66,22 @@ class DbService{
       console.log(error);
     }
   }
+async getPromedio() {
+    try {
+      const response = await new Promise((resolve, reject) => {
+        const query = "SELECT email, carrera, promedio, DATE_FORMAT(fecha, '%d-%m-%Y') as fecha_formateada FROM promedios ORDER BY promedio DESC";
+        connection.query(query, async (err, results) => {
+          if (err) reject(new Error(err.message));
+          resolve(results);
+        });
+      });
+
+      console.log(response);
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  }
     async EstadisticaEstudianteITI(){
         try {
             const response = await new Promise((resolve, reject)=>{
