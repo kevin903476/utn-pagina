@@ -16,20 +16,21 @@ function counter(id, start, end) {
 }
 
 // Función para verificar si el elemento está en la ventana visible
-function isOnFocus(el) {
-    // Obtener el tamaño y posición del elemento relativo a la ventana del navegador
+function isPartiallyOnFocus(el) {
     var rect = el.getBoundingClientRect();
-    // Verificar si el elemento está completamente dentro de la ventana visible
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.top < windowHeight &&
+        rect.bottom > 0 &&
+        rect.left < windowWidth &&
+        rect.right > 0
     );
 }
 
 // Función para manejar el evento de desplazamiento
- var estudiantesCounter = false;
+var estudiantesCounter = false;
 var graduadosCounter = false;
 var insercionCounter = false;
 function handleScroll() {
@@ -44,18 +45,18 @@ function handleScroll() {
         
         const estadisticas = data.data[0];
         //console.log(estadisticas)
-        if (isOnFocus(estudiantesITI) && !estudiantesCounter) {
+        if (isPartiallyOnFocus(estudiantesITI) && !estudiantesCounter) {
             counter("estudiantes", 0, estadisticas.estudiantes);
             estudiantesCounter = true;
         }
         
-        if (isOnFocus(graduadosITI) && !graduadosCounter) {
+        if (isPartiallyOnFocus(graduadosITI) && !graduadosCounter) {
             counter("graduados", 0, estadisticas.graduados);
             graduadosCounter = true;
             
         }
         
-        if (isOnFocus(insercionITI) && !insercionCounter) {
+        if (isPartiallyOnFocus(insercionITI) && !insercionCounter) {
             
             counter("insercion", 0, estadisticas.insercion);
             insercionCounter = true;
