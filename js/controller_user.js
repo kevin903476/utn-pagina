@@ -36,15 +36,32 @@ function out() {
     if (loginLink) loginLink.style.display = "block";
     if (registerLink) registerLink.style.display = "block";
     if (titulo) titulo.style.display = "block";
-    localStorage.setItem("show", "false");
     localStorage.setItem("user", "none");
     localStorage.setItem("email", "none");
     localStorage.setItem("rol", "0");
+
     window.location.reload();
 }
 let admin = document.querySelector("#caja-admin");
 document.addEventListener('DOMContentLoaded', function() {
-    
+
+
+    fetch('https://api-utn.up.railway.app/obtenerUser', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email: localStorage.getItem("email")
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data) 
+        localStorage.setItem("user", data.data[0].nombre);
+        localStorage.setItem("rol", data.data[0].rol);
+        console.log('Success:', data);
+
         console.log(localStorage.getItem("user"))
         if (localStorage.getItem("user") !== "none") {
             show(localStorage.getItem("user"))
@@ -53,26 +70,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem("rol")==="1") {
             admin.style.display = "block";
         } 
-        /* fetch('https://api-utn.up.railway.app/obtenerUser', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                nombre: localStorage.getItem("user")
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data) 
-            if (data.data[0].rol === 1) {
-                admin.style.display = "block";
-            }
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        }); */
+        
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    
+        
+
 });
 
 if (document.getElementById('userForm')) {
@@ -130,29 +135,9 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         .then(response => response.json())
         .then(data => {
             if (data.data === true) {
-
-                fetch('https://api-utn.up.railway.app/obtenerUser', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        email: user
-                    })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data) 
-                    localStorage.setItem("user", data.data[0].nombre);
-                    localStorage.setItem("rol", data.data[0].rol);
-                    localStorage.setItem("email", data.data[0].email);
-                    
-                    console.log('Success:', data);
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-
+                localStorage.setItem("email", user);
+        
+                
                /*  console.log(data.data[0]); */
                
                 this.submit();
