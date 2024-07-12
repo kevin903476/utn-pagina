@@ -43,7 +43,7 @@ function handleScroll() {
         
         
         const estadisticas = data.data[0];
-        console.log(estadisticas)
+        //console.log(estadisticas)
         if (isOnFocus(estudiantesITI) && !estudiantesCounter) {
             counter("estudiantes", 0, estadisticas.estudiantes);
             estudiantesCounter = true;
