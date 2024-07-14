@@ -81,39 +81,59 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 if (document.getElementById('userForm')) {
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevenir el envío del formulario por defecto
     
-
-document.getElementById('userForm').addEventListener('submit', function(event) {
-  
-    const user = document.querySelector("#user").value;
-    const correo = document.querySelector("#email").value;
-    const pass = document.querySelector("#pass").value;
-    // Crear un objeto FormData con los datos del formulario
-    const formData = new FormData(this);
-
-    // Convertir FormData a un objeto para enviar con fetch
-    const data = Object.fromEntries(formData.entries());
-
-    fetch('https://api-utn.up.railway.app/insertUser', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            nombre: user,
-            email: correo,
-            contra: pass,
+        const user = document.querySelector("#user").value;
+        const correo = document.querySelector("#email").value;
+        const pass = document.querySelector("#pass").value;
+        // Crear un objeto FormData con los datos del formulario
+        const formData = new FormData(this);
+    
+        // Convertir FormData a un objeto para enviar con fetch
+        const data = Object.fromEntries(formData.entries());
+        
+        fetch('https://api-utn.up.railway.app/validarUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: correo
+            })
         })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
+        .then(response => response.json())
+        .then(data => {
+            if (data.data === true) {
+                alert('El correo ya existe. Por favor, use otro correo.');
+            } else {
+                fetch('https://api-utn.up.railway.app/insertUser', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nombre: user,
+                        email: correo,
+                        contra: pass,
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Usuario registrado con éxito.');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     });
-});
 }
+
  if (document.getElementById('loginForm')) {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Evitar que el formulario se envíe de manera convencional
