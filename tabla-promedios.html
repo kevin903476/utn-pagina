@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.15/jspdf.plugin.autotable.min.js"></script>
     <title>Tabla</title>
 </head>
 <body style="background-color: #2499c7;">
@@ -42,7 +44,7 @@
     </div>
     <div id="contenedor-tabla">
         
-        
+        <button id="download-pdf">Descargar PDF</button>
 
         
         <div id="separator-content"></div>
@@ -72,7 +74,16 @@
     
             
     </div>
-    
+    <script>
+        
+        document.getElementById('download-pdf').addEventListener('click', function () {
+            var { jsPDF } = window.jspdf;
+            var doc = new jsPDF();
+            doc.autoTable({ html: '#table-promedio' });
+            doc.save('tabla_promedios.pdf');
+        });
+   
+    </script>
     <script src="js/controller_tablaPromedio.js"></script>
 </body>
 </html>
