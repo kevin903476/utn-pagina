@@ -67,6 +67,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
   }
   
   .close-btn:hover,
@@ -134,6 +137,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
   }
   
   .close-btn2:hover,
@@ -202,6 +208,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
   }
   
   .close-btn3:hover,
@@ -269,6 +278,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
   }
   
   .close-btn4:hover,
@@ -276,6 +288,7 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+    
   }
 
 .link-box {
