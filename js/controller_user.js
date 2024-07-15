@@ -87,26 +87,29 @@ if (document.getElementById('userForm')) {
         const user = document.querySelector("#user").value;
         const correo = document.querySelector("#email").value;
         const pass = document.querySelector("#pass").value;
-        // Crear un objeto FormData con los datos del formulario
+    
         const formData = new FormData(this);
     
         // Convertir FormData a un objeto para enviar con fetch
         const data = Object.fromEntries(formData.entries());
-        
-        fetch('https://api-utn.up.railway.app/validarUser', {
+
+        // Comprobar si el correo ya existe en la base de datos
+        fetch('https://api-utn.up.railway.app/obtenerUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                email: correo
+            body: JSON.stringify({ 
+                email: correo 
             })
         })
         .then(response => response.json())
         .then(data => {
-            if (data.data === true) {
-                alert('El correo ya existe. Por favor, use otro correo.');
+            if (data.data && data.data.length > 0) {  
+                alert('El email ya existe, ingresa otro');
+                window.location.href = 'Registro.html';
             } else {
+                
                 fetch('https://api-utn.up.railway.app/insertUser', {
                     method: 'POST',
                     headers: {
@@ -120,8 +123,9 @@ if (document.getElementById('userForm')) {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Success:', data);
-                    alert('Usuario registrado con éxito.');
+                    console.log('Success', data);
+                    
+                    window.location.href = 'login.html';
                 })
                 .catch((error) => {
                     console.error('Error:', error);
@@ -183,4 +187,4 @@ if (document.getElementById('userForm')) {
 
        
     });
- }
+}
