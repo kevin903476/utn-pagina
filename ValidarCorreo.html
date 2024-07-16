@@ -52,12 +52,56 @@
     <div class="container">
         <label for="email"><b>Correo Electrónico</b></label>
         <input type="email" placeholder="Ingrese su correo electrónico" name="email" id="email" required>
-
         <input type="submit" value="Validar Correo Electrónico">
     </div>
 </form>
 
-<script src="js/ActualizarPassword.js"></script>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const validateEmailForm = document.getElementById('validateEmailForm');
+    
+    if (validateEmailForm) {
+        validateEmailForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío por defecto del formulario
+    
+            const email = document.getElementById('email').value;
+    
+            if (!email) {
+                alert('Por favor, ingrese un correo electrónico.');
+                return;
+            }
+            
+            fetch('https://api-utn.up.railway.app/obtenerUser', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la validación del usuario');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.data && data.data.length > 0) {
+                    // Si el correo existe, redirigir a la página para cambiar contraseña
+                    window.location.href = 'cambiarContraseña.html?email=' + encodeURIComponent(email);
+                } else {
+                    alert('El correo electrónico ingresado no existe');
+                    window.location.href = 'Registro.html';
+                }
+            })
+            .catch(error => {
+                console.error('Error al verificar el correo:', error);
+                alert('Hubo un error al verificar el correo: ' + error.message);
+            });
+        });
+    }
+});
+</script>
 </body>
 </html>
