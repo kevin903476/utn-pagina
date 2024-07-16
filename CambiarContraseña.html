@@ -43,10 +43,8 @@
             padding: 20px;
         }
         .presionado {
-            background-color: #ccc !important;
-        }
-        .no-hover {
-            pointer-events: none;
+            background-color: gray;
+            cursor: not-allowed;
         }
     </style>
 </head>
@@ -56,14 +54,58 @@
 
 <form id="changePasswordForm">
     <div class="container">
-        <label for="newPassword"><b>Nueva Contraseña</b></label>
-        <input type="password" placeholder="Ingrese su nueva contraseña" id="pass" required>
-
-        <button type="submit" id="btn-actualizar">Cambiar Contraseña</button>
+        <label for="pass"><b>Nueva Contraseña</b></label>
+        <input type="password" placeholder="Ingrese su nueva contraseña" name="newPassword" id="pass" required>
+        <input type="submit" id="btn-actualizar" value="Actualizar">
     </div>
 </form>
 
-<script src="js/ActualizarPassword.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const changePasswordForm = document.getElementById('changePasswordForm');
+
+    if (changePasswordForm) {
+        changePasswordForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = decodeURIComponent(window.location.search.substr(1)).split("=")[1];
+            const newPassword = document.querySelector('#pass').value;
+
+            fetch("https://api-utn.up.railway.app/updatePassword", {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: email,
+                    newPassword: newPassword
+                }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la actualización de la contraseña');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    const btnActualizar = document.querySelector('#btn-actualizar');
+                    btnActualizar.classList.add('presionado');
+                    btnActualizar.value = 'Contraseña Actualizada';
+                    alert('Contraseña cambiada exitosamente');
+                    window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
+                } else {
+                    alert('No se pudo cambiar la contraseña');
+                }
+            })
+            .catch(error => {
+                console.error('Error al cambiar la contraseña:', error);
+                alert('Hubo un error al cambiar la contraseña: ' + error.message);
+            });
+        });
+    }
+});
+</script>
 
 </body>
 </html>
+
