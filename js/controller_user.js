@@ -45,7 +45,10 @@ function out() {
 let admin = document.querySelector("#caja-admin");
 document.addEventListener('DOMContentLoaded', function() {
 
-
+    localStorage.setItem("user", "none");
+    localStorage.setItem("email", "none");
+    localStorage.setItem("rol", "0");
+    
     fetch('https://api-utn.up.railway.app/obtenerUser', {
         method: 'POST',
         headers: {
