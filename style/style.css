@@ -279,7 +279,11 @@
   position: relative;
 }
 
-
+.image-banner {
+  width: 100%;
+  height: 100%;
+ 
+}
 .image-banner-ile {
   width: 100%;
   height: 100%;
@@ -1062,15 +1066,8 @@ background-color: #006691;
   
 
 } */
-
-
-/*_____ Final footer _____*/
-
-
 @media only screen and (max-width: 768px) {
   .image-banner {
-    width: 100%;
-    height: 100%;
     background: url(/img/informatica-telefono.jpg);
     background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
     background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
@@ -1080,6 +1077,7 @@ background-color: #006691;
   }
 }
 
+/*_____ Final footer _____*/
 @media only screen and (min-width: 769px) {
   /* Estilos específicos para dispositivos portátiles */
   /* Se puede agregar estilos aquí que se apliquen a pantallas de hasta 768px de ancho */
