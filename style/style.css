@@ -1178,7 +1178,7 @@ background-color: #006691;
   
   }
   .info-content p {
-    width: 60%;
+    width: 83%;
     text-align: center;
     line-height: 2.0;
     font-size: 20px;
@@ -1209,7 +1209,7 @@ background-color: #006691;
     
     
     justify-content: left;
-    width: 100%;
+    width: 70%;
 
     display: flex;
     align-items: center;
@@ -1264,13 +1264,19 @@ background-color: #006691;
     padding-bottom: 0px;
   }
 
-  .dual-section-container {
+  .contenedor-dual {
     display: flex;
-  align-items: flex-start ;
+    align-items: flex-start ;
+    justify-content: center;
+    width: 80%;
+    
   }
-  .dual-section-container p{
-    text-align: justify;
+  .dual-section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
 
 .insercion-container, .skills-content {
   flex: 1;
@@ -1327,7 +1333,7 @@ background-color: #006691;
     box-sizing: border-box;
 }
  .footer-col h4{
-  font-size: 25px;
+  font-size: 26px;
  }
  .footer-col ul li a{
   font-size: 17px;
