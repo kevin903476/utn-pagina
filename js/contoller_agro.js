@@ -158,6 +158,11 @@ document.addEventListener("DOMContentLoaded", function () {
              botonCiencias.classList.add('disabled');
              
           }
+          if (data.data[0].puntuacion_agro > -1 && data.data[0].puntuacion_mate > -1 && data.data[0].puntuacion_ingles > -1 && data.data[0].puntuacion_ciencias > -1) {
+            document.querySelector("#caja-promedio").style.display = "block";
+          }else{
+            document.querySelector("#caja-promedio").style.display = "none";
+          }
           
       })
       .catch((error) => {
