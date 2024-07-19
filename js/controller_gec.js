@@ -50,6 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
               botonAct.textContent = 'Deshabilitado'
               botonAct.classList.add('disabled');
           }
+          if (data.data[0].puntuacion_act > -1 ) {
+            document.querySelector("#caja-promedio").style.display = "block";
+          }else{
+            document.querySelector("#caja-promedio").style.display = "none";
+          }
           
           
       })

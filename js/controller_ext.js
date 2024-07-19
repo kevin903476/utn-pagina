@@ -51,7 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
              botonIdioma.textContent = 'Deshabilitado'
              botonIdioma.classList.add('disabled');
           }
-          
+          if (data.data[0].puntuacion_idioma > -1 ) {
+            document.querySelector("#caja-promedio").style.display = "block";
+          }else{
+            document.querySelector("#caja-promedio").style.display = "none";
+          }
           
       })
       .catch((error) => {

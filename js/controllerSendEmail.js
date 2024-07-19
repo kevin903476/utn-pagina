@@ -1,35 +1,163 @@
 document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById('send-email-btn')) {
+    
     const sendEmailBtn = document.getElementById('send-email-btn');
-  if(sendEmailBtn){
-    sendEmailBtn.onclick= function () {
-      // Obtener el email del usuario desde local storage o cookies
-      const userEmail = localStorage.getItem('userEmail'); // Ejemplo usando local storage
-  
-      fetch('https://api-utn.up.railway.app/send-email', {
+
+    sendEmailBtn.addEventListener('click', function () {
+      
+      fetch('https://api-utn.up.railway.app/send-email-iti', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email: userEmail }) // Incluir el email en el cuerpo de la solicitud
+        body: JSON.stringify({
+          email: localStorage.getItem("email")
+          }) 
       })
       .then(response => response.json())
       .then(data => {
-        const messageDiv = document.getElementById('message');
-        if (data.error) {
-          messageDiv.textContent = 'Error al enviar los resultados';
-          messageDiv.style.color = 'red';
-        } else {
-          messageDiv.textContent = 'Resultados enviados exitosamente';
-          messageDiv.style.color = 'green';
-        }
+        console.log(data)
+        Swal.fire({
+          icon: 'success',
+          title: 'Enviado',
+          text: 'Ya puedes reviar tu correo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
       })
       .catch(error => {
-        console.error('Error:', error);
-        const messageDiv = document.getElementById('message');
-        messageDiv.textContent = 'Error al enviar los resultados';
-        messageDiv.style.color = 'red';
+        console.log(data)
+        Swal.fire({
+          icon: 'error',
+          title: 'error',
+          text: 'Ha ocurrido algo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
       });
-    };
+    });
   }
+  if (document.getElementById('send-email-btn-agro')) {
     
-  });
+    const sendEmailBtn = document.getElementById('send-email-btn-agro');
+
+    sendEmailBtn.addEventListener('click', function () {
+      
+      fetch('https://api-utn.up.railway.app/send-email-agro', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: localStorage.getItem("email")
+          }) 
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        Swal.fire({
+          icon: 'success',
+          title: 'Enviado',
+          text: 'Ya puedes reviar tu correo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
+      })
+      .catch(error => {
+        console.log(data)
+        Swal.fire({
+          icon: 'error',
+          title: 'error',
+          text: 'Ha ocurrido algo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
+      });
+    });
+  }
+  if (document.getElementById('send-email-btn-ig')) {
+    
+    const sendEmailBtn = document.getElementById('send-email-btn-ig');
+
+    sendEmailBtn.addEventListener('click', function () {
+      
+      fetch('https://api-utn.up.railway.app/send-email-ig', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: localStorage.getItem("email")
+          }) 
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        Swal.fire({
+          icon: 'success',
+          title: 'Enviado',
+          text: 'Ya puedes reviar tu correo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
+      })
+      .catch(error => {
+        console.log(data)
+        Swal.fire({
+          icon: 'error',
+          title: 'error',
+          text: 'Ha ocurrido algo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
+      });
+    });
+  }
+  if (document.getElementById('send-email-btn-gec')) {
+    
+    const sendEmailBtn = document.getElementById('send-email-btn-gec');
+
+    sendEmailBtn.addEventListener('click', function () {
+      
+      fetch('https://api-utn.up.railway.app/send-email-gec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: localStorage.getItem("email")
+          }) 
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        Swal.fire({
+          icon: 'success',
+          title: 'Enviado',
+          text: 'Ya puedes reviar tu correo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
+      })
+      .catch(error => {
+        console.log(data)
+        Swal.fire({
+          icon: 'error',
+          title: 'error',
+          text: 'Ha ocurrido algo',
+          confirmButtonText: 'Aceptar'
+        }).then(() => {
+            console.log("enviado")
+        });
+      });
+    });
+  }
+
+});
