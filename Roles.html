@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Actualizar Role del Usuario</h1>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <button id="validate-btn">Validar</button>
+    </div>
+    <div id="user-info" style="display: none;">
+      <h3 id="user-name"></h3>
+      <label for="role">Role:</label>
+      <select id="role">
+        <option value="0">0</option>
+        <option value="1">1</option>
+      </select>
+      <button type="submit" id="update-role-btn">Actualizar Role</button>
+    </div>
+    <div id="message"></div>
+
+    <script src="./js/controller_Roles.js"></script>
+</body>
+</html>

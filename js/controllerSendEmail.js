@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           icon: 'success',
           title: 'Enviado',
-          text: 'Ya puedes reviar tu correo',
+          text: 'Ya puedes revisar tu correo',
           confirmButtonText: 'Aceptar'
         }).then(() => {
             console.log("enviado")
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           icon: 'success',
           title: 'Enviado',
-          text: 'Ya puedes reviar tu correo',
+          text: 'Ya puedes revisar tu correo',
           confirmButtonText: 'Aceptar'
         }).then(() => {
             console.log("enviado")
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           icon: 'success',
           title: 'Enviado',
-          text: 'Ya puedes reviar tu correo',
+          text: 'Ya puedes revisar tu correo',
           confirmButtonText: 'Aceptar'
         }).then(() => {
             console.log("enviado")
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           icon: 'success',
           title: 'Enviado',
-          text: 'Ya puedes reviar tu correo',
+          text: 'Ya puedes revisar tu correo',
           confirmButtonText: 'Aceptar'
         }).then(() => {
             console.log("enviado")
