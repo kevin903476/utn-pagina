@@ -3,18 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Actualizar Roles</title>
+    <link rel="stylesheet" href="style/style.css" />
 </head>
-<body>
-    <h1>Actualizar Role del Usuario</h1>
-    <div>
-      <label for="email">Email:</label>
+<body style="background-color: #2499c7;">
+  <div id="nav-db" >
+            
+
+    <header class="header-db">
+    <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" /></a>
+
+    <button class="button">
+        <svg
+          class="icon-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </button>
+    <nav class="nav">
+        <ul class="nav-list">
+        <li><a href="./index.html">INICIO</a></li>
+        <li><a href="https://www.utn.ac.cr">PRINCIPAL UTN</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    
+    
+</div>
+<div class="container-role">
+   <h1 class="title-role">Actualizar Role del Usuario</h1>
+    <div class="info-email">
+      <label for="email" class="email-role">Email:</label>
       <input type="email" id="email" required>
       <button id="validate-btn">Validar</button>
     </div>
     <div id="user-info" style="display: none;">
       <h3 id="user-name"></h3>
-      <label for="role">Role:</label>
+      <label for="role" class="role-info">Role:</label>
       <select id="role">
         <option value="0">0</option>
         <option value="1">1</option>
@@ -22,6 +56,8 @@
       <button type="submit" id="update-role-btn">Actualizar Role</button>
     </div>
     <div id="message"></div>
+</div>
+   
 
     <script src="./js/controller_Roles.js"></script>
 </body>
