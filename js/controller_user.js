@@ -5,7 +5,7 @@ function show(username) {
     let logueado = document.querySelector("#logueado");
     let logoutButton = document.querySelector("#logout-button");
     let titulo = document.querySelector("#titulo-inicio");
-  
+
     if (nameUser && logoutButton) {
         nameUser.textContent = username;
         logoutButton.style.display = "block";
@@ -29,7 +29,7 @@ function out() {
     let logueado = document.querySelector("#logueado");
     let logoutButton = document.querySelector("#logout-button");
     let titulo = document.querySelector("#titulo-inicio");
-  
+
     if (logoutButton) logoutButton.style.display = "none";
     if (nameUser) nameUser.style.display = "none";
     if (logueado) logueado.style.display = "none";
@@ -43,7 +43,7 @@ function out() {
     window.location.reload();
 }
 let admin = document.querySelector("#caja-admin");
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     console.log(localStorage.getItem("email"));
     console.log(localStorage.getItem("user"));
@@ -58,41 +58,41 @@ document.addEventListener('DOMContentLoaded', function() {
             email: localStorage.getItem("email")
         })
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data) 
-        localStorage.setItem("user", data.data[0].nombre);
-        localStorage.setItem("rol", data.data[0].rol);
-        console.log('Success:', data);
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            localStorage.setItem("user", data.data[0].nombre);
+            localStorage.setItem("rol", data.data[0].rol);
+            console.log('Success:', data);
 
-        console.log(localStorage.getItem("user"))
-        if (localStorage.getItem("user") !== "none") {
-            show(localStorage.getItem("user"))
-        } 
-        console.log(localStorage.getItem("rol"))
-        if (localStorage.getItem("rol")==="1") {
-            admin.style.display = "block";
-        } 
-        
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-    
-        
+            console.log(localStorage.getItem("user"))
+            if (localStorage.getItem("user") !== "none") {
+                show(localStorage.getItem("user"))
+            }
+            console.log(localStorage.getItem("rol"))
+            if (localStorage.getItem("rol") === "1") {
+                admin.style.display = "block";
+            }
+
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+
 
 });
 
 if (document.getElementById('userForm')) {
-    document.getElementById('userForm').addEventListener('submit', function(event) {
+    document.getElementById('userForm').addEventListener('submit', function (event) {
         event.preventDefault();  // Prevenir el envío del formulario por defecto
-    
+
         const user = document.querySelector("#user").value;
         const correo = document.querySelector("#email").value;
         const pass = document.querySelector("#pass").value;
-    
+        const confirmpass=document.querySelector("#pass-confirm").value;
         const formData = new FormData(this);
-    
+
         // Convertir FormData a un objeto para enviar con fetch
         const data = Object.fromEntries(formData.entries());
 
@@ -102,52 +102,55 @@ if (document.getElementById('userForm')) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ 
-                email: correo 
+            body: JSON.stringify({
+                email: correo
             })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.data && data.data.length > 0) {  
-                alert('El email ya existe, ingresa otro');
-                window.location.href = 'Registro.html';
-            } else {
+            .then(response => response.json())
+            .then(data => {
+                if (data.data && data.data.length > 0) {
+                    alert('El email ya existe, ingresa otro');
+                    window.location.href = 'Registro.html';
+                } else if(pass!==confirmpass){
+                    alert('las contraseñas no coinciden');
+                    window.location.href = 'Registro.html';
+                }else {
                 
-                fetch('https://api-utn.up.railway.app/insertUser', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        nombre: user,
-                        email: correo,
-                        contra: pass,
+                    fetch('https://api-utn.up.railway.app/insertUser', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            nombre: user,
+                            email: correo,
+                            contra: pass,
+                        })
                     })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success', data);
-                    
-                    window.location.href = 'login.html';
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Success', data);
+
+                            window.location.href = 'login.html';
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                        });
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     });
 }
 
- if (document.getElementById('loginForm')) {
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
+if (document.getElementById('loginForm')) {
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Evitar que el formulario se envíe de manera convencional
-        
+
         const user = document.querySelector("#user").value;
         const pass = document.querySelector("#pass").value;
-        
+
         // Enviar los datos del formulario usando fetch
         fetch('https://api-utn.up.railway.app/validarUser', {
             method: 'POST',
@@ -159,35 +162,35 @@ if (document.getElementById('userForm')) {
                 contra: pass
             })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.data === true) {
-                localStorage.setItem("email", user);
-        
-                
-               /*  console.log(data.data[0]); */
-               
-                this.submit();
-            } else {
-                // Mostrar alerta si el inicio de sesión falló
-                
-                /* alert("Usuario o contraseña incorrectos. Por favor, intenta nuevamente."); */
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Error',
-                    text: 'El email o la contraseña son incorrectos',
-                    confirmButtonText: 'Aceptar'
-                }).then(() => {
-                    window.location.href = 'login.html';
-                });
-                
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert("Error al intentar iniciar sesión. Por favor, intenta nuevamente.");
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.data === true) {
+                    localStorage.setItem("email", user);
 
-       
+
+                    /*  console.log(data.data[0]); */
+
+                    this.submit();
+                } else {
+                    // Mostrar alerta si el inicio de sesión falló
+
+                    /* alert("Usuario o contraseña incorrectos. Por favor, intenta nuevamente."); */
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Error',
+                        text: 'El email o la contraseña son incorrectos',
+                        confirmButtonText: 'Aceptar'
+                    }).then(() => {
+                        window.location.href = 'login.html';
+                    });
+
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Error al intentar iniciar sesión. Por favor, intenta nuevamente.");
+            });
+
+
     });
 }
