@@ -46,6 +46,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             min-height: 100vh;
             background-color: rgba(0, 0, 0, 0.2);
         }
@@ -60,6 +61,7 @@
             border-radius: 15px;
             padding: 3em 2.5em;
             color: var(--second-color);
+            margin-bottom: 20px; /* Añadir espacio entre formularios */
         }
 
         .login-header {
@@ -79,7 +81,6 @@
         .login-header span {
             font-size: 24px; 
             color: var(--black-color);
-            
         }
 
         .input-box {
@@ -87,7 +88,6 @@
             display: flex;
             flex-direction: column;
             margin: 20px 0;
-            
         }
 
         .input-field {
@@ -146,9 +146,7 @@
 <body>
 
 <div class="wrapper">
-    
     <div class="login-box">
-   
         <form id="validateEmailForm">
             <div class="input-box">
                 <input type="email" placeholder=" " name="email" id="email" class="input-field" required>
@@ -162,7 +160,6 @@
     </div>
 
     <div id="changePasswordContainer" class="login-box" style="display:none;">
-
         <form id="changePasswordForm">
             <div class="input-box">
                 <input type="password" placeholder=" " name="newPassword" id="pass" class="input-field" required>
