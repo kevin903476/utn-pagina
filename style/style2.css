@@ -78,9 +78,16 @@ a:hover {
 }
 
 .login-header span {
-    font-size: 24px; 
+    font-size: 20px; 
     color: var(--black-color);
 }
+
+
+.register-header span {
+    font-size: 20px; 
+    color: var(--black-color);
+}
+
 
 .input-box {
     position: relative;
