@@ -180,7 +180,7 @@ button a{
   color: white;
 }
 button{
-  width: 20em; 
+  width: 15em; 
   height: 3em; 
   border-radius: 30em; 
   font-size: 15px;
@@ -360,4 +360,50 @@ a {
 
   width: 550px;
 }
+
+button a{
+  color: white;
+}
+button{
+  width: 20em; 
+  height: 3em; 
+  border-radius: 30em; 
+  font-size: 15px;
+  border: none;
+  position: relative; 
+  cursor: pointer; 
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5,
+  -6px -6px 12px #ffffff;
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: #007eb4;
+  padding: 10px;
+  }
+  
+  .no-hover::before {
+    width: 0 !important;
+  }
+  
+  button::before{
+      text-decoration: none;
+      content: "";
+       width: 0; 
+       height: 3em; 
+       border-radius: 30em; 
+       position: absolute;
+       top: 0;
+       Left: 0; 
+       background-image: linear-gradient(to right, #006691 0%, #006691 100%);
+      transition: .5s ease;
+      display: block;
+      z-index: -1;
+  }
+      button:hover::before{ 
+        width: 20em; 
+          
+      }
 }
