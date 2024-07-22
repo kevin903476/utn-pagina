@@ -109,8 +109,14 @@ if (document.getElementById('userForm')) {
             .then(response => response.json())
             .then(data => {
                 if (data.data && data.data.length > 0) {
-                    alert('El email ya existe, ingresa otro');
-                    window.location.href = 'Registro.html';
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Error',
+                        text: 'El email ya existe ingresa otro',
+                        confirmButtonText: 'Aceptar'
+                    }).then(() => {
+                        window.location.href = 'Registro.html';
+                    });
                 } else if(pass!==confirmpass){
                     alert('las contraseñas no coinciden');
                     window.location.href = 'Registro.html';
