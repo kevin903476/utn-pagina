@@ -18,12 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         console.log(data)
         Swal.fire({
-          icon: 'success',
+          icon: "success",
           title: 'Enviado',
-          text: 'Ya puedes revisar tu correo',
-          confirmButtonText: 'Aceptar'
-        }).then(() => {
-            console.log("enviado")
+          text: '¡Hemos enviado un correo! Por favor, revisa tu bandeja de entrada.',
+          showConfirmButton: false,
+          timer: 2500
         });
       })
       .catch(error => {
@@ -58,12 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         console.log(data)
         Swal.fire({
-          icon: 'success',
+          icon: "success",
           title: 'Enviado',
-          text: 'Ya puedes revisar tu correo',
-          confirmButtonText: 'Aceptar'
-        }).then(() => {
-            console.log("enviado")
+          text: '¡Hemos enviado un correo! Por favor, revisa tu bandeja de entrada.',
+          showConfirmButton: false,
+          timer: 2500
         });
       })
       .catch(error => {
@@ -98,12 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         console.log(data)
         Swal.fire({
-          icon: 'success',
+          icon: "success",
           title: 'Enviado',
-          text: 'Ya puedes revisar tu correo',
-          confirmButtonText: 'Aceptar'
-        }).then(() => {
-            console.log("enviado")
+          text: '¡Hemos enviado un correo! Por favor, revisa tu bandeja de entrada.',
+          showConfirmButton: false,
+          timer: 2500
         });
       })
       .catch(error => {
@@ -138,12 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         console.log(data)
         Swal.fire({
-          icon: 'success',
+          icon: "success",
           title: 'Enviado',
-          text: 'Ya puedes revisar tu correo',
-          confirmButtonText: 'Aceptar'
-        }).then(() => {
-            console.log("enviado")
+          text: '¡Hemos enviado un correo! Por favor, revisa tu bandeja de entrada.',
+          showConfirmButton: false,
+          timer: 2500
         });
       })
       .catch(error => {

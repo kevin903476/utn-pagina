@@ -110,7 +110,7 @@ if (document.getElementById('userForm')) {
             .then(data => {
                 if (data.data && data.data.length > 0) {
                     Swal.fire({
-                        icon: 'warning',
+                        icon: 'error',
                         title: 'Error',
                         text: 'El email ya existe ingresa otro',
                         confirmButtonText: 'Aceptar'
@@ -118,30 +118,20 @@ if (document.getElementById('userForm')) {
                         window.location.href = 'Registro.html';
                     });
                 } else if(pass!==confirmpass){
-                    alert('las contraseñas no coinciden');
-                    window.location.href = 'Registro.html';
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Las contraseñas no coinciden',
+                        confirmButtonText: 'Aceptar'
+                    }).then(() => {
+                        window.location.href = 'Registro.html';
+                    });
                 }else {
-                
-                    fetch('https://api-utn.up.railway.app/insertUser', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            nombre: user,
-                            email: correo,
-                            contra: pass,
-                        })
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Success', data);
-
-                            window.location.href = 'login.html';
-                        })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                        });
+                    sessionStorage.setItem('usuarioTemporal', user);
+                    sessionStorage.setItem('correoTemporal', correo);
+                    sessionStorage.setItem('contraTemporal', pass);
+                    window.location.href = 'confirmarCorreo.html';
+                    
                 }
             })
             .catch((error) => {
