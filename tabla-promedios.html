@@ -74,16 +74,8 @@
     
             
     </div>
-    <script>
-        
-        document.getElementById('download-pdf').addEventListener('click', function () {
-            var { jsPDF } = window.jspdf;
-            var doc = new jsPDF();
-            doc.autoTable({ html: '#table-promedio' });
-            doc.save('tabla_promedios.pdf');
-        });
-   
-    </script>
+
     <script src="js/controller_tablaPromedio.js"></script>
+    <script src="js/PdfScript.js"></script>
 </body>
 </html>
