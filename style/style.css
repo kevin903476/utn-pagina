@@ -1424,7 +1424,9 @@ padding: 5%;
 
 
 }
-
+#download-pdf-ig, #download-pdf-gec , #download-pdf-agro,#download-pdf-iti{
+  background-color: tomato;
+}
 
 
 
