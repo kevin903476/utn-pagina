@@ -6,7 +6,7 @@
     <title>Actualizar Roles</title>
     <link rel="stylesheet" href="style/style.css" />
 </head>
-<body style="background-color: #2499c7;">
+<body style="background-color: #6fcbf0;">
   <div id="nav-db" >
             
 
@@ -39,24 +39,27 @@
     
     
 </div>
-<div class="container-role">
+<div class="contRoles">
+  <div class="container-role">
    <h1 class="title-role">Actualizar Role del Usuario</h1>
     <div class="info-email">
       <label for="email" class="email-role">Email:</label>
       <input type="email" id="email" required>
       <button id="validate-btn">Validar</button>
     </div>
-    <div id="user-info" style="display: none;">
-      <h3 id="user-name"></h3>
+    <div id="user-info" style="display: none;"><br>
+      <h3 id="user-name"></h3><br>
       <label for="role" class="role-info">Role:</label>
       <select id="role">
-        <option value="0">0</option>
-        <option value="1">1</option>
+        <option value="0">Usuario</option>
+        <option value="1">Administrador</option>
       </select>
       <button type="submit" id="update-role-btn">Actualizar Role</button>
     </div>
     <div id="message"></div>
 </div>
+</div>
+
    
 
     <script src="./js/controller_Roles.js"></script>
