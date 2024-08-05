@@ -319,7 +319,28 @@
 
   position: relative;
 }
-.image-banner::before , .image-banner-ile::before, .image-banner-gec::before {
+.image-banner-ener {
+  width: 100%;
+  height: 100%;
+  background: url(/img/energetica-telefono.jpg);
+  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  background-position: center; /* Para centrar la imagen */
+
+  position: relative;
+}
+
+.image-banner-salud {
+  width: 100%;
+  height: 100%;
+  background: url(/img/saludOcupa-telefono.jpg);
+  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  background-position: center; /* Para centrar la imagen */
+
+  position: relative;
+}
+.image-banner::before , .image-banner-ile::before, .image-banner-gec::before , .image-banner-ener::before , .image-banner-salud::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1205,6 +1226,26 @@ padding: 5%;
 
 
 /*_____ Final footer _____*/
+/* inicio estilos de los boton pdf */
+.boton-pdf{
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #cdffff;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.boton-pdf:hover{
+  transform: scale(1.1);
+}
+
+.caja-boton-pdf{
+  display: flex;
+  justify-content: end;
+}
+/* final estilos de los boton pdf */
+
 @media only screen and (min-width: 769px) {
   /* Estilos específicos para dispositivos portátiles */
   /* Se puede agregar estilos aquí que se apliquen a pantallas de hasta 768px de ancho */
@@ -1236,9 +1277,26 @@ padding: 5%;
     position: relative;
   }
   .image-banner-agro {
-    width: 100%;
-    height: 100%;
+    
     background: url(/img/agronomia.jpg);
+    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed;
+    position: relative;
+  }
+  .image-banner-ener {
+    
+    background: url(/img/energetica.jpg);
+    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed;
+    position: relative;
+  }
+  .image-banner-salud {
+    
+    background: url(/img/saludOcupa.jpg);
     background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
     background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
     background-position: center; /* Para centrar la imagen */
@@ -1477,9 +1535,6 @@ padding: 5%;
 }
 
 
-}
-#download-pdf-ig, #download-pdf-gec , #download-pdf-agro,#download-pdf-iti{
-  background-color: tomato;
 }
 
 
