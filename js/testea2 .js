@@ -1,6 +1,6 @@
 
 const terminar = document.getElementById("terminar");
-let correctas = [3, 1, 3, 2, 2, 1, 3];
+let correctas = [2,3,2,2,3,3,1,2,1,3];
 
 let opcion_elegida = [];
 let cantidad_correctas = 0;
@@ -31,12 +31,12 @@ function corregir() {
   }
 
     let mensaje = "";
-  if (cantidad_correctas >= 1 && cantidad_correctas <= 3) {
+  if (cantidad_correctas >= 1 && cantidad_correctas <= 4) {
     mensaje =
       "Esta carrera cuenta con varias materias de programacion, piénsalo bien";
-  } else if (cantidad_correctas >= 4 && cantidad_correctas <= 5) {
+  } else if (cantidad_correctas >= 5 && cantidad_correctas <= 7) {
     mensaje = "Tienes buena lógica, pero puedes mejorar";
-  } else if (cantidad_correctas >= 6 && cantidad_correctas <= 7) {
+  } else if (cantidad_correctas >= 8 && cantidad_correctas <= 10) {
     mensaje = "Tienes una excelente lógica, excelente trabajo";
   } else if (cantidad_correctas == 0) {
     mensaje = "Hay que seguir estudiando";
