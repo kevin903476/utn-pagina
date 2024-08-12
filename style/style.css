@@ -228,6 +228,7 @@
 } 
  #name, #logout-button, #logueado{
   display: none;
+  cursor: pointer;
 
 } 
 .banner-content{
