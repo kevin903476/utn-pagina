@@ -30,7 +30,7 @@ function isPartiallyOnFocus(el) {
 }
 
 
-// Función para manejar el evento de desplazamiento
+
  var estudiantesCounter = false;
 var graduadosCounter = false;
 var insercionCounter = false;
@@ -45,7 +45,7 @@ function handleScroll() {
         
         
         const estadisticas = data.data[0];
-        //console.log(estadisticas)
+     
         if (isPartiallyOnFocus(estudiantesITI) && !estudiantesCounter) {
             counter("estudiantes", 0, estadisticas.estudiantes);
             estudiantesCounter = true;
@@ -68,5 +68,5 @@ function handleScroll() {
     
 } 
 
-// Asociar el evento de desplazamiento a la función handleScroll
+
 window.addEventListener("scroll", handleScroll);
