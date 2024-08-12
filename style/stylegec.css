@@ -128,7 +128,7 @@
   
   
   
-  /* Estilo para el modal */
+
   .modal {
     display: none;
     position: fixed;
@@ -141,7 +141,7 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
   
-  /* Estilo para el contenido del modal */
+
   .modal-contenido {
     background-color: #fefefe;
     margin: 15% auto;
