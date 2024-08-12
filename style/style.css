@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Trebuchet MS";
 }
-/*_____ inicio de la pantalla principal_____ */
+
 
 .principal-screen {
   width: 100%;
@@ -16,9 +16,7 @@
   justify-content: center;
 }
 
-/* _____fin de la pantalla principal _____*/
 
-/*_____ inicio del fondo _____*/
 .background {
   width: 100%;
   height: 100%;
@@ -26,9 +24,7 @@
 
   background-attachment: fixed;
 }
-/* _____final del fondo _____*/
 
-/*_____ inicio del header _____*/
 .header {
   position: absolute;
   top: 0;
@@ -62,9 +58,7 @@
   height: 110px;
   
 }
-/* _____final del header _____*/
 
-/*inicio del bloque admin*/
 #caja-admin , #caja-promedio{
   display: flex;
   flex-direction: column;
@@ -81,14 +75,14 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  /* margin: 25px; */
+  
   
 }
 
 #caja-promedio h2{
   
   color: #fff;
-  /* margin: 25px; */
+
   
 }
 .caja-section button {
@@ -107,22 +101,20 @@
   border: 2px solid transparent;
   transition: all 300ms ease;
 
-  letter-spacing: 0.5px; /*Para separar un poco las letras*/
+  letter-spacing: 0.5px; 
 }
 
 #caja-admin a:hover {
-  background: transparent; /*Fondo transparente*/
+  background: transparent; 
   border: 2px solid #000000;
   color: #000000;
 }
 .caja-section a:hover {
-  background: transparent; /*Fondo transparente*/
+  background: transparent; 
   border: 2px solid #ffffff;
   
 }
-/*inicio del bloque admin*/
 
-/*_____ inio del nav _____*/
 .nav{
   width: 100%;
   
@@ -166,10 +158,7 @@
   
   color: rgb(247, 160, 60);
 }
-/* _____inio del nav _____*/
 
-
-/*_____ inicio del contenido_____ */
 .banner-content {
   position: absolute;
   top: 28%;
@@ -226,11 +215,11 @@
   border: 2px solid transparent;
   transition: all 300ms ease;
 
-  letter-spacing: 0.5px; /*Para separar un poco las letras*/
+  letter-spacing: 0.5px; 
 }
 
 .banner-content .info a:hover {
-  background: transparent; /*Fondo transparente*/
+  background: transparent;
   border: 2px solid #fff;
 }
 #login-link, #register-link{
@@ -259,9 +248,7 @@
   letter-spacing: 1px;
   margin-bottom: 8%;
 }
-/*_____ final del contenido _____*/
 
-/*_____ inicio de las waves _____*/
 .waves {
   position: absolute;
   width: 100%;
@@ -270,9 +257,7 @@
 .waves img {
   width: 100%;
 }
-/*_____ final de las waves _____*/
 
-/*_____ inicio del banner _____*/
 .banner {
   width: 100%;
   height: 500px;
@@ -283,9 +268,9 @@
   width: 100%;
   height: 100%;
   background: url(/img/informatica-telefono.jpg);
-  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-  background-position: center; /* Para centrar la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
   
   position: relative;
 }
@@ -293,9 +278,9 @@
   width: 100%;
   height: 100%;
   background: url(/img/ingles-telefono.jpg);
-  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-  background-position: center; /* Para centrar la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
   
   position: relative;
 }
@@ -303,9 +288,9 @@
   width: 100%;
   height: 100%;
   background: url(/img/turismo-telefono.jpg);
-  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-  background-position: center; /* Para centrar la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
   
   position: relative;
 }
@@ -313,9 +298,9 @@
   width: 100%;
   height: 100%;
   background: url(/img/agronomia-telefono.jpg);
-  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-  background-position: center; /* Para centrar la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
 
   position: relative;
 }
@@ -323,9 +308,9 @@
   width: 100%;
   height: 100%;
   background: url(/img/energetica-telefono.jpg);
-  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-  background-position: center; /* Para centrar la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 
   position: relative;
 }
@@ -334,9 +319,9 @@
   width: 100%;
   height: 100%;
   background: url(/img/saludOcupa-telefono.jpg);
-  background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-  background-position: center; /* Para centrar la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 
   position: relative;
 }
@@ -352,7 +337,7 @@
     0,
     0,
     0.5
-  ); /* Color de fondo semitransparente (negro con opacidad 0.5) */
+  ); 
 }
 
 .title-banner {
@@ -360,9 +345,7 @@
   top: 50%;
   text-align: center;
 }
-/*_____ inicio del banner _____*/
 
-/*_____ inicio contenido  _____*/
 #first-info-content{
   margin-top: 10%;
 }
@@ -434,9 +417,6 @@
 
 
 
-/*_____ final contenido  _____*/
-
-/*_____ inicio habilidades  _____*/
 
 
 
@@ -469,8 +449,7 @@
 }
 
 
-/*_____ final habilidades  _____*/
-/*_____ inico de los estilos de la tabla BD _____*/
+
 html, body {
   height: 100%;
   margin: 0;
@@ -482,8 +461,7 @@ html, body {
 }
 
 .header-db {
-  /* position: absolute; */
-  
+
   
   margin-top: 2%;
   display: flex;
@@ -555,9 +533,6 @@ html, body {
   margin-right: 15px;
   
 }
-/*_____ final de los estilos de la tabla BD _____*/
-
-/*_____ inicio contenido  plan estudios_____*/
 
 
 
@@ -595,16 +570,15 @@ html, body {
 .acordeon .contenido-acordeon{
   padding: 0px;
   margin: 0px 20px;
-  /* el max-height: hace que este oculto en un principio */
+ 
   max-height: 0px;
-  /* escondemos el contenido del acordeon */
+
   overflow: hidden;
   transition: all 500ms ease;
 }
-/* al momento de dar click que aparezca el contenido gracias al ser radio o check */
-/* el simbolo ~ hace que conecte el boton con el contenido, el btn lo selecciona*/
+
 .btn-acordeon:checked ~ .contenido-acordeon{
-  /* y aca lo expandemos para que aparezca */
+
   max-height: 100%;
   padding: 15px 0px;
   
@@ -623,7 +597,7 @@ table {
 }
 th, td {
   border: 1px solid #006691;
-  /* padding: 8px; */
+ 
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 2px;
@@ -641,14 +615,12 @@ th {
 
 
 
-/*_____ final contenido  plan estudios  _____*/
 
-/*_____ inicio contenido  stats  _____*/
 
 
 #insercion, #porcentaje-insercion {
-  display: inline; /* Mostrar el strong en línea */
-  margin-right: 5px; /* Espacio a la derecha del strong */
+  display: inline; 
+  margin-right: 5px; 
   
 }
 .stats, .stats p{
@@ -668,14 +640,7 @@ th {
 
 
 
-/*_____ final contenido  stats  _____*/
 
-
-
-/* inicio cards de asesoria */
-/* .box-container p{
-  text-align: center;
-} */
 #row{
   flex-direction: row;
 }
@@ -728,10 +693,7 @@ th {
 }
 
   
-/* final cards de asesoria */
 
-
-/*_____ Inicio contenido test _____*/
 
 .container-test{
   background-color: #2499c7;
@@ -742,9 +704,7 @@ th {
 #white-text{
   color: aliceblue;
 }
-/*_____ Final contenido test _____*/
 
-/*_____ Inicio contenido cards _____*/
 
 .content-carts{
 
@@ -768,10 +728,7 @@ th {
   color: #006691;
 }
 
-/*_____ Final contenido cards _____*/
 
-
-/* inicio cards de resultados */
 #content-cards{
   padding:15px 10%;
   padding-bottom:100px;
@@ -822,10 +779,6 @@ th {
 .card img{
   height: 90px;
 }
-/* fin de card de resultados */
-
-
-/* inicio referencias */
 
 .background-advice {
   width: 80%;
@@ -936,11 +889,7 @@ th {
 .action-button-advice a:hover {
 background-color: #006691;
 }
-/* fin referencias */
 
-
-
-/*_____ Inicio footer _____*/
 
 .footer-container{
 	display: flex;
@@ -1043,7 +992,7 @@ background-color: #006691;
   width: 100%;
 }
 
-/* btn style  */
+
  .card-info .link-box {
     margin-top: 10px;
     display: inline-block;
@@ -1236,21 +1185,7 @@ padding: 5%;
   outline: none;
   margin: 7px;
 }
-/* #estadisticas-caja{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: 1;
-  flex-grow: ;
-  align-items: baseline;
-  justify-content: space-around;
-  
-  
 
-} */
-
-
-/*_____ Final footer _____*/
-/* inicio estilos de los boton pdf */
 .boton-pdf{
   border-radius: 20px;
   padding: 10px;
@@ -1268,62 +1203,61 @@ padding: 5%;
   display: flex;
   justify-content: end;
 }
-/* final estilos de los boton pdf */
+
 
 @media only screen and (min-width: 769px) {
-  /* Estilos específicos para dispositivos portátiles */
-  /* Se puede agregar estilos aquí que se apliquen a pantallas de hasta 768px de ancho */
+
   .image-banner {
     
     background: url(/img/informatica.jpg);
-    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     background-attachment: fixed;
     position: relative;
   }
   .image-banner-ile {
     
     background: url(/img/ingles.jpg);
-    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
     background-attachment: fixed;
     position: relative;
   }
   .image-banner-gec {
     
     background: url(/img/turismo.jpg);
-    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
     background-attachment: fixed;
     position: relative;
   }
   .image-banner-agro {
     
     background: url(/img/agronomia.jpg);
-    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     background-attachment: fixed;
     position: relative;
   }
   .image-banner-ener {
     
     background: url(/img/energetica.jpg);
-    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     background-attachment: fixed;
     position: relative;
   }
   .image-banner-salud {
     
     background: url(/img/saludOcupa.jpg);
-    background-size: cover; /* Para que la imagen se ajuste y cubra todo el contenedor */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     background-attachment: fixed;
     position: relative;
   }
@@ -1498,17 +1432,7 @@ padding: 5%;
 }
 
 
-/* alineamento de las skills */
-/* .skills-content, .info-content {
-  position: relative;
-  top: -61px;
-}
 
-.skills-content, .skills-box {
-  position: relative;
-  top: -61px;
-} */
- /*estilos de carta de pc*/
  .background-advice img {
   width: 60%;
   height: 50%;
@@ -1538,7 +1462,7 @@ padding: 5%;
   .content-advice p{
     font-size: 15px;
   }
-  /* estilos de footer en pc */
+
   .footer-col {
     width: 15%; 
     padding: 0 15px;
@@ -1553,9 +1477,7 @@ padding: 5%;
   font-size: 17px;
  }
  .block-footer {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-evenly; */
+
   margin-bottom: 5%;
 }
 

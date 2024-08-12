@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 btnActualizar.classList.add('presionado')
                 btnActualizar.classList.add('no-hover')
                 btnActualizar.innerHTML = 'actualizado'
-                //location.reload();
+                
               }
             });
         };

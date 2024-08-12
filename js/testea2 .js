@@ -43,8 +43,7 @@ function corregir() {
   }
 
   document.getElementById("resultado").innerHTML = cantidad_correctas;
-  /* document.getElementById("mensaje").innerHTML = mensaje;
-  mostrarRecomendaciones(); */
+
 
   var preguntas = document.getElementsByClassName("pregunta");
   for (var i = 0; i < preguntas.length; i++) {
@@ -71,7 +70,7 @@ function corregir() {
     }
   };
 
-  // Desactiva el botón de corregir
+
  
   terminar.classList.add('presionado')
   terminar.classList.add('no-hover')
@@ -102,11 +101,11 @@ document.getElementById('enviar').addEventListener('click', function () {
               selectedInput = input;
           }
 
-          // Reiniciar estilos
+          
           label.style.backgroundColor = '';
           label.style.color = '';
 
-          // Marcar la respuesta correcta
+          
           if (labelIndex === correctIndex) {
               label.style.backgroundColor = 'green';
               label.style.color = 'white';
@@ -114,16 +113,16 @@ document.getElementById('enviar').addEventListener('click', function () {
               label.style.backgroundColor = 'red';
               label.style.color = 'white';
           }
-          //Desactiva los input
+          
           input.disabled = true; 
       });
 
-      // Incrementar puntaje si la respuesta seleccionada es la correcta
+      
       if (selectedInput && labels[correctIndex].querySelector('input').checked) {
           score++;
       }
 
-      // Mostrar respuesta correcta en el div
+      
       const correctAnswerElement = section.querySelector('.correct-answer');
       correctAnswerElement.textContent = `Respuesta correcta: ${labels[correctIndex].innerText}`;
   });

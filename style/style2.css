@@ -118,17 +118,7 @@ a:hover {
     margin-bottom: 5px;
 }
 
-/* .input-field:focus~.label,
-.input-field:valid .label {
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-size: 14px;
-    background-color: var(--primary-color);
-    border-radius: 30px;
-    color: var(--black-color);
-    padding: 0 10px;
-} */
+
 
 .icon {
     position: absolute;
@@ -182,6 +172,6 @@ a:hover {
     .login-box {
         width: 90%;
         max-width: 300px;
-        padding: 3em 1.5em; /* Ajusta el relleno para pantallas más pequeñas */
+        padding: 3em 1.5em; 
     }
 }

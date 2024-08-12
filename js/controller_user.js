@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (document.getElementById('userForm')) {
     document.getElementById('userForm').addEventListener('submit', function (event) {
-        event.preventDefault();  // Prevenir el envío del formulario por defecto
+        event.preventDefault();  
 
         const user = document.querySelector("#user").value;
         const correo = document.querySelector("#email").value;
@@ -101,10 +101,10 @@ if (document.getElementById('userForm')) {
         const confirmpass=document.querySelector("#pass-confirm").value;
         const formData = new FormData(this);
 
-        // Convertir FormData a un objeto para enviar con fetch
+        
         const data = Object.fromEntries(formData.entries());
 
-        // Comprobar si el correo ya existe en la base de datos
+       
         fetch('https://api-utn.up.railway.app/obtenerUser', {
             method: 'POST',
             headers: {
@@ -150,12 +150,12 @@ if (document.getElementById('userForm')) {
 
 if (document.getElementById('loginForm')) {
     document.getElementById('loginForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Evitar que el formulario se envíe de manera convencional
+        event.preventDefault(); 
 
         const user = document.querySelector("#user").value;
         const pass = document.querySelector("#pass").value;
 
-        // Enviar los datos del formulario usando fetch
+        
         fetch('https://api-utn.up.railway.app/validarUser', {
             method: 'POST',
             headers: {
@@ -172,13 +172,11 @@ if (document.getElementById('loginForm')) {
                     localStorage.setItem("email", user);
 
 
-                    /*  console.log(data.data[0]); */
+                    
 
                     this.submit();
                 } else {
-                    // Mostrar alerta si el inicio de sesión falló
 
-                    /* alert("Usuario o contraseña incorrectos. Por favor, intenta nuevamente."); */
                     Swal.fire({
                         icon: 'warning',
                         title: 'Error',
