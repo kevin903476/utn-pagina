@@ -1,9 +1,9 @@
 
 
-// Función para animar el conteo de números
+
 function counter(id, start, end) {
     let current = start;
-    // Incremento positivo o negativo dependiendo de si end es mayor o menor que start
+
     let increment = end > start ? 1 : -1;
     let obj = document.getElementById(id);
     let timer = setInterval(function() {
@@ -15,7 +15,7 @@ function counter(id, start, end) {
     }, 10);
 }
 
-// Función para verificar si el elemento está en la ventana visible
+
 function isPartiallyOnFocus(el) {
     var rect = el.getBoundingClientRect();
     var windowHeight = window.innerHeight || document.documentElement.clientHeight;

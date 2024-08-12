@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
               btnCargar_riego.classList.add('presionado')
               btnCargar_riego.classList.add('no-hover')
               btnCargar_riego.innerHTML = 'enviado'
-              //location.reload();
+              
             }
           });
       };
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 btnCargar_ciencias.classList.add('presionado')
                 btnCargar_ciencias.classList.add('no-hover')
                 btnCargar_ciencias.innerHTML = 'enviado'
-              //location.reload();
+              
             }
           });
       };
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 btnCargar_ig.classList.add('presionado')
                 btnCargar_ig.classList.add('no-hover')
                 btnCargar_ig.innerHTML = 'enviado'
-              //location.reload();
+              
             }
           });
       };
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
               btnCargar_mt.classList.add('presionado')
               btnCargar_mt.classList.add('no-hover')
               btnCargar_mt.innerHTML = 'enviado'
-              //location.reload();
+              
             }
           });
       };

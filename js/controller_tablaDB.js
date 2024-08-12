@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // const btnInsertar = document.querySelector('#boton-insertar');
+
 
   fetch("https://api-utn.up.railway.app/getCarreraITI")
     .then((response) => response.json())
@@ -135,28 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     table.innerHTML = tablehtml;
   }
 
-  /*   function insertUser(nombre, correo) {
-    fetch('https://api-utn.up.railway.app/insert', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        nombre: nombre,
-        correo: correo
-      })
-    })
-      .then(response => response.json())
-      .then(data => {
-        location.reload();
-      })
-  } */
 
-  /*   btnInsertar.onclick = function () {
-    const nombre = document.querySelector('#nombre-insertar');
-    const correo = document.querySelector('#correo-insertar');
-    insertUser(nombre.value, correo.value,fecha.value)
-  } */
 
   function loadTable(data) {
     const table = document.querySelector("#tableiti tbody");

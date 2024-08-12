@@ -35,7 +35,7 @@ if (document.querySelector('#ejercicio-mate-iti')) {
         });
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'TestMatematico.html';
         });
     
@@ -59,7 +59,7 @@ if (document.querySelector('#ejercicio-idioma-iti')) {
         
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'Test_Idioma.html';
         });
     
@@ -84,7 +84,7 @@ if (document.querySelector('#ejercicio-progra-iti')) {
         
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'Test_Programacion.html';
         });
     
@@ -109,7 +109,7 @@ if (document.querySelector('#ejercicio-agro-agro')) {
         
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'EjercicioAgro.html';
         });
     
@@ -134,7 +134,7 @@ if (document.querySelector('#ejercicio-ci-agro')) {
 
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'EjercicioCiencias.html';
         });
     
@@ -159,7 +159,7 @@ if (document.querySelector('#ejercicio-en-agro')) {
 
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'EjercicioEnglish.html';
         });
     
@@ -182,7 +182,7 @@ if (document.querySelector('#ejercicio-mt-agro')) {
         });
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'EjercicioMatematico.html';
         });
     
@@ -206,7 +206,7 @@ if (document.querySelector('#ejercicio-ac-gec')) {
         
     } else {
         botonLogico.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'TestActitudinal-GEC.html';
         });
     
@@ -235,7 +235,7 @@ if (document.querySelector('#ejercicio-lg-ile')) {
         
     } else {
         botonIle.addEventListener('click', function() {
-            // Redirige al usuario a la URL especificada
+            
             window.location.href = 'Test_LenguasExt.html';
         });
     

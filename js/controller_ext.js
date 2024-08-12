@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
               btnCargar_im.classList.add('presionado')
               btnCargar_im.classList.add('no-hover')
               btnCargar_im.innerHTML = 'enviado'
-              //location.reload();
+              
             }
           });
       };

@@ -54,13 +54,7 @@ updateRoleBtn.addEventListener('click', () => {
       .then(response => response.json())
       .then(data => {
         alert("cambiado")
-        /* if (data.error) {
-          messageDiv.textContent = data.error;
-          messageDiv.style.color = 'red';
-        } else {
-          messageDiv.textContent = data.message;
-          messageDiv.style.color = 'green';
-        } */
+
       })
       .catch((error) => {
         alert("error")

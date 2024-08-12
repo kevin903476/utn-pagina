@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btnCargar_mt.classList.add('presionado')
             btnCargar_mt.classList.add('no-hover')
             btnCargar_mt.innerHTML = 'enviado'
-            //location.reload();
+            
           }
         });
     };
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btnCargar_im.classList.add('presionado')
             btnCargar_im.classList.add('no-hover')
             btnCargar_im.innerHTML = 'enviado'
-            //location.reload();
+            
           }
         });
     };
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btnCargar.classList.add('presionado')
             btnCargar.classList.add('no-hover')
             btnCargar.innerHTML = 'enviado'
-            //location.reload();
+            
           }else{
             alert("error")
           }
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btnCargar_progra.classList.add('presionado')
             btnCargar_progra.classList.add('no-hover')
             btnCargar_progra.innerHTML = 'enviado'
-            //location.reload();
+           
           }else{
             alert("error")
           }
