@@ -49,27 +49,36 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(localStorage.getItem("user"));
     console.log(localStorage.getItem("rol"));
 
-    fetch('https://api-utn.up.railway.app/obtenerUser', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            email: localStorage.getItem("email")
+        fetch('https://api-utn.up.railway.app/obtenerUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: localStorage.getItem("email")
+            })
         })
-    })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            localStorage.setItem("user", data.data[0].nombre);
-            localStorage.setItem("rol", data.data[0].rol);
+            console.log(data);
+
+            if (data.data.length > 0) {
+                const userData = data.data[0];
+                if (userData && userData.nombre && userData.rol) {
+                    localStorage.setItem("user", userData.nombre);
+                    localStorage.setItem("rol", userData.rol);
+                } else {
+                    console.error('Error: Missing user data properties');
+                }
+            }
+
             console.log('Success:', data);
 
-            console.log(localStorage.getItem("user"))
+            console.log(localStorage.getItem("user"));
             if (localStorage.getItem("user") !== "none") {
-                show(localStorage.getItem("user"))
+                show(localStorage.getItem("user"));
             }
-            console.log(localStorage.getItem("rol"))
+            console.log(localStorage.getItem("rol"));
             if (localStorage.getItem("rol") === "1") {
                 admin.style.display = "block";
             }
@@ -78,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch((error) => {
             console.error('Error:', error);
         });
-
 
 
 });

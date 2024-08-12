@@ -26,3 +26,13 @@
     
   }
 
+.contenedor-loading {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+.contenedor-loading.hidden {
+    opacity: 0;
+    display: none;
+}
+
