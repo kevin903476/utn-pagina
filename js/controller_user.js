@@ -189,8 +189,14 @@ if (document.getElementById('loginForm')) {
                 }
             })
             .catch(error => {
-                console.error('Error:', error);
-                alert("Error al intentar iniciar sesión. Por favor, intenta nuevamente.");
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Error',
+                    text: 'Error al tratar de iniciar sesion, intentalo más tarde.',
+                    confirmButtonText: 'Aceptar'
+                }).then(() => {
+                    window.location.href = 'login.html';
+                });
             });
 
 
