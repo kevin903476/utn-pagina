@@ -62,15 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             console.log(data);
 
-            if (data.data.length > 0) {
+            
                 const userData = data.data[0];
-                if (userData && userData.nombre && userData.rol) {
+                
                     localStorage.setItem("user", userData.nombre);
                     localStorage.setItem("rol", userData.rol);
-                } else {
-                    console.error('Error: Missing user data properties');
-                }
-            }
+                
+            
 
             console.log('Success:', data);
 
