@@ -268,7 +268,7 @@
 .image-banner {
   width: 100%;
   height: 100%;
-  background: url(/img/informatica-telefono.jpg);
+  background: url(/img/informatica-telefono.webp);
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center; 
@@ -278,7 +278,7 @@
 .image-banner-ile {
   width: 100%;
   height: 100%;
-  background: url(/img/ingles-telefono.jpg);
+  background: url(/img/ingles-telefono.webp);
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center; 
@@ -288,7 +288,7 @@
 .image-banner-gec {
   width: 100%;
   height: 100%;
-  background: url(/img/turismo-telefono.jpg);
+  background: url(/img/turismo-telefono.webp);
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center; 
@@ -298,7 +298,7 @@
 .image-banner-agro {
   width: 100%;
   height: 100%;
-  background: url(/img/agronomia-telefono.jpg);
+  background: url(/img/agronomia-telefono.webp);
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center;
@@ -308,7 +308,7 @@
 .image-banner-ener {
   width: 100%;
   height: 100%;
-  background: url(/img/energetica-telefono.jpg);
+  background: url(/img/energetica-telefono.webp);
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center; 
@@ -319,7 +319,7 @@
 .image-banner-salud {
   width: 100%;
   height: 100%;
-  background: url(/img/saludOcupa-telefono.jpg);
+  background: url(/img/saludOcupa-telefono.webp);
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center; 
@@ -415,11 +415,6 @@
   margin-top: 17%;
 
 }
-
-
-
-
-
 
 .skills-box{
   text-align: left;
@@ -1210,7 +1205,7 @@ padding: 5%;
 
   .image-banner {
     
-    background: url(/img/informatica.jpg);
+    background: url(/img/informatica.webp);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -1219,7 +1214,7 @@ padding: 5%;
   }
   .image-banner-ile {
     
-    background: url(/img/ingles.jpg);
+    background: url(/img/ingles.webp);
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center; 
@@ -1228,7 +1223,7 @@ padding: 5%;
   }
   .image-banner-gec {
     
-    background: url(/img/turismo.jpg);
+    background: url(/img/turismo.webp);
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center; 
@@ -1237,7 +1232,7 @@ padding: 5%;
   }
   .image-banner-agro {
     
-    background: url(/img/agronomia.jpg);
+    background: url(/img/agronomia.webp);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -1246,7 +1241,7 @@ padding: 5%;
   }
   .image-banner-ener {
     
-    background: url(/img/energetica.jpg);
+    background: url(/img/energetica.webp);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -1255,7 +1250,7 @@ padding: 5%;
   }
   .image-banner-salud {
     
-    background: url(/img/saludOcupa.jpg);
+    background: url(/img/saludOcupa.webp);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 

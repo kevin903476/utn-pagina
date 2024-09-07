@@ -23,7 +23,7 @@
     <div id="container">
       <div class="contenedor-loading">
         <div class="loading-image">
-          <img src="./img/loading.gif" alt="gif" height="150" width="150" />
+          <img src="./img/loading.gif" alt="gif" height="150" width="150" loading="lazy"/>
         </div>
 
         <div class="loading-text">
@@ -34,7 +34,7 @@
       <div class="principal-screen">
         <div class="image-banner-gec"></div>
         <header id="header" class="header">
-          <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" /></a>
+          <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" loading="lazy"/></a>
 
           <button class="button">
             <svg
@@ -59,7 +59,7 @@
           </nav>
         </header>
         <div class="waves">
-          <img src="img/img2.svg" />
+          <img src="img/img2.svg" loading="lazy" loading="lazy"/>
         </div>
 
         <div class="title-banner">
@@ -78,7 +78,7 @@
             para personas apasionadas por la naturaleza, la cultura y el desarrollo sostenible.
         </p>
         <div class="imagen">
-          <img src="img/img-eco.jpg" alt="" width="320px" height="220px"> 
+          <img src="img/img-eco.jpg" alt="" width="320px" height="220px" loading="lazy"> 
         </div>
       </div>
       <br />
@@ -481,7 +481,7 @@
         <div class="box-stats">
           <div class="stats">
             <div class="card-image">
-              <img src="img/leer.svg" alt="" />
+              <img src="img/leer.svg" alt="" loading="lazy"/>
             </div>
             <h3 id="estudiantes">0</h3>
             <p>Estudiantes ingresados</p>
@@ -489,7 +489,7 @@
 
           <div class="stats">
             <div class="card-image">
-              <img src="img/alumno.svg" alt="" />
+              <img src="img/alumno.svg" alt="" loading="lazy"/>
             </div>
             <h3 id="graduados">0</h3>
             <p>Graduados de la carrera</p>
@@ -497,7 +497,7 @@
 
           <div class="stats">
             <div class="card-image">
-              <img src="img/mundo.svg" alt="" />
+              <img src="img/mundo.svg" alt="" loading="lazy"/>
             </div>
             <div class="porcentaje">
               <h3 id="insercion">0</h3>
@@ -513,7 +513,7 @@
   
 
       <div class="waves-position">
-        <img src="img/img7.svg" />
+        <img src="img/img7.svg" loading="lazy"/>
       </div>
       <div class="container-test">
         <div id="content-carts">
@@ -526,7 +526,7 @@
           <div class="box-container">
             <div class="card-content" id="column">
               <div class="card-image">
-                <img src="img/mentalidad.png" alt="" />
+                <img src="img/mentalidad.png" alt="" loading="lazy"/>
               </div>
               <div class="card-info">
                 <h3>ejercicio Actitudinal</h3>
@@ -540,7 +540,7 @@
               <div id="modal" class="modal">
                   <div class="modal-content">
                       <span class="close-btn">&times;</span>
-                      <img src="./img/modal5.jpg" alt="Imagen">
+                      <img src="./img/modal5.jpg" alt="Imagen" loading="lazy">
                       <h1>ejercicio Actitudinal</h1>
                       <h2>El objetivo de la prueba actitudinal es evaluar las actitudes y disposiciones de los estudiantes en relación con su entorno educativo y sus propios intereses y valores personales.</h2>
                       <a id="ejercicio-ac-gec" class="link-box">Tomar Ejercicio</a>
@@ -565,7 +565,7 @@
       </div>
     </div>
       <div class="waves-position">
-        <img src="img/img8.svg" />
+        <img src="img/img8.svg" loading="lazy"/>
       </div>
 
 
@@ -578,7 +578,7 @@
         <div id="card-content-advise">
           <article class="card-advice">
             <div class="background-advice">
-              <img src="img/est1-ecoturi.jpg" alt="profile" />
+              <img src="img/est1-ecoturi.jpg" alt="profile" loading="lazy"/>
             </div>
             <div class="content-advice">
               <h2>Leandro Artavia</h2>
@@ -590,7 +590,7 @@
           </article>
           <article class="card-advice">
             <div class="background-advice">
-              <img src="img/est2-ecoturi.jpg" alt="profile" />
+              <img src="img/est2-ecoturi.jpg" alt="profile" loading="lazy"/>
             </div>
             <div class="content-advice">
               <h2>Abigail Lara</h2>
@@ -610,7 +610,7 @@
 
     <div id="separator"></div>
     <div class="waves-position">
-      <img src="img/img6.svg" />
+      <img src="img/img6.svg" loading="lazy"/>
     </div>
     <footer class="footer">
       <div class="footer-container">
@@ -685,12 +685,12 @@
     </footer>
 
 
-    <script src="./js/app.js"></script>
-    <script src="js/scriptmodal.js"></script>
-    <script src="js/loading.js"></script>
-    <script src="js/estadistica-gec.js"></script>
-    <script src="js/verificar_sesion.js"></script>
-    <script src="js/controller_gec.js"></script>
-    <script src="js/controllerSendEmail.js"></script>
+    <script src="./js/app.js" defer></script>
+    <script src="js/scriptmodal.js" defer></script>
+    <script src="js/loading.js" async></script>
+    <script src="js/estadistica-gec.js" defer></script>
+    <script src="js/verificar_sesion.js" defer></script>
+    <script src="js/controller_gec.js" defer></script>
+    <script src="js/controllerSendEmail.js" defer></script>
   </body>
 </html>
