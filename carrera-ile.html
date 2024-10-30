@@ -17,13 +17,16 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+    <link rel="icon" href="img/gorra.ico">
     <title>Inglés</title>
   </head>
-  <body>
+  <body class="hidden">
+    <div class="centrado" id="onload">
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
 
     <div id="container">
-      <div class="contenedor-loading">
+      <!-- <div class="contenedor-loading">
         <div class="loading-image">
           <img src="./img/loading.gif" alt="gif" height="150" width="150" loading="lazy"/>
         </div>
@@ -31,7 +34,7 @@
         <div class="loading-text">
           <p>Cargando...</p>
         </div>
-      </div>
+      </div> -->
 
       <div class="principal-screen">
         <div class="image-banner-ile"></div>
@@ -61,7 +64,7 @@
           </nav>
         </header>
         <div class="waves">
-          <img src="img/img2.svg" loading="lazy"/>
+          <img src="img/img2.svg"/>
         </div>
 
         <div class="title-banner">
@@ -450,7 +453,7 @@
 
 
       <div class="waves-position">
-        <img src="img/img7.svg" loading="lazy"/>
+        <img src="img/img7.svg"/>
       </div>
       <div class="container-test">
         <div id="content-carts">
@@ -503,7 +506,7 @@
         </div>
       </div>
       <div class="waves-position">
-        <img src="img/img8.svg" loading="lazy"/>
+        <img src="img/img8.svg"/>
       </div>
 
       <div class="info-content">
@@ -533,7 +536,7 @@
 
     <div id="separator"></div>
     <div class="waves-position">
-      <img src="img/img6.svg" loading="lazy" />
+      <img src="img/img6.svg" />
     </div>
     <footer class="footer">
       <div class="footer-container">
@@ -611,6 +614,7 @@
     <script src="./js/app.js" defer></script>
     <script src="./js/scriptmodal.js" defer></script>
     <script src="js/loading.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="js/estadistica-ig.js" defer></script>
     <script src="js/verificar_sesion.js" defer></script>
     <script src="js/controller_ext.js" defer></script>

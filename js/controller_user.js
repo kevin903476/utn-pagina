@@ -7,7 +7,7 @@ function show(username) {
     let titulo = document.querySelector("#titulo-inicio");
 
     if (nameUser && logoutButton) {
-        nameUser.textContent = username;
+        nameUser.textContent = "¡Hola "+username+"! 👋";
         logoutButton.style.display = "block";
         nameUser.style.display = "block";
         logueado.style.display = "block";
