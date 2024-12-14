@@ -1,6 +1,6 @@
 const terminar = document.getElementById("terminar");
 
-let correctas = [2, 3, 2, 2, 1, 3, 2, 2, 1, 2];
+let correctas = [3, 3, 2, 2, 1, 3, 2, 2, 1, 2];
 let opcion_elegida = [];
 let cantidad_correctas = 0;
 
