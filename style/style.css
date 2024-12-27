@@ -275,6 +275,17 @@
   
   position: relative;
 }
+
+.image-banner-guanacaste {
+  width: 100%;
+  height: 100%;
+  background: url(/img/sedeGuanacaste.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  
+  position: relative;
+}
 .image-banner-ile {
   width: 100%;
   height: 100%;
@@ -326,7 +337,8 @@
 
   position: relative;
 }
-.image-banner::before , .image-banner-ile::before, .image-banner-gec::before , .image-banner-ener::before , .image-banner-salud::before {
+.image-banner::before , .image-banner-ile::before, .image-banner-gec::before , .image-banner-ener::before , .image-banner-salud::before
+,.image-banner-guanacaste::before {
   content: "";
   position: absolute;
   top: 0;
@@ -369,6 +381,13 @@
   font-size: 38px;
   margin-bottom: 25px;
 } 
+.sub-tittle{
+  text-align: center;
+  color:#000000;
+  text-shadow: 0 5px 10px rgba(0,0,0,.2);
+  font-size: 34px;
+  margin-bottom: 25px;
+} 
 
 
 
@@ -384,7 +403,7 @@
 
 .video-youtube iframe, .video video{
   height: 200px;
-  width: 100%;
+  width: 70%;
 }
 .content-buttons{
   display: flex;
@@ -500,16 +519,15 @@ html, body {
 }
 .contenedor-tabla-bd {
   position: relative;
-  width: 100%; 
-  max-width: 1100px; 
-  border: 3px solid white;
+  width: 100%;
+  max-width: 1100px;
+  border: 3px solid #7fb8ce;
   border-radius: 15px;
   padding: 3em 2.5em;
-  color: var(--second-color);
-  backdrop-filter: blur(25px);
+  /* color: var(--second-color); */
+  /* backdrop-filter: blur(25px); */
   margin: 10px;
-  justify-content: center;
-  
+  background: #d3f1ff;
 }
 
 
@@ -560,6 +578,8 @@ html, body {
   transition: all 300ms ease;
 }
 
+
+
 .acordeon label:hover{
   background: #2e2e2e;
 }
@@ -584,7 +604,32 @@ html, body {
   
 }
 
+.acordeon-preguntas label{
+  display: block;
+  padding: 20px;
+  background-color: #003f5a;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  transition: all 300ms ease;
+}
 
+.acordeon-preguntas label:hover{
+  background: #006691;
+}
+.acordeon-preguntas .contenido-acordeon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px 20px;
+ 
+  max-height: 0px;
+
+  overflow: hidden;
+  transition: all 500ms ease;
+}
 
 table {
   width: 100%;
@@ -604,7 +649,7 @@ th, td {
 th {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #cdffff;
+  background-color: #7fb8ce;
 }
 
 
@@ -1027,11 +1072,11 @@ background-color: #006691;
   position: relative;
   width: 70%; 
   max-width: 500px; 
-  border: 3px solid white;
+  border: 3px solid #7fb8ce;
   border-radius: 15px;
   padding: 3em 2.5em;
   color: var(--second-color);
-  backdrop-filter: blur(25px);
+  background-color: #d3f1ff;
 
 }
 .contEstadisticas{
@@ -1048,11 +1093,11 @@ background-color: #006691;
     position: relative;
     width: 90%; 
     max-width: 400px; 
-    border: 3px solid white;
+    border: 3px solid #7fb8ce;
     border-radius: 15px;
     padding: 3em 2.5em;
     color: var(--second-color);
-    backdrop-filter: blur(25px);
+   background-color: #d3f1ff;
 }
 
 .title-update{
@@ -1093,7 +1138,7 @@ flex-direction: column;
 #btn-actualizar{
   width: 100%;
     height: 45px; 
-    background: rgb(216, 214, 214);
+    background: #7fb8ce;
     font-size: 16px;
     font-weight: 500;
     border: none;
@@ -1113,11 +1158,11 @@ flex-direction: column;
 
 }
 .email-role{
-  color: #cdffff;
+  color: #000542;
   font-size: 20px;
 }
 .role-info{
-  color: #cdffff;
+  color: #000542;
   font-size: 20px;
 }
 #email{
@@ -1134,7 +1179,7 @@ flex-direction: column;
 #validate-btn{
   width: 100%;
   height: 45px; 
-  background: rgb(216, 214, 214);
+  background: #7fb8ce;
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -1148,7 +1193,7 @@ flex-direction: column;
 #update-role-btn{
   width: 100%;
   height: 45px; 
-  background: rgb(216, 214, 214);
+  background: #7fb8ce;
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -1167,7 +1212,7 @@ padding: 5%;
 }
 #user-name{
   
-  color: #000000;
+  color: #000542;
   font-size: 20px;
 }
 #role{
@@ -1185,7 +1230,7 @@ padding: 5%;
 .boton-pdf{
   border-radius: 20px;
   padding: 10px;
-  background-color: #cdffff;
+  background-color: #7fb8ce;
   border: none;
   margin: 20px;
   cursor: pointer;
@@ -1198,6 +1243,54 @@ padding: 5%;
 .caja-boton-pdf{
   display: flex;
   justify-content: end;
+}
+
+
+.carreras-content{
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carreras-box{
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  margin-top: 1%;
+  justify-content: space-around; 
+  width: 80%;
+}
+.carrera{
+
+  flex: 1 1 270px; 
+  max-width: 300px; 
+  text-align: left; 
+
+  font-size: 23px;
+  
+  margin-bottom: 35px;
+  font-size: 23px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: 0px;
+  
+  
+  
+  justify-content: left;
+  width: 70%;
+
+  display: flex;
+  align-items: center;
+  
+
+}
+
+.video-youtube { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 
@@ -1299,6 +1392,7 @@ padding: 5%;
     margin-top: 2%;
   }
 
+
   .video-youtube iframe, .video video{
     height: 100%;
     width: 100%;
@@ -1383,6 +1477,7 @@ padding: 5%;
   margin: 0;
  
 } 
+
 
   .box-stats{
     display: flex;

@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/style-loading.css" />
-    
+
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <link rel="icon" href="img/gorra.ico">
+    <link rel="icon" href="img/gorra.ico" />
     <title>Inicio</title>
   </head>
 
   <body class="hidden">
     <div class="centrado" id="onload">
-      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-    
+
     <div id="container">
       <!-- <div class="contenedor-loading">
         <div class="loading-image">
@@ -30,12 +35,14 @@
           <p>Cargando...</p>
         </div>
       </div> -->
-      
+
       <div class="principal-screen">
         <div class="background"></div>
 
         <header class="header">
-          <a href="/index.html"><img src="./img/utn_logo.png" alt="logo" loading="lazy" /></a>
+          <a href="/index.html"
+            ><img src="./img/utn_logo.png" alt="logo" loading="lazy"
+          /></a>
 
           <button class="button">
             <svg
@@ -61,17 +68,17 @@
         </header>
         <div class="banner-content">
           <div class="info">
-            <h1 id="titulo-inicio" class="principal-title">Explora tu potencial</h1>
-            
+            <h1 id="titulo-inicio" class="principal-title">
+              Explora tu potencial
+            </h1>
+
             <div id="link-banner-content">
-              <a  id="login-link" href="./login.html"
-              >Iniciar</a
-              >
+              <a id="login-link" href="./login.html">Iniciar</a>
               <a id="register-link" href="./Registro.html">Registrar</a>
-            </div> 
+            </div>
             <div id="login-name">
               <h2 id="logueado"><strong id="name"></strong></h2>
-              
+
               <a id="logout-button" onclick="out()">Salir</a>
             </div>
           </div>
@@ -80,53 +87,85 @@
           <img src="img/img2.svg" />
         </div>
       </div>
-  
+
       <div id="caja-admin">
         <div id="separator-content"></div>
-        <h2 class="tittle">Administra la pagina</h2>
-        <div>
-          <section class="caja-section">
-            <br>
-            <p>Promedio de las notas</p>
-            <br>
-            <button><a href="./tabla-promedios.html" class="caja-emergente">Tabla de promedios</a></button>
-          </section>
-          <section class="caja-section">
-            <br>
-            <p>Notas de los ejercicios</p>
-            <br>
-            <button><a href="./tabla.html" class="caja-emergente">Tabla de notas</a></button>
-          </section>
-          <section class="caja-section">
-            <br>
-            <p>Actualiza las estadísticas de la carrera</p>
-            <br>
-            <button><a href="./actualizarEstadisticas.html" class="caja-emergente">Estadísticas de las carreras</a></button>
-          </section>
-          <section class="caja-section">
-            <br>
-            <p>Roles</p>
-            <br>
-            <button><a href="./Roles.html" class="caja-emergente">Actualizar Roles</a></button>
-          </section>
+        <h2 class="tittle">Administra la Página</h2>
+        <div class="box-container">
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img/promedios.png" alt="" loading="lazy" />
+            </div>
+            <div class="card-info">
+              <h3>Promedio de las notas</h3>
+              <p>
+                Si quieres ver los promedios de los estudiantes de las distintas
+                carreras presiona el botón de abajo
+              </p>
+              <br />
+              <a href="./tabla-promedios.html" class="link-box">Admistar</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img/ejercicios.png" alt="" loading="lazy" />
+            </div>
+            <div class="card-info">
+              <h3>Notas de los ejercicios</h3>
+              <p>
+                Si quieres ver la nota y los promedios de los estudiantes de los
+                distintos ejercicios presiona el botón de abajo
+              </p>
+              <br />
+              <a href="./tabla.html" class="link-box">Admistar</a>
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img/estadisticas.png" alt="" loading="lazy" />
+            </div>
+            <div class="card-info">
+              <h3>Estadísticas de la carrera</h3>
+              <p>
+                Si quieres actualizar las estadísticas de una carrera presiona
+                el botón de abajo
+              </p>
+              <br />
+              <a href="./actualizarEstadisticas.html" class="link-box"
+                >Admistar</a
+              >
+            </div>
+          </div>
+
+          <div class="card-content" id="column">
+            <div class="card-image">
+              <img src="img/rol.png" alt="" loading="lazy" />
+            </div>
+            <div class="card-info">
+              <h3>Roles</h3>
+              <p>
+                Si quieres cambiar el rol de un usuario presiona el botón de
+                abajo
+              </p>
+              <br />
+              <a href="./Roles.html" class="link-box">Admistar</a>
+            </div>
+          </div>
         </div>
-       
-        
-        
+
         <div id="separator-content"></div>
       </div>
 
-   
       <div id="separator-content"></div>
-
- 
 
       <div id="content-carts">
         <h1 class="tittle">Carreras que ofrece la UTN</h1>
         <div class="box-container">
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img/informatica.png" alt=""  loading="lazy"/>
+              <img src="img/informatica.png" alt="" loading="lazy" />
             </div>
             <div class="card-info">
               <h3>Tecnologías de la información</h3>
@@ -171,7 +210,7 @@
 
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img/idioma.png" alt="" loading="lazy"/>
+              <img src="img/idioma.png" alt="" loading="lazy" />
             </div>
             <div class="card-info">
               <h3>Inglés</h3>
@@ -201,7 +240,7 @@
 
           <div class="card-content" id="column">
             <div class="card-image">
-              <img src="img/turismo.png" alt="" loading="lazy"/>
+              <img src="img/turismo.png" alt="" loading="lazy" />
             </div>
             <div class="card-info">
               <h3>Gestión ecoturística</h3>
@@ -212,108 +251,252 @@
               <br />
               <a href="/carrera-gec.html" class="link-box">Más información</a>
             </div>
-          </div> 
-
-        </div> 
-        </div>
-        <div id="separator-content"></div>
-       
-
-        <div id="first-info-content" class="info-content">
-          <h2 class="tittle">Un vistazo a nuestra sede Corobicí</h2>
-      
-        <div class="video-youtube">
-          <iframe 
-          src="https://www.youtube.com/embed/IU_VCGxV3PU?si=8FOSRm0vc1EM1V0z" 
-          title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-       <br><br><br><br>
-        <div class="waves-position">
-          <img src="img/img6.svg"/>
+      <div id="separator-content"></div>
+
+      <div id="first-info-content" class="info-content">
+        <h2 class="tittle">¡Descubre lo mejor en nuestras sedes!</h2>
+      </div>
+      <div class="box-container">
+        <div class="card-content" id="column">
+          <div class="card-image">
+            <img src="img/edificioGuanacaste.png" alt="" loading="lazy" />
+          </div>
+          <div class="card-info">
+            <h3>Sede Guanacaste</h3>
+            <p>
+              Si quieres ver información de la sede de Guanacaste presiona el
+              botón de abajo
+            </p>
+            <br />
+            <a href="./sede-guanacaste.html" class="link-box"
+              >Más información</a
+            >
+          </div>
         </div>
-        <footer class="footer">
-          <div class="footer-container">
-            <dic class="block-footer">
-              <div class="footer-col">
-                <h4>Sobre nosotros</h4>
-                <ul>
-                  <li>
-                    <a href="https://www.utn.ac.cr/mapas-y-direcciones"
-                      >Ubicaciones</a
-                    >
-                  </li>
-                  <li><a href="https://www.utn.ac.cr/carreras">carreras</a></li>
-    
-                  <li>
-                    <a href="https://www.utn.ac.cr/cursos-libres-por-sede"
-                      >cursos</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>Contacto</h4>
-                <ul>
-                  <li>
-                    <a
-                      href="https://www.utn.ac.cr/content/directorio-sede-de-guanacaste"
-                      >Sede de Guanacaste</a>
-                      <div>
-                        <img src="./img/UBICACIONES SEDE COROBICÍ.jpg" height="100%" width="160%" loading="lazy">
-                       </div>
-                  </li>
-                  <li>
-                    <a href="https://www.utn.ac.cr/content/contacto-sede-central"
-                      >Sede de Central</a
-                    >
-                  </li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                </ul>
-              </div>
-            </dic>
-            <div class="block-footer">
-              <div class="footer-col">
-                <h4>Información</h4>
-                <ul>
-                  <li>
-                    <a href="https://www.utn.ac.cr/content/informacion-general"
-                      >Información General
-                    </a>
-                  </li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                  <a
-                    href="https://www.facebook.com/UniversidadTecnicaNacional/?locale=es_LA"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-    
-                  <a
-                    href="https://www.linkedin.com/school/utncostarica/?originalSubdomain=cr"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-              </div>
+      </div>
+
+      <div id="separator-content"></div>
+      <div class="info-content">
+        <h2 class="tittle">
+          Preguntas Frecuentes sobre la Universidad Técnica Nacional
+        </h2>
+        <p>
+          Todo lo que necesitas saber para comenzar tu camino académico en la
+          UTN
+        </p>
+
+        <div class="contenedor-plan">
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon1"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon1">
+              ¿Qué son los créditos universitarios y cómo funcionan?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                Los créditos universitarios representan la carga académica de
+                cada materia. Para mantener tu beca, debes aprobar al menos 9
+                créditos cada semestre. Cada crédito tiene un valor de 14.025
+                colones, y cada asignatura tiene una cantidad específica de
+                créditos asignados según su carga horaria.
+              </p>
             </div>
           </div>
-        </footer>
-        <!-- final del footer -->
 
-        <script src="./js/app.js" defer></script>
-        <script src="js/loading.js" async></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script src="js/controller_user.js" ></script>
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon2"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon2">
+              ¿Cómo sé cuántos créditos tiene cada materia?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                Cada materia tiene asignada una cantidad de créditos según su
+                duración y contenido académico. Esta información la puedes
+                consultar al momento de matricularte en la plataforma Avatar.
+              </p>
+            </div>
+          </div>
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon3"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon3">
+              ¿Puedo perder mi beca si no cumplo con los créditos?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                Sí, para mantener tu beca debes aprobar al menos 9 créditos por
+                semestre. Si no alcanzas esta cantidad, podrías perder los
+                beneficios de la beca.
+              </p>
+            </div>
+          </div>
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon4"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon4">
+              ¿Cómo puedo matricularme en la UTN?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                La matrícula se realiza a través de Avatar, la plataforma en
+                línea de la universidad. Debes ingresar a tu cuenta, seleccionar
+                las materias y completar el proceso para formalizar tu
+                inscripción.
+              </p>
+            </div>
+          </div>
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon5"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon5">
+              ¿Cuánto tiempo tengo para realizar el pago de la matrícula?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                Tienes un plazo de 24 horas para realizar el pago de la
+                matrícula una vez que la hayas formalizado. Es importante
+                hacerlo dentro de este tiempo para asegurar tu lugar en el
+                curso.
+              </p>
+            </div>
+          </div>
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon6"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon6">
+              ¿Cómo sé cuántos créditos tiene cada materia?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                Cada materia tiene asignada una cantidad de créditos según su
+                duración y contenido académico. Esta información la puedes
+                consultar al momento de matricularte en la plataforma Avatar.
+              </p>
+            </div>
+          </div>
+          <div class="acordeon-preguntas">
+            <input
+              type="checkbox"
+              name="acordeon"
+              id="btn-acordeon7"
+              class="btn-acordeon"
+            />
+            <label for="btn-acordeon7">
+              ¿Qué pasa si no logro aprobar una materia?
+            </label>
+            <div class="contenido-acordeon">
+              <p>
+                Si no apruebas una materia, tendrás que repetirla en otro
+                cuatrimestre. Esto puede afectar el avance de tu carrera, pero
+                no perderás tu matrícula o beca de inmediato.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <br /><br /><br /><br />
+    <div class="waves-position">
+      <img src="img/img6.svg" />
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="block-footer">
+          <!-- Corregido de <dic> a <div> -->
+          <div class="footer-col">
+            <h4>Sobre nosotros</h4>
+            <ul>
+              <li>
+                <a href="https://www.utn.ac.cr/mapas-y-direcciones"
+                  >Ubicaciones</a
+                >
+              </li>
+              <li><a href="https://www.utn.ac.cr/carreras">Carreras</a></li>
+              <li>
+                <a href="https://www.utn.ac.cr/cursos-libres-por-sede"
+                  >Cursos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.utn.ac.cr/content/directorio-sede-de-guanacaste"
+                  >Sede de Guanacaste</a
+                >
+              </li>
+              <li>
+                <a href="https://www.utn.ac.cr/content/contacto-sede-central"
+                  >Sede Central</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="block-footer">
+          <div class="footer-col">
+            <h4>Información</h4>
+            <ul>
+              <li>
+                <a href="https://www.utn.ac.cr/content/informacion-general"
+                  >Información General</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/UniversidadTecnicaNacional/?locale=es_LA"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/school/utncostarica/?originalSubdomain=cr"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- final del footer -->
+
+    <script src="./js/app.js" defer></script>
+    <script src="js/loading.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/controller_user.js"></script>
   </body>
 </html>

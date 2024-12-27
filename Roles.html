@@ -46,18 +46,22 @@
    <h1 class="title-role">Actualizar Role del Usuario</h1>
     <div class="info-email">
       <label for="email" class="email-role">Email:</label>
+      <br>
       <input type="email" id="email" required>
+      <br>
       <button id="validate-btn">Validar</button>
+      <br>
+      <div id="user-info" style="display: none;"><br>
+        <h3 id="user-name"></h3><br>
+        <label for="role" class="role-info">Role:</label>
+        <select id="role">
+          <option value="0">Usuario</option>
+          <option value="1">Administrador</option>
+        </select>
+        <button type="submit" id="update-role-btn">Actualizar Role</button>
+      </div>
     </div>
-    <div id="user-info" style="display: none;"><br>
-      <h3 id="user-name"></h3><br>
-      <label for="role" class="role-info">Role:</label>
-      <select id="role">
-        <option value="0">Usuario</option>
-        <option value="1">Administrador</option>
-      </select>
-      <button type="submit" id="update-role-btn">Actualizar Role</button>
-    </div>
+
     <div id="message"></div>
 </div>
 </div>
